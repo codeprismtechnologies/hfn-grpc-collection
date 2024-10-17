@@ -1,0 +1,88 @@
+{
+  "scheduleV2": {
+    "goalID": "298",
+    "userID": "855",
+    "goalCategory": "REFER_APP",
+    "selectedDateAndTimeWithCalendarEvent": [
+      {
+        "selectedDateAndTime": "1970-01-01T00:05:19.000000693Z",
+        "calendarEventId": "{{ faker.random.uuid }}",
+        "durationMinutes": 488,
+        "completedStatus": true,
+        "startTime": "1970-01-01T00:09:54.000000708Z"
+      },
+      {
+        "selectedDateAndTime": "1970-01-01T00:15:21.000000048Z",
+        "calendarEventId": "{{ faker.random.uuid }}",
+        "durationMinutes": 678,
+        "completedStatus": false,
+        "startTime": "1970-01-01T00:16:12.000000528Z"
+      }
+    ],
+    "selectedLanguage": "EN_US",
+    "hfn": false,
+    "todaySeconds": "762"
+  },
+  "goalDetails": {
+    "title": {
+      "defaultContent": "Mall CFA Franc BCEAO",
+      "en": "XML Pass",
+      "hi": "Liaison overriding",
+      "te": "harness HTTP sky blue",
+      "gu": "Investment Account lime Plastic",
+      "ta": "Seamless Unbranded Awesome",
+      "ka": "Intelligent Steel Cheese pixel Seamless",
+      "mr": "Generic Myanmar reboot",
+      "it": "Home Loan Account Intelligent Berkshire",
+      "ru": "Avon transmitting Awesome",
+      "es": "Landing",
+      "fr": "Plastic Rapid Handmade",
+      "pt": "application De-engineered",
+      "de": "Cambridgeshire bi-directional Port",
+      "bn": "Administrator",
+      "ml": "Flats",
+      "uk": "Rustic Granite Bike Cambridgeshire",
+      "od": "exploit",
+      "enUs": "methodology",
+      "enAu": "Ferry Passage"
+    },
+    "description": {
+      "defaultContent": "Auto Loan Account",
+      "en": "navigate synthesize",
+      "hi": "Branding",
+      "te": "Meadow Small",
+      "gu": "generate",
+      "ta": "e-markets optical",
+      "ka": "Home Loan Account",
+      "mr": "orchestrate",
+      "it": "Clothing, Automotive & Garden",
+      "ru": "motivating",
+      "es": "Creative",
+      "fr": "Locks Steel",
+      "pt": "Automotive & Games",
+      "de": "Licensed",
+      "bn": "Refined application",
+      "ml": "mobile Investment Account bandwidth",
+      "uk": "Burg system",
+      "od": "Rial Omani",
+      "enUs": "Mobility Generic Steel Hat",
+      "enAu": "calculate ADP web services"
+    },
+    "requiredTimes": 607,
+    "requiredDays": 55,
+    "goalCategory": "OFFLINE_HEARTFULNESS_PRACTICE",
+    "associatedBadgeID": "341",
+    "badgeCount": 554,
+    "duration": 883,
+    "requiredIDs": [
+      "157",
+      "365"
+    ],
+    "publishGoal": false,
+    "meditationCategory": "GUIDANCE_MEDITATION",
+    "userId": "788",
+    "selectedLanguage": "EN",
+    "goalTitle": "Interactions navigate value-added",
+    "goalDescription": "Handmade Metal Keyboard 3rd generation Clothing & Clothing"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "821",
+  "userId": "94",
+  "hasDonated": false,
+  "cause": "markets",
+  "channel": "EMAIL_ADDRESS",
+  "campaignId": "105",
+  "isNotificationSent": false,
+  "createdAt": "1970-01-01T00:15:40.000000425Z",
+  "isBirthdayRequest": true,
+  "hasClicked": false,
+  "uuid": "{{ faker.random.uuid }}"
+}

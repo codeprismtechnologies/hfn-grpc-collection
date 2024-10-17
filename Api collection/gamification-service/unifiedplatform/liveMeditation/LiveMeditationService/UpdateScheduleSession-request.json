@@ -1,0 +1,44 @@
+{
+  "id": "56",
+  "scheduledTime": "1970-01-01T00:05:39.000000815Z",
+  "sessionTitle": "SAS transition",
+  "sessionSubTitle": "silver",
+  "sessionInfo": "synthesize Italy",
+  "duration": 424,
+  "registeredUserCount": 20,
+  "liveParticipantsCount": 386,
+  "aboutSession": "Berkshire sky blue",
+  "meditationSteps": "Practical Frozen Bike Ameliorated",
+  "associatedCoachId": "573",
+  "associatedListOfBenefitsID": [
+    "617",
+    "169"
+  ],
+  "imageURL": "full-range Handmade Wooden Shoes",
+  "videoURL": "Wooden haptic",
+  "selectedLanguage": "OD",
+  "viewerCountStart": "761",
+  "viewerCountEnd": "724",
+  "sessionStartTime": "1970-01-01T00:13:18.000000970Z",
+  "sessionEndTime": "1970-01-01T00:11:26.000000795Z",
+  "preRecordedId": "501",
+  "preRecordedUrl": "Awesome hard drive lime",
+  "updateAllocatedCoach": true,
+  "link": "Versatile Street Rustic Cotton Shirt",
+  "tags": [
+    {
+      "id": "96",
+      "name": "{{ faker.name.last_name }}"
+    },
+    {
+      "id": "755",
+      "name": "{{ faker.name.last_name }}"
+    }
+  ],
+  "tagIds": [
+    "608",
+    "439"
+  ],
+  "attribute": "Manor Plastic IB",
+  "Topic": "copying virtual withdrawal"
+}

@@ -1,0 +1,10 @@
+{
+  "userId": "405",
+  "meditationType": "MEDITATE_WITH_GUIDANCE",
+  "selectedLanguage": "IT",
+  "requestPageable": {
+    "pageSize": 373,
+    "pageNumber": 633
+  },
+  "firebaseId": "{{ faker.random.uuid }}"
+}

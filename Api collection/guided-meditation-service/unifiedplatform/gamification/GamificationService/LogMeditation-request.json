@@ -1,0 +1,22 @@
+{
+  "id": "875",
+  "meditationType": "MEDITATE_WITH_OFFLINE",
+  "startDate": "1970-01-01T00:09:04.000000423Z",
+  "endDate": "1970-01-01T00:13:16.000000807Z",
+  "playCount": "67",
+  "pauseCount": "704",
+  "totalSeconds": "335",
+  "completedPercentage": 726,
+  "userId": "409",
+  "meditationId": "719",
+  "liveSessionId": "646",
+  "userActivity": "GUIDED_MEDITATION_ACTIVITY",
+  "logMeditationType": "OFFLINE",
+  "meditationCategory": "CLEANING_MEDITATION",
+  "selectedLanguage": "RU",
+  "badgeId": "496",
+  "badgeCount": 115,
+  "startOfDay": "1970-01-01T00:02:37.000000133Z",
+  "endOfDay": "1970-01-01T00:00:24.000000970Z",
+  "goalId": "845"
+}

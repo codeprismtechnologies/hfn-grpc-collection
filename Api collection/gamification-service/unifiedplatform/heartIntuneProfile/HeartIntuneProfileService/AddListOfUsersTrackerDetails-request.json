@@ -1,0 +1,83 @@
+{
+  "requestTrackerInfo": [
+    {
+      "meditationType": "MEDITATE_WITH_PRECEPTOR",
+      "startDate": "1970-01-01T00:02:48.000000627Z",
+      "endDate": "1970-01-01T00:04:02.000000840Z",
+      "playCount": "253",
+      "pauseCount": "824",
+      "totalSeconds": "456",
+      "completedPercentage": 319,
+      "userId": "492",
+      "meditationId": "381",
+      "liveSessionId": "882",
+      "userGroupRegister": false,
+      "respectiveId": "973",
+      "logMeditationType": "OFFLINE",
+      "meditationCategory": "CLEANING_MEDITATION"
+    },
+    {
+      "meditationType": "MEDITATE_WITH_TRAINER",
+      "startDate": "1970-01-01T00:11:59.000000995Z",
+      "endDate": "1970-01-01T00:00:54.000000318Z",
+      "playCount": "96",
+      "pauseCount": "500",
+      "totalSeconds": "947",
+      "completedPercentage": 682,
+      "userId": "453",
+      "meditationId": "911",
+      "liveSessionId": "273",
+      "userGroupRegister": false,
+      "respectiveId": "285",
+      "logMeditationType": "EXTERNAL_APP",
+      "meditationCategory": "ANY_MEDITATION"
+    }
+  ],
+  "trackerInfo": [
+    {
+      "id": "584",
+      "meditationType": "UNKNOWN_MEDITATION_TYPE",
+      "startDate": "1970-01-01T00:05:06.000000537Z",
+      "endDate": "1970-01-01T00:14:52.000000148Z",
+      "playCount": "359",
+      "pauseCount": "361",
+      "totalSeconds": "425",
+      "completedPercentage": 861,
+      "userId": "802",
+      "meditationId": "294",
+      "liveSessionId": "315",
+      "userActivity": "CIRCLE_INVITATION_ACTIVITY",
+      "logMeditationType": "INTERNAL_APP",
+      "meditationCategory": "ANY_MEDITATION",
+      "liveMeditationRating": "SAD_RATING",
+      "logMeditation": "OFFLINE"
+    },
+    {
+      "id": "439",
+      "meditationType": "MEDITATE_WITH_GUIDANCE",
+      "startDate": "1970-01-01T00:13:43.000000836Z",
+      "endDate": "1970-01-01T00:08:16.000000127Z",
+      "playCount": "150",
+      "pauseCount": "603",
+      "totalSeconds": "106",
+      "completedPercentage": 282,
+      "userId": "400",
+      "meditationId": "340",
+      "liveSessionId": "954",
+      "userActivity": "OFFLINE_HEARTFULNESS_PRACTICE_ACTIVITY",
+      "logMeditationType": "INTERNAL_APP",
+      "meditationCategory": "ANY_MEDITATION",
+      "liveMeditationRating": "UNKNOWN_RATING",
+      "logMeditation": "EXTERNAL_APP"
+    }
+  ],
+  "trackerIds": [
+    "171",
+    "143"
+  ],
+  "paginationResponse": {
+    "selectedPageNumber": 101,
+    "selectedPageSize": 422,
+    "totalCount": "35"
+  }
+}

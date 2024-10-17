@@ -1,0 +1,13 @@
+{
+  "details": {
+    "methodFqn": "unifiedplatform.HFNEvents.HFNEventsService.GetAllDynamicPublishAnnouncement"
+  },
+  "requests": [
+    {
+      "location": "GetAllDynamicPublishAnnouncement-request.json"
+    }
+  ],
+  "operationType": "serverStreaming",
+  "invokerName": "grpc",
+  "importStreamId": "546337ab-2098-4c02-aac8-293b9b8c79ce"
+}

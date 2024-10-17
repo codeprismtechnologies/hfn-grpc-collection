@@ -1,0 +1,408 @@
+/**
+ * @author : Godwin Vinny Carole Kati
+ * @created : 31/03/22, Thursday 2:16 PM
+ * @organisation : Codeprism Technologies Pvt Ltd 
+**/
+
+syntax = 'proto3';
+
+package unifiedplatform.HFNEvents;
+
+option java_package = "org.heartfulness.unifiedplatform.HFNEvents";
+option java_multiple_files = true;
+import 'google/protobuf/timestamp.proto';
+import 'common/common.proto';
+
+message Test {
+  string result = 1;
+}
+
+message Empty {
+}
+
+message TestResponse {
+  Test test = 1;
+}
+
+message ScheduleEventDetails{
+  int64 id = 1;
+  string title = 2;
+  string subTitle = 3;
+  google.protobuf.Timestamp scheduleTime = 4;
+  string directionUrl = 5;
+  string liveStreamingUrl = 6;
+  double latitude = 7;
+  double longitude = 8;
+}
+
+message ScheduleEventRequest{
+  string title = 1;
+  string subTitle = 2;
+  google.protobuf.Timestamp scheduleTime = 3;
+  string directionUrl = 4;
+  string liveStreamingUrl = 5;
+  double latitude = 6;
+  double longitude = 7;
+}
+
+message ID{
+  int64 id = 1;
+}
+
+message EssentialRequest{
+  string essentialTitle = 1;
+  string name = 2;
+  string imageUrl = 3;
+  string mobileNumber = 4;
+  string smsNumber = 5;
+  string whatsAppNumber = 6;
+  string landLineNumber= 7;
+  string directionUrl = 8;
+}
+
+message EssentialDetails{
+  int64 id = 1;
+  string essentialTitle = 2;
+  string name = 3;
+  string imageUrl = 4;
+  string mobileNumber = 5;
+  string smsNumber = 6;
+  string whatsAppNumber = 7;
+  string landLineNumber= 8;
+  string directionUrl = 9;
+}
+
+message HelpLineRequest{ //this request is used for lostAndFound as well as report issue.
+  string description = 1;
+  string keyLocationId = 2;
+  string contactNumber = 3;
+  heartintune.common.BhandaraHelpLineType helpLineType =4;
+}
+
+message HelpLineDetails{
+  int64 id = 1;
+  string description = 2;
+  string keyLocationId = 3;
+  string contactNumber = 4;
+  heartintune.common.BhandaraHelpLineType helpLineType =5;
+}
+
+message KeyLocationRequest{
+  string title = 1;
+  string openAt = 2;
+  string closeAt = 3;
+  string imageUrl = 4;
+  double latitude = 5;
+  double longitude = 6;
+  string directionUrl = 7;
+  int64 keyLocationCategoryId = 8;
+  string description = 9;
+}
+
+message KeyLocationDetails{
+  int64 id = 1;
+  string title = 2;
+  string openAt = 3;
+  string closeAt = 4;
+  string imageUrl = 5;
+  double latitude = 6;
+  double longitude = 7;
+  string directionUrl = 8;
+  int64 keyLocationCategoryId = 9;
+  string description = 10;
+  KeyLocationCategoryDetails keyLocationCategoryDetail = 11;
+}
+
+message GetAllKeyLocationsResponse{
+  repeated KeyLocationDetails keyLocationDetails =1;
+  ResponsePageable pageableResponse = 2;
+}
+message  Status{
+  bool status = 1;
+}
+
+message RequestPageable{
+  uint32 pageSize = 2;
+  uint32 pageNumber = 3;
+}
+
+message ResponsePageable{
+  int64 totalCount = 1;
+  uint32 selectedPageSize = 2;
+  uint32 selectedPageNumber = 3;
+}
+
+message EssentialDetailsResponse{
+  repeated EssentialDetails essentialDetails = 1;
+  ResponsePageable pageable = 2;
+}
+
+message GetAllScheduleEventRequest{
+  google.protobuf.Timestamp scheduledStartTime = 1;
+  google.protobuf.Timestamp scheduledEndTime = 2;
+  RequestPageable pageable = 3;
+}
+
+message GetAllScheduleEventResponse{
+  repeated ScheduleEventDetails scheduledEventDetails = 1;
+  ResponsePageable pageable = 2;
+}
+
+message LostAndFoundDetails{
+  int64 id = 1;
+  string description = 2;
+  string KeyLocation = 3;
+  string contactNumber = 4;
+  heartintune.common.BhandaraHelpLineType bhandaraHelpLineType = 5;
+  google.protobuf.Timestamp createdAt = 6;
+}
+
+message LostAndFoundRequest{
+  string description = 1;
+  string KeyLocation = 2;
+  string contactNumber = 3;
+  heartintune.common.BhandaraHelpLineType bhandaraHelpLineType = 4;
+  google.protobuf.Timestamp createdAt = 5;
+}
+
+message getAllLostAndFoundDetailsResponse{
+  repeated LostAndFoundDetails lostAndFoundDetails = 1;
+  ResponsePageable pageable = 2;
+}
+
+message searchLostAndFoundItem{
+  string searchItem = 1;
+  heartintune.common.BhandaraHelpLineType bhandaraHelpLineType = 2;
+  RequestPageable pageable = 3;
+}
+
+message AnnouncementDetails{
+  int64 id = 1;
+  string announcementText = 2;
+  google.protobuf.Timestamp scheduledAt = 3;
+  string locationUrl = 4;
+  heartintune.common.PublishContent publishStatus = 5;
+}
+
+message AnnouncementRequest{
+  string announcementText = 2;
+  google.protobuf.Timestamp scheduledAt = 3;
+  string locationUrl = 4;
+  heartintune.common.PublishContent publishStatus = 5;
+}
+
+message KeyLocationCategoryDetails{
+  int64 id = 1;
+  string categoryName = 2;
+}
+
+message KeyLocationCategoryRequest{
+  string categoryName = 1;
+}
+
+message GetAllKeyLocationCategoriesDetails{
+  repeated KeyLocationCategoryDetails keyLocationCategoryDetails = 1;
+}
+
+message BhandaraHelpLineTypeRequest{
+  heartintune.common.BhandaraHelpLineType bhandaraHelpLineType = 1;
+}
+
+message GetAllPublishAnnouncementResponse {
+  repeated AnnouncementDetails announcementDetails = 1;
+  ResponsePageable pageable = 2;
+}
+
+message BhandaraCategoryDetail{
+  int64 id = 1;
+  string title = 2;
+  string imageUrl = 3;
+}
+
+message BhandaraCategoryRequest{
+  string title = 1;
+  string imageUrl = 2;
+}
+
+message GetAllBhandaraCategoryResponse{
+ repeated BhandaraCategoryDetail bhandaraCategoryDetail = 1;
+}
+
+message GetAllLostOrFoundItemDetailsRequest{
+  RequestPageable pageable = 1;
+  heartintune.common.BhandaraHelpLineType bhandaraHelpLineType = 2;
+}
+
+message ArchivesEventsDetails{
+  int64 id = 1;
+  string eventName = 2;
+}
+
+message ArchivesSubEventsDetails{
+  int64 id = 1;
+  string subEventName = 2;
+  string url = 3;
+  ArchivesEventsDetails archivesEventsDetails = 4;
+}
+
+message ArchivesSubEventsDetailsRequest{
+  int64 id = 1;
+  string subEventName = 2;
+  string url = 3;
+}
+
+message ListOfArchivesSubEventsDetailsRequest{
+  repeated ArchivesSubEventsDetailsRequest archivesSubEventsDetailsRequest = 1;
+}
+
+message ArchivesEventsRequest{
+  string eventName = 1;
+}
+
+message GetAllArchivesSubEventsDetails{
+  repeated ArchivesSubEventsDetails archivesSubEventsDetails = 1;
+  ResponsePageable pageable = 2;
+}
+
+message GetAllArchivesEventsDetails{
+  repeated ArchivesEventsDetails archivesEventsDetails = 1;
+  ResponsePageable pageable = 2;
+}
+
+message Tag {
+  int64 id = 1;
+  string name = 2;
+}
+
+message TagsList{
+  repeated Tag tags = 1;
+  ResponsePageable pageable = 2;
+}
+
+message Content{
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale subTitle = 3;
+  heartintune.common.Locale description = 4;
+  heartintune.common.Locale contentUrl = 5;
+  string thumbnailImageUrl = 6;
+  string backgroundImageUrl = 7;
+  float duration = 8;
+  int32 readingTime = 9;
+  google.protobuf.Timestamp publishedAt = 10;
+  heartintune.common.ContentCategory contentCategory = 11;
+  repeated Tag tags = 12;
+}
+
+message ContentWithLanguageSupport{
+  int64 id = 1;
+  string title = 2;
+  string subTitle = 3;
+  string description = 4;
+  string contentUrl = 5;
+  string thumbnailImageUrl = 6;
+  string backgroundImageUrl = 7;
+  float duration = 8;
+  int32 readingTime = 9;
+  google.protobuf.Timestamp publishedAt = 10;
+  heartintune.common.ContentCategory contentCategory = 11;
+  repeated Tag tags = 12;
+}
+
+message ListOfContent{
+  repeated ContentWithLanguageSupport contentWithLanguageSupport = 1;
+  ResponsePageable responsePageable = 2;
+}
+
+message RequestForGetContentWithLocaleSupport{
+  heartintune.common.ContentCategory contentCategory = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+  RequestPageable pageable = 3;
+}
+
+message CardDetails {
+  int64 id = 1;
+  string cardData = 2;
+  bool isPublished = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  string type = 5;
+  int32 sortOrder = 6;
+  string createdBy = 7;
+  google.protobuf.Timestamp createdDate = 8;
+  google.protobuf.Timestamp updatedDate = 9;
+  int32 version = 10;
+}
+
+message ListOfCard{
+  repeated CardDetails listOfCards = 1;
+  heartintune.common.ResponsePageable responsePageable = 2;
+}
+
+message GetAllCardsRequest{
+  heartintune.common.RequestPageable pageable = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+  bool sort=3;
+}
+
+service HFNEventsService {
+  rpc Test (Empty) returns (TestResponse) {};
+  rpc AddScheduleEvent (ScheduleEventRequest) returns (ScheduleEventDetails) {};
+  rpc UpdateScheduleEvent (ScheduleEventDetails) returns (ScheduleEventDetails) {};
+  rpc AddEssentialDetails (EssentialRequest) returns (EssentialDetails) {};
+  rpc UpdateEssentialDetails (EssentialDetails) returns (EssentialDetails) {};
+  rpc GetAllEssentialDetails (RequestPageable) returns (EssentialDetailsResponse) {};
+  rpc DeleteEssentialDetailsById (ID) returns (Status) {};
+  rpc DeleteScheduleEventById (ID) returns (Status){};
+  rpc getScheduleEventByID(ID) returns  (ScheduleEventDetails){};
+  rpc GetAllScheduleEvent (GetAllScheduleEventRequest) returns (GetAllScheduleEventResponse) {};
+  rpc GetUpcomingScheduleEvent (GetAllScheduleEventRequest) returns (GetAllScheduleEventResponse) {};
+
+  rpc AddHelpLine (LostAndFoundRequest) returns (LostAndFoundDetails) {}; // we are using this rpc for lost, found , issue also
+  rpc GetAllLostAndFoundDetails (GetAllLostOrFoundItemDetailsRequest) returns (getAllLostAndFoundDetailsResponse) {};
+  rpc SearchLostAndFoundItem (searchLostAndFoundItem) returns (getAllLostAndFoundDetailsResponse) {};
+  rpc GetAllDynamicLostAndFoundItem (BhandaraHelpLineTypeRequest) returns (stream getAllLostAndFoundDetailsResponse) {};
+  rpc DeleteLostAndFoundItem (ID) returns (Status) {};
+  rpc UpdateLostAndFoundItem (LostAndFoundDetails) returns (LostAndFoundDetails) {};
+  rpc PublishAnnouncement (AnnouncementRequest) returns (AnnouncementDetails) {};
+  rpc UpdatePublishAnnouncement (AnnouncementDetails) returns (AnnouncementDetails) {};
+  rpc DeletePublishAnnouncementByID (ID) returns (Status) {};
+  rpc GetAllPublishAnnouncement (RequestPageable) returns (GetAllPublishAnnouncementResponse) {};
+  rpc GetAllDynamicPublishAnnouncement (Empty) returns (stream GetAllPublishAnnouncementResponse) {};
+  rpc AddKeyLocation (KeyLocationRequest) returns (KeyLocationDetails) {};
+  rpc UpdateKeyLocation (KeyLocationDetails) returns (KeyLocationDetails) {};
+  rpc DeleteKeyLocationById (ID) returns (Status){};
+  rpc GetAllKeyLocations(RequestPageable)returns (GetAllKeyLocationsResponse){};
+  rpc SearchKeyLocationsByCategoryId (ID) returns (GetAllKeyLocationsResponse){};
+  rpc AddKeyLocationCategory (KeyLocationCategoryRequest) returns (KeyLocationCategoryDetails) {};
+  rpc UpdateKeyLocationCategory (KeyLocationCategoryDetails) returns (KeyLocationCategoryDetails) {};
+  rpc DeleteKeyLocationCategoryById (ID) returns (Status){};
+  rpc GetAllKeyLocationCategories(Empty) returns (GetAllKeyLocationCategoriesDetails){};
+  rpc AddBhandaraCategory (BhandaraCategoryRequest) returns (BhandaraCategoryDetail) {};
+  rpc UpdateBhandaraCategory (BhandaraCategoryDetail) returns (BhandaraCategoryDetail) {};
+  rpc GetAllBhandaraCategory (Empty) returns (GetAllBhandaraCategoryResponse) {};
+
+  // Archives Screen
+  rpc AddArchivesEvents(ArchivesEventsRequest) returns (ArchivesEventsDetails) {};
+  rpc UpdateArchivesEvents(ArchivesEventsDetails) returns (ArchivesEventsDetails) {};
+  rpc AddArchivesSubEvents(ListOfArchivesSubEventsDetailsRequest) returns (Status) {};
+  rpc UpdateArchivesSubEvents(ArchivesSubEventsDetailsRequest) returns (ArchivesSubEventsDetails) {};
+  rpc DeleteArchivesEventsById(ID) returns (Status) {};
+  rpc DeleteArchivesSubEventsById(ID) returns (Status) {};
+  rpc GetAllArchivesEvents(RequestPageable) returns (GetAllArchivesEventsDetails) {};
+  rpc GetAllArchivesSubEvents(RequestPageable) returns (GetAllArchivesSubEventsDetails) {};
+
+  // Tags RPC
+  rpc AddOrUpdateMultipleTags(TagsList)returns(TagsList) {};
+  rpc GetAllTags(RequestPageable) returns(TagsList) {};
+
+  // Content RPC
+  rpc AddOrUpdateContent(Content)returns(Content) {};
+  rpc GetBhandaraContentByCategory(RequestForGetContentWithLocaleSupport) returns (ListOfContent) {};
+  rpc DeleteContentById(ID) returns (Status) {};
+
+  rpc CreateCard(CardDetails) returns (CardDetails) {};
+  rpc UpdateCard(CardDetails) returns (CardDetails) {};
+  rpc DeleteCardById(ID) returns (Status) {};
+  rpc GetAllCards(GetAllCardsRequest) returns (ListOfCard) {};
+  rpc GetCardById(ID) returns (CardDetails) {};
+}

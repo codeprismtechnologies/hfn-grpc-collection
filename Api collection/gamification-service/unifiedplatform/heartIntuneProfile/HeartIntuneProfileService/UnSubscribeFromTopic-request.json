@@ -1,0 +1,5 @@
+{
+  "topic": "Automotive & Clothing",
+  "userId": "{{ faker.random.uuid }}",
+  "deviceId": "{{ faker.random.uuid }}"
+}

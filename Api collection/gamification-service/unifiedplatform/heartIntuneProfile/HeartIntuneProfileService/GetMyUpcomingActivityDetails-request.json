@@ -1,0 +1,16 @@
+{
+  "UserID": "251",
+  "currentTime": "1970-01-01T00:14:36.000000235Z",
+  "paginationRequest": {
+    "pageNumber": 887,
+    "pageSize": 468
+  },
+  "selectedLanguage": "OD",
+  "status": "HOLD",
+  "delayTimeInMinutes": "397",
+  "listOfInviteStatus": [
+    "ACCEPTED",
+    "PENDING"
+  ],
+  "endTime": "1970-01-01T00:13:34.000000519Z"
+}

@@ -1,0 +1,9 @@
+{
+  "liveSessionId": "985",
+  "userId": "594",
+  "userName": "{{ faker.internet.user_name }}",
+  "textIssue": "Licensed Steel Soap circuit grid-enabled",
+  "userReportType": "ISSUE",
+  "email": "{{ faker.internet.example_email }}",
+  "mobileNumber": "{{ faker.random.ushort }}"
+}

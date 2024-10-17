@@ -1,0 +1,6 @@
+{
+  "email": "{{ faker.internet.example_email }}",
+  "mobileNumber": "{{ faker.random.ushort }}",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "checkEmailExistInFireBase": true
+}

@@ -1,0 +1,10 @@
+{
+  "essentialTitle": "Clothing bypassing",
+  "name": "{{ faker.name.last_name }}",
+  "imageUrl": "Berkshire Ferry Avenue",
+  "mobileNumber": "{{ faker.random.ushort }}",
+  "smsNumber": "{{ faker.random.ushort }}",
+  "whatsAppNumber": "{{ faker.random.ushort }}",
+  "landLineNumber": "{{ faker.random.ushort }}",
+  "directionUrl": "Rubber Inlet"
+}

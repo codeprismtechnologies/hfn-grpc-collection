@@ -1,0 +1,46 @@
+{
+  "settings": [
+    {
+      "options": {
+        "grpc": {
+          "endpoint": "http://localhost:50054",
+          "mode": "grpc",
+          "disableServerCertificateValidation": true
+        }
+      }
+    },
+    {
+      "environmentId": "54b1792e-4840-4b07-afb1-b397da772b64",
+      "options": {
+        "grpc": {
+          "endpoint": "https://guided-meditation-service-grpc.dev.heartfulnessinstitute.in"
+        },
+        "rest": {
+          "pathParams": []
+        }
+      }
+    },
+    {
+      "environmentId": "8358b62a-16b3-444e-9932-79eb9e94438f",
+      "options": {
+        "grpc": {
+          "endpoint": "https://guided-meditation-service-grpc.heartfulnessinstitute.in"
+        },
+        "rest": {
+          "pathParams": []
+        }
+      }
+    },
+    {
+      "environmentId": "daab3d8d-6d8b-4ca7-a9fb-02cd2adcdf04",
+      "options": {
+        "grpc": {
+          "endpoint": "https://guided-meditation-service-grpc.qa.heartfulnessinstitute.in"
+        },
+        "rest": {
+          "pathParams": []
+        }
+      }
+    }
+  ]
+}

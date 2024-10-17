@@ -1,0 +1,22 @@
+{
+  "goalID": "572",
+  "userID": "254",
+  "goalCategory": "GUIDED_MEDITATION",
+  "selectedDateAndTimeWithCalendarEvent": [
+    {
+      "selectedDateAndTime": "1970-01-01T00:15:37.000000013Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "duration": 58,
+      "completedStatus": false,
+      "startTime": "1970-01-01T00:12:29.000000430Z"
+    },
+    {
+      "selectedDateAndTime": "1970-01-01T00:12:59.000000091Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "duration": 163,
+      "completedStatus": true,
+      "startTime": "1970-01-01T00:03:39.000000355Z"
+    }
+  ],
+  "selectedLanguage": "KA"
+}

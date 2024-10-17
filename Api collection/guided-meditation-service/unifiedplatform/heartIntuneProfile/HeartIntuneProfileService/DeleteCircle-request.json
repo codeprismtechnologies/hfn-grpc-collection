@@ -1,0 +1,9 @@
+{
+  "ID": "658",
+  "userID": "731",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Executive",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Strategist",
+  "email": "{{ faker.internet.example_email }}"
+}

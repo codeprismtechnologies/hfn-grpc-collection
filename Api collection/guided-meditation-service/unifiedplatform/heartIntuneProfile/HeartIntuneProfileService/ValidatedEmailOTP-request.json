@@ -1,0 +1,4 @@
+{
+  "email": "{{ faker.internet.example_email }}",
+  "otp": "Buckinghamshire Frozen Tunisian Dinar"
+}

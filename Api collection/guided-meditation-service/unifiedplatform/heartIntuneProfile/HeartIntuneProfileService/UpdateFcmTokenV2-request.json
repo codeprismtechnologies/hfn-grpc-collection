@@ -1,0 +1,14 @@
+{
+  "UUID": "{{ faker.random.uuid }}",
+  "platform": "Product Executive",
+  "name": "{{ faker.name.last_name }}",
+  "versionBaseOS": "Grocery & Tools",
+  "manufacturer": "{{ faker.vehicle.manufacturer }}",
+  "model": "{{ faker.vehicle.model }}",
+  "isPhysicalDevice": false,
+  "appVersion": "directional cutting-edge",
+  "fcmToken": "Executive open-source",
+  "buildCodeVersion": "infrastructures",
+  "modifiedDate": "1970-01-01T00:14:39.000000988Z",
+  "firebaseId": "{{ faker.random.uuid }}"
+}

@@ -1,0 +1,9 @@
+{
+  "seekerIds": [
+    "Gold Borders",
+    "24/7"
+  ],
+  "preceptorId": "{{ faker.random.uuid }}",
+  "contentId": "396",
+  "contentCategory": "YATRA_GARDEN"
+}

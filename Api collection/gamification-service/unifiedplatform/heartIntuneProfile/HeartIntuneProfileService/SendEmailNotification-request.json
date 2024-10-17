@@ -1,0 +1,32 @@
+{
+  "bcc": [
+    "Assistant",
+    "withdrawal"
+  ],
+  "cc": [
+    "Bhutan maroon",
+    "neural Cambridgeshire Generic Metal Sausages"
+  ],
+  "replyTo": "didactic Points",
+  "to": [
+    "Concrete Sleek Licensed Frozen Chips",
+    "Analyst"
+  ],
+  "subject": "generate",
+  "text": "{{ faker.lorem.text }}",
+  "html": "Multi-layered Generic",
+  "attachments": [
+    {
+      "name": "{{ faker.name.last_name }}",
+      "data": "QXdlc29tZSB0cmFuc21pdHRlciBoYWNr",
+      "contentType": "Fantastic Frozen Table invoice",
+      "contentId": "{{ faker.random.uuid }}"
+    },
+    {
+      "name": "{{ faker.name.last_name }}",
+      "data": "QXdlc29tZSB0cmFuc21pdHRlciBoYWNr",
+      "contentType": "Montana artificial intelligence hard drive",
+      "contentId": "{{ faker.random.uuid }}"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "goalID": "957",
+  "userID": "411",
+  "selectedDateAndTimeWithCalendarEvent": [
+    {
+      "selectedDateAndTime": "1970-01-01T00:05:06.000000965Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "duration": 67,
+      "completedStatus": false,
+      "startTime": "1970-01-01T00:15:57.000000578Z"
+    },
+    {
+      "selectedDateAndTime": "1970-01-01T00:12:44.000000971Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "duration": 270,
+      "completedStatus": false,
+      "startTime": "1970-01-01T00:05:50.000000719Z"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "ID": "749",
+  "userID": "727",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Practical Concrete Bike Forward Books & Computers",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "capacitor",
+  "email": "{{ faker.internet.example_email }}"
+}

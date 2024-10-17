@@ -1,0 +1,23 @@
+{
+  "locale": {
+    "selectedLanguage": "ML",
+    "selectedScreen": "LIVE_SESSION_DETAILS_SCREEN"
+  },
+  "pageable": {
+    "pageSize": 238,
+    "pageNumber": 269
+  },
+  "userId": "516",
+  "min": 779,
+  "max": 251,
+  "isHours": true,
+  "isDays": false,
+  "listOfGoalIds": [
+    "524",
+    "281"
+  ],
+  "hfnProfile": false,
+  "durationInMinutes": 858,
+  "isCustomGoals": false,
+  "newVersion": true
+}

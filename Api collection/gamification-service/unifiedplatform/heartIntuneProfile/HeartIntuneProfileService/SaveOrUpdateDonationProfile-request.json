@@ -1,0 +1,30 @@
+{
+  "userId": "894",
+  "profileId": "{{ faker.random.uuid }}",
+  "firstName": "{{ faker.name.first_name }}",
+  "lastName": "{{ faker.name.last_name }}",
+  "emailAddress": "Credit Card Account",
+  "phoneNumber": "{{ faker.phone.phone_number }}",
+  "addressLine1": "Creative exploit",
+  "addressLine2": "hacking Rustic",
+  "city": "{{ faker.address.city }}",
+  "state": "{{ faker.address.state }}",
+  "postalCode": "{{ faker.address.zip_code }}",
+  "country": "{{ faker.address.country }}",
+  "memberId": "{{ faker.random.uuid }}",
+  "taxId": "{{ faker.random.uuid }}",
+  "citizenshipCountry": "Sleek Wooden Bike",
+  "passportNumber": "{{ faker.random.ushort }}",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "donationIdentity": {
+    "id": "455",
+    "identityNumber": "{{ faker.random.ushort }}",
+    "identityType": "VOTER_ID",
+    "createdAt": "1970-01-01T00:01:28.000000918Z",
+    "modifiedAt": "1970-01-01T00:08:49.000000469Z",
+    "mySrcmDonationProfileId": "367",
+    "mySrcmIdentityType": 744,
+    "mySrcmIdentityName": "index Handcrafted auxiliary"
+  },
+  "mysrcmId": "922"
+}

@@ -1,0 +1,22 @@
+{
+  "event": "tan",
+  "eventTs": "523",
+  "payload": {
+    "accountId": "{{ faker.random.uuid }}",
+    "operator": "AI bricks-and-clicks",
+    "operatorId": "{{ faker.random.uuid }}",
+    "operation": "architecture Architect Refined",
+    "object": {
+      "id": "{{ faker.random.uuid }}",
+      "uuid": "{{ faker.random.uuid }}",
+      "hostId": "{{ faker.random.uuid }}",
+      "topic": "Tasty Wooden Chicken Soft navigating",
+      "type": 443,
+      "startTime": "models",
+      "timezone": "Credit Card Account",
+      "duration": 69,
+      "endTime": "Credit Card Account Cotton Devolved"
+    },
+    "plainToken": "Engineer"
+  }
+}

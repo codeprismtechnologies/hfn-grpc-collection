@@ -1,0 +1,7 @@
+{
+  "pageable": {
+    "pageSize": 821,
+    "pageNumber": 76
+  },
+  "preceptorId": "{{ faker.random.uuid }}"
+}

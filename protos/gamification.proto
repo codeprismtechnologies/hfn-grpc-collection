@@ -1,0 +1,1130 @@
+/**
+ * @author : Godwin Vinny Carole Kati
+ * @created : 22/01/2021, Friday 01:54
+ * @organisation : Codeprism Technologies Pvt Ltd
+**/
+
+
+syntax = 'proto3';
+package unifiedplatform.gamification;
+import 'Badge.proto';
+import 'Goal.proto';
+import 'program.proto';
+import 'common/common.proto';
+import 'google/protobuf/timestamp.proto';
+import 'google/protobuf/wrappers.proto';
+option java_package = "org.heartfulness.unifiedplatform.gamification";
+option java_multiple_files = true;
+
+message Test {
+  string result = 1;
+}
+
+
+message Empty {
+}
+
+message Status {
+  bool status = 1;
+  string  message = 2;
+}
+
+message TestResponse {
+  Test test = 1;
+}
+
+message FileInfo {
+  string name = 1;
+  string format = 2;
+  int64 size = 3;
+  string token = 4;
+  string chunkRange = 5;
+  string objectPath = 6;
+  string type = 7;
+}
+
+message UploadFileRequest {
+  string badgeId = 1;
+  FileInfo info = 2;
+  bytes file = 3;
+}
+
+message UploadFileResponse {
+  int32 code = 1;
+  string range = 2;
+  string url = 3;
+}
+
+message Meditation {
+  heartintune.common.MeditationType meditationType = 1;
+}
+
+message GoalId {
+  int64 goalID = 1;
+  int64 associatedBadgeID = 2;
+}
+
+message ResponseStatus {
+  bool success = 1; //return the status, if saved successfully then true, else false
+}
+
+message RequestGetBadgeByID {
+  int64 badgeID = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+}
+
+message ResponseGoal {
+  goal.Goal goal = 1;
+  badge.Badge badge = 2;
+}
+
+message AllGoals {
+  repeated goal.Goal goal = 1;
+}
+
+message AddNewGoalResponse {
+  int64 createdGoalID = 1;
+}
+
+message GetAllGoalsResponse {
+  repeated ResponseGoal goal = 1;
+}
+
+message GetGoalByIdRequest {
+  int64 id = 1;
+}
+
+message GetGoalByIdRequestWithSelectedLanguage{
+  int64 id = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+}
+
+message DeleteGoalByIdRequest {
+  int64 id = 1;
+}
+
+message DeleteGoalByIdResponse {
+  string message = 1;
+  goal.Goal goal = 2;
+}
+
+message UpdateGoalByIdRequest {
+  int64 id = 1;
+  goal.Goal goal = 2;
+}
+
+message GetBadgeByNameResponse{
+  badge.Badge badge = 1;
+}
+
+message GetBadgeByNameRequest{
+  string badgeName = 1;
+}
+
+message GetBadgeDetailsByNameResponse{
+  badge.BadgeDetails badge = 1;
+}
+
+message ResponseGoalDetails {
+  goal.GoalDetails goal = 1;
+  badge.BadgeDetails badge = 2;
+}
+
+message GetAllGoalDetailsResponse {
+  repeated ResponseGoal goal = 1;
+}
+
+message DeleteGoalDetailsByIdResponse {
+  string message = 1;
+  goal.GoalDetails goal = 2;
+}
+message GetBadgeDetailsByNameRequest{
+  string badgeName = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+}
+message DeleteFileRequest{
+  string imgPath = 1;
+}
+message RequestForGetAllBadgeDetails{
+  heartintune.common.LocaleType selectedLanguage = 1;
+  bool isRequestComingFromV2 = 2;
+}
+message RequestForGetAllGoalDetails{
+  heartintune.common.LocaleType selectedLanguage = 1;
+}
+message RequestPageable{
+  uint32 pageSize = 1;
+  uint32 pageNumber = 2;
+}
+message ResponsePageable{
+  int64 totalCount = 1;
+  uint32 selectedPageSize = 2;
+  uint32 selectedPageNumber = 3;
+}
+
+message GoalInfoV2LocaleResponse{
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  repeated DurationAndRequiredTime durationAndRequiredTime = 4;
+  uint32 requiredDays = 5;
+  heartintune.common.GoalCategory goalCategory = 6;
+  int64 associatedBadgeID = 8;
+  uint32 badgeCount = 9;
+  uint32 duration = 10;
+  double hours = 11;
+  repeated int64 requiredSessionIds = 12;
+  int64 requiredTimes = 13;
+  bool publishGoal = 14;
+  heartintune.common.MeditationCategory meditationCategory = 15;
+}
+
+
+message GoalInfoV2Response{
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  int64 requiredTimes = 4;
+  uint32 requiredDays = 5;
+  heartintune.common.GoalCategory goalCategory = 6;
+  int64 associatedBadgeID = 8;
+  uint32 badgeCount = 9;
+  uint32 duration = 10;
+  double hours = 11;
+  repeated int64 requiredSessionIds = 12;
+  bool publishGoal = 13;
+  heartintune.common.MeditationCategory meditationCategory = 14;
+  string goalTitle = 15;
+  string goalDescription = 16;
+  repeated DurationAndRequiredTime durationAndRequiredTime = 17;
+
+}
+message AddNewGoalInfoV2Request{
+  heartintune.common.Locale title = 1;
+  heartintune.common.Locale description = 2;
+  uint32 requiredTimes = 3;
+  uint32 requiredDays = 4;
+  heartintune.common.GoalCategory goalCategory = 5;
+  int64 associatedBadgeID = 7;
+  uint32 badgeCount = 8;
+  uint32 duration = 9;
+  repeated int64 requiredIDs = 10;
+  bool publishGoal = 11;
+  heartintune.common.MeditationCategory meditationCategory = 12;
+  int64 userId = 13;
+  heartintune.common.LocaleType selectedLanguage = 14;
+  string goalTitle = 15;
+  string goalDescription = 17;
+}
+message updateGoalInfoV2Request{
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  uint32 requiredTimes = 4;
+  uint32 requiredDays = 5;
+  heartintune.common.GoalCategory goalCategory = 6;
+  int64 associatedBadgeID = 8;
+  uint32 badgeCount = 9;
+  uint32 duration = 10;
+  repeated int64 requiredIDs = 11;
+  heartintune.common.MeditationCategory meditationCategory = 12;
+  bool publishGoal = 13;
+  repeated  badge.BadgeDetails badgeWithCount = 14;
+}
+message GetGoalInfoV2Response{
+  GoalInfoV2LocaleResponse goalTypes = 1;
+  badge.Badge badge = 2;
+  int64 userAcceptedGoalsCount = 3;
+  bool isRegistered = 4;
+  repeated  badge.Badge badgeWithCount = 5;
+  int64 missedUsersCount = 6;
+  int64 acceptedUsersCount = 7;
+  int64 completedUsersCount = 8;
+  int64 totalUsersCount = 9;
+  bool completed = 10;
+  int32 percentage = 11;
+}
+message ResponseForGetAllGoalInfoV2{
+  repeated GetGoalInfoV2Response goalTypes = 1;
+  ResponsePageable pageable = 2;
+}
+message DeleteGoalInfoV2ByIdResponse{
+  string message = 1;
+  GoalInfoV2Response goalTypes = 2;
+}
+message GetGoalInfoV2ByIdRequest{
+  int64 id = 1;
+  LocaleType localeType = 2;
+  int64 userId = 3;
+}
+message ID{
+  int64 Id = 1;
+  int64 UserId = 2;
+}
+message LocaleType{
+  heartintune.common.LocaleType selectedLanguage = 1;
+  heartintune.common.Screens selectedScreen = 2;
+}
+
+message GetAllGoalInfoV2Request{
+  LocaleType locale = 1;
+  RequestPageable pageable = 2;
+  int64 userId = 3;
+  int32 min = 4;
+  int32 max = 5;
+  bool isHours = 6;
+  bool isDays = 7;
+  repeated int64 listOfGoalIds = 8;
+  bool hfnProfile = 9;
+  int32 durationInMinutes = 10;
+  bool isCustomGoals = 11;
+  bool newVersion = 12;
+}
+message GetAllGoalInfoV2ResponseForAdminV2{
+  repeated ResponseGoalInfoV2 goalTypes = 1;
+  ResponsePageable pageable = 2;
+}
+message GetAllBadgeDetailsForAdminResponse{
+  repeated badge.BadgeDetails badge = 1;
+  ResponsePageable pageable = 2;
+}
+
+message AddGoalCategoryDetailsRequest{
+  int64 GoalId = 1;
+  int64 UserID = 2;
+  heartintune.common.GoalCategory goalCategory = 4;
+  int64 goalCategoryId = 5;
+}
+
+message GoalCategoryDetailsResponse{
+  int64 id = 1;
+  repeated int64 GoalTypeId = 2;
+  int64 userId = 3;
+  int32 earnedGems = 4;
+  int32 timesCompleted = 5;
+  repeated int64 completedSessionIds = 6;
+  int32 daysCompleted = 7;
+  google.protobuf.Timestamp lastCompletedDate = 8;
+  int32 entryId = 9;
+  repeated int64 entryIds = 10;
+  heartintune.common.GoalStatus goalStatus = 11;
+}
+
+message ResponseForUpdateGoalCategory{
+  int64 goalCategoryId = 1;
+  int64 userId = 2;
+  heartintune.common.GoalCategory goalCategory = 3;
+  heartintune.common.GoalStatus goalStatus = 4;
+  int64 goalId = 5;
+}
+
+message DonationResponseWithLocale{
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  repeated float amounts = 4;
+  string currency = 5;
+  string country = 6;
+  string selectedLanguage = 7;
+}
+
+message DonationCreateRequest{
+  heartintune.common.Locale title = 1;
+  heartintune.common.Locale description = 2;
+  repeated float amounts = 4;
+  string currency = 5;
+  string country = 6;
+  string selectedLanguage = 7;
+}
+
+message DonationDetails{
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  repeated float amounts = 4;
+  string currency = 5;
+  string country = 6;
+  string selectedLanguage = 7;
+}
+
+message ListOfDonationDetailsResponse{
+  repeated DonationDetails donationDetails = 1;
+}
+message AddQuoteRequest{
+  heartintune.common.Locale author = 1;
+  heartintune.common.Locale quote = 2;
+  string tagOne = 3;
+  string tagTwo = 4;
+  string tagThree = 5;
+  string screen = 6;
+}
+message ListOfQuoteDetails{
+  repeated QuoteDetails quoteDetails = 1;
+  ResponsePageable pageable = 2;
+}
+message QuoteDetails{
+  int64 id = 1;
+  heartintune.common.Locale author = 2;
+  heartintune.common.Locale quote = 3;
+  string tagOne = 4;
+  string tagTwo = 5;
+  string tagThree = 6;
+  string screen = 7;
+}
+message ContentLocaleResponse{
+  int64 id = 1;
+  string title = 2;
+  string subtitle = 3;
+  string author = 4;
+  string image = 5;
+  string content = 6;
+  int32 readingTime = 7;
+  google.protobuf.Timestamp createdAt = 8;
+  google.protobuf.Timestamp modifiedAt = 9;
+  string tag = 10;
+  string webViewUrl = 11;
+  heartintune.common.ContentCategory contentCategory = 12;
+  string videoUrl = 13;
+  string featuredImage = 14;
+  string thumbnail = 15;
+  heartintune.common.VideoCategory videoCategory = 16;
+  heartintune.common.FeaturedContent featuredContent = 17;
+  repeated int64 filterIds = 18;
+  heartintune.common.Discover discover = 19;
+  repeated Tag tags = 20;
+  repeated int64 tagIds = 21;
+  heartintune.common.DocumentCategory documentCategory = 22; //added for PDF_ARTICLE and YOUTUBE_VIDEO Category
+  string pdfUrl = 23; //added for PDF_ARTICLE Category
+  string attribute = 24;
+}
+
+message ContentRequest{
+  heartintune.common.Locale title = 1;
+  heartintune.common.Locale subtitle = 2;
+  heartintune.common.Locale author = 3;
+  heartintune.common.Locale content = 4;
+  string image = 5;
+  int32 readingTime = 6;
+  string tag = 7;
+  bool isWebView = 8;
+  string webViewUrl = 9;
+  heartintune.common.ContentCategory contentCategory = 10;
+  heartintune.common.Locale videoUrl = 11;
+  string featureImage = 12;
+  string thumbnail = 13;
+  heartintune.common.VideoCategory videoCategory = 14;
+  heartintune.common.FeaturedContent featuredContent = 15;
+  repeated int64 filterIds = 16;
+  heartintune.common.Discover discover = 17;
+  repeated Tag tags = 18;
+  heartintune.common.DocumentCategory documentCategory = 19; //added for PDF_ARTICLE and YOUTUBE_VIDEO Category
+  string pdfUrl = 20; //added for PDF_ARTICLE Category
+  heartintune.common.Locale attribute = 21;
+}
+
+message ContentResponse{
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale subtitle = 3;
+  heartintune.common.Locale author = 4;
+  heartintune.common.Locale content = 5;
+  string image = 6;
+  int32 readingTime = 7;
+  google.protobuf.Timestamp createdAt = 8;
+  google.protobuf.Timestamp modifiedAt = 9;
+  string tag = 10;
+  string webViewUrl = 11;
+  heartintune.common.ContentCategory contentCategory = 12;
+  heartintune.common.Locale videoUrl = 13;
+  string featureImage = 14;
+  string thumbnail = 15;
+  heartintune.common.VideoCategory videoCategory = 16;
+  heartintune.common.FeaturedContent featuredContent = 17;
+  repeated int64 filterIds = 18;
+  heartintune.common.Discover discover = 19;
+  repeated Tag tags = 20;
+  repeated int64 tagIds = 21;
+  heartintune.common.DocumentCategory documentCategory = 22;
+  string pdfUrl = 23;
+  heartintune.common.Locale attribute = 24;
+}
+
+message ListOfContentResponse{
+  ContentLocaleResponse featuredContent = 1;
+  repeated ContentLocaleResponse daajiTalksVideosList = 2;
+  repeated ContentLocaleResponse allContentList = 3;
+  repeated ContentLocaleResponse articleList = 4;
+  repeated ContentLocaleResponse blogList = 5;
+  ResponsePageable pageable = 6;
+  int64 totalArticleCount = 7;
+  int64 totalBlogsCount = 8;
+  int64 totalVideosCount = 9;
+  repeated ContentLocaleResponse whyIMeditateVideosList = 10;
+  int64 totalWhyIMeditateVideosCount = 11;
+  repeated ContentLocaleResponse pdfArticleList = 12;
+  repeated ContentLocaleResponse youtubeVideosList = 13;
+  int64 totalPdfArticleCount = 14;
+  int64 totalYoutubeVideoCount = 15;
+}
+
+message ListOfAllContentResponse {
+  repeated ContentResponse contentResponse = 1;
+}
+
+message PersonalityQuizLocale{
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  string meterRating = 4;
+}
+
+message PersonalityQuizRequest{
+  heartintune.common.Locale title = 1;
+  heartintune.common.Locale description = 2;
+  string meterRating = 3;
+}
+
+message PersonalityQuizResponse{
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  string meterRating = 4;
+}
+message HelloWorldString{
+  string data = 1;
+}
+
+message ListOfPersonalityQuizResponse{
+  repeated PersonalityQuizResponse PersonalityQuizList = 1;
+}
+
+message ContentCategoryRequest{
+  int64 contentId = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+  heartintune.common.ContentCategory contentCategory = 3;
+  RequestPageable pageable = 4;
+  repeated int64 filterIds = 5;
+}
+
+message ContentCategoriesRequest{
+  heartintune.common.LocaleType selectedLanguage = 1;
+  repeated heartintune.common.ContentCategory contentCategory = 2;
+  repeated heartintune.common.VideoCategory videoCategory = 3;
+  SearchContent searchContent = 4; //Only for PDF_Article and Youtube_Videos category
+  RequestPageable pageable = 5;
+}
+
+message ContentCategoriesResponse{
+  repeated ContentLocaleResponse contentList = 1;
+  int64 totalContentCount = 2;
+  ResponsePageable pageable = 3;
+}
+
+message URLRequest{
+  string url = 1;
+}
+message BulkUploadQuoteResponse{
+  int32 totalQuotes = 1;
+}
+message MoodIdWithSelectedLanguageRequest{
+  int64 Id = 1;
+  heartintune.common.LocaleType localeType = 2;
+}
+message MoodDetailsListWithLocaleResponse{
+  repeated MoodDetailsWithSelectedLanguageResponse moodDetailResponse = 1;
+  int64 totalCount = 2;
+}
+
+message SearchContent {
+  string searchByTitle = 1;
+  heartintune.common.DocumentCategory searchByDocumentCategory = 2;
+}
+
+message GetAllContentRequest{
+  bool getAllContent = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+  RequestPageable pageable = 3;
+}
+
+message GetAllContentResponse{
+  ContentLocaleResponse featuredContent = 1;
+  repeated ContentLocaleResponse articleList = 2;
+  repeated ContentLocaleResponse blogList = 3;
+  repeated ContentLocaleResponse daajiTalksVideosList = 4;
+}
+message ScreenNameRequest{
+  string screenName = 1;
+}
+
+message ContentFilterLocaleResponse{
+  int64 id = 1;
+  string contentFilterName = 2;
+}
+
+message ContentFilterRequest{
+  heartintune.common.Locale contentFilterName = 1;
+}
+
+message  ContentFilterResponse{
+  int64 id = 1;
+  heartintune.common.Locale contentFilterName = 2;
+}
+
+message GetAllContentFilterResponse{
+  repeated ContentFilterLocaleResponse contentFilterLocaleResponse = 1;
+  repeated ContentFilterResponse contentFilterResponse = 2;
+  ResponsePageable pageable = 3;
+}
+message MoodTriggerRequest{
+  heartintune.common.Locale tiggerName = 1;
+  string emoji_url = 2;
+}
+message MoodTriggerResponse{
+  int64 id = 1;
+  heartintune.common.Locale tiggerName = 2;
+  string emoji_url = 3;
+}
+message MoodTriggerLocalResponse{
+  int64 id = 1;
+  string tiggerName = 2;
+  string emoji_url = 3;
+}
+message GetAllMoodTriggerResponse{
+  repeated MoodTriggerResponse moodTriggerResponse = 1;
+  repeated MoodTriggerLocalResponse moodTriggerLocalResponse = 2;
+  ResponsePageable pageable = 3;
+}
+message AddMoodRequest{
+  heartintune.common.Locale name = 1;
+  string associatedColor = 2;
+  heartintune.common.MoodType moodType = 3;
+}
+message MoodDetails{
+  int64 id = 1;
+  heartintune.common.Locale name = 2;
+  string associated_color = 3;
+  heartintune.common.MoodType moodType = 4;
+}
+message ListOfMoodDetailsResponse{
+  repeated MoodDetails moodDetailResponse = 1;
+  int64 totalCount = 2;
+}
+message MoodDetailsWithSelectedLanguageResponse{
+  int64 id = 1;
+  string name = 2;
+  string associated_color = 3;
+  heartintune.common.MoodType moodType = 4;
+}
+message ScreenNameLocaleTypeRequest{
+  string screenName = 1;
+  LocaleType localeType = 2;
+}
+message QuoteDetailsWithLocaleSupport{
+  int64 id = 1;
+  string author = 2;
+  string quote = 3;
+  string tagOne = 4;
+  string tagTwo = 5;
+  string tagThree = 6;
+  string screen = 7;
+}
+
+message FAQsLocaleResponse{
+  int64 id = 1;
+  string FAQs = 2;
+  repeated string FAQsAnswers = 3;
+  string screen = 4;
+  heartintune.common.Screens selectedScreen = 5;
+}
+
+message FAQsRequest{
+  heartintune.common.Locale FAQs = 1;
+  heartintune.common.Locale FAQsAnswers = 2;
+  string screen = 3;
+  heartintune.common.Screens selectedScreen = 4;
+}
+
+message FAQsResponse{
+  int64 id = 1;
+  heartintune.common.Locale FAQs = 2;
+  heartintune.common.Locale FAQsAnswers = 3;
+  string screen = 4;
+  heartintune.common.Screens selectedScreen = 5;
+}
+
+message GetAllFAQsResponse{
+  repeated FAQsResponse faqsAndAnswers = 1;
+  ResponsePageable pageable = 2;
+}
+
+message GetAllFAQsWithLanguageSupportResponse {
+  repeated FAQsLocaleResponse faqsLocaleResponse = 1;
+}
+
+message SelfDevelopmentContentRequest{
+  heartintune.common.Discover discover = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+  RequestPageable pageable = 3;
+  heartintune.common.ContentCategory contentCategory = 4;
+}
+
+message SelfDevelopmentContentResponse{
+  ContentLocaleResponse featured = 1;
+  repeated ContentLocaleResponse videoList = 2;
+  repeated ContentLocaleResponse articleList = 3;
+  repeated ContentLocaleResponse storyList = 4;
+  repeated ContentLocaleResponse bookList = 5;
+  ResponsePageable pageable = 6;
+  repeated ContentLocaleResponse featuredContent = 7;
+  int64 totalArticleCount = 8;
+  int64 totalStoryCount = 9;
+  int64 totalBookCount = 10;
+  int64 totalVideosCount = 11;
+}
+
+message SelfDevelopmentContentResponseWithAllLanguage{
+  repeated ContentResponse videoList = 1;
+  repeated ContentResponse articleList = 2;
+  repeated ContentResponse storyList = 3;
+  repeated ContentResponse bookList = 4;
+  ResponsePageable pageable = 5;
+  repeated ContentResponse featuredContents = 6;
+  int64 totalArticleCount = 7;
+  int64 totalStoryCount = 8;
+  int64 totalBookCount = 9;
+  int64 totalVideosCount = 10;
+}
+
+message Tag{
+  int64 id = 1;
+  string name = 2;
+}
+message TagWithContent{
+  int64 id = 1;
+  string name = 2;
+  repeated ContentResponse contents = 3;
+}
+message TagsList{
+  repeated Tag tags = 1;
+  ResponsePageable pageable = 2;
+}
+message Tags{
+  repeated Tag tags = 1;
+}
+
+message DocumentInfoRequest {
+  int64 content_id = 1;
+  string firebase_id = 2;
+  heartintune.common.ContentCategory contentCategory = 3;
+}
+
+message SharedInfoRequest {
+  RequestPageable pageable = 1;
+  string preceptorId = 2;
+}
+
+message SeekerInfoRequest {
+  repeated string seeker_ids = 1;
+  string preceptor_id = 2;
+  int64 content_id = 3;
+  heartintune.common.ContentCategory contentCategory = 4;
+}
+
+message ListOfAllContentLocaleResponse {
+  repeated ContentLocaleResponse contentLocaleResponse = 1;
+}
+
+
+
+message ContentCategoryWithListOfContentIds{
+  heartintune.common.ContentCategory contentCategory = 1;
+  repeated int64 contentIds = 2;
+  RequestPageable requestPageable = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+}
+message MeditationTrackerStatus{
+  google.protobuf.Timestamp date = 1;
+  heartintune.common.GoalStatus goalStatus = 2;
+  int32 minutes = 3;
+}
+message MeditationTrackerStatusResponse{
+  repeated MeditationTrackerStatus meditationTrackerStatus = 1;
+  int32 totalDurationInMinutes = 2;
+  int32 progressDurationInMinutes = 3;
+  int32 percentCompleted = 4;
+  GoalInfoV2LocaleResponse goalInfo = 5;
+}
+
+message GetAllGoalStatusByUserRequest{
+  int64 userId = 1;
+  heartintune.common.GoalStatus goalStatus = 2;
+  heartintune.common.LocaleType selectLanguage = 3;
+  int64 goalId = 4;
+  PaginationRequest pageable = 6;
+}
+
+message PaginationRequest {
+  int32 pageNumber = 1;
+  int32 pageSize = 2;
+}
+
+message GetGoalStatusCount {
+  int64 userAcceptedGoalCount = 1;
+  int64 userMissedGoalCount = 2;
+  int64 userCompletedGoalCount = 3;
+}
+
+message DurationAndRequiredTime{
+  int64 duration = 1;
+  int64 requiredTimes = 2;
+  int64 userCompletedRequiredTimesCount = 3;
+}
+
+message ResponseGoalInfoV2 {
+  GoalInfoV2Response goalTypes = 1;
+  badge.BadgeDetails badge = 2;
+  int32 day = 3;
+  google.protobuf.Timestamp goalScheduledTime = 4;
+  int64 daysToComplete = 5;
+  double completedGoalPercentage = 6;
+  int64 userCompletedRequiredTimesCount = 7;
+  int32 earnedBadgeCount = 8;
+  repeated SelectedDateAndTimeWithCalendarEvent listOfGoalScheduledDates = 9;
+  int64 totalRegisteredUserCount = 10;
+  bool isRegistered = 11;
+  repeated badge.BadgeDetailsV2 badgeWithCount = 12;
+  badge.BadgeDetailsV2 defaultBadge = 13;
+  int64 associatedId = 14;
+  bool completed = 15;
+  repeated badge.BadgeDetails badges = 16;
+
+}
+
+message GetAllGoalStatusByUserResponse{
+  repeated ResponseGoalInfoV2 responseGoalInfoV2 = 1;
+  int64 totalGoalsCount = 2;
+  heartintune.common.GoalStatus goalStatus = 3;
+  PaginationRequest pageable = 6;
+}
+
+message ListOfIDs {
+  int64 userID = 1;
+  repeated int64 IDs = 2;
+}
+
+message RequestV2GetAllMySignUp{
+  int64 userId = 1;
+  google.protobuf.Timestamp startDateTime = 2;
+  google.protobuf.Timestamp endDateTime = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  RequestPageable pageable = 5;
+}
+
+message ResponseV2GetAllMySignUp{
+  repeated ResponseGoalInfoV2 goalDetailsActiveOnGivenDay = 1;
+}
+message RequestGoalByUserId{
+  int64 userId = 1;
+  int64 goalId = 2;
+  int64 id = 3;
+  heartintune.common.GoalStatus goalStatus = 4;
+  heartintune.common.LocaleType selectedLanguage = 5;
+}
+
+message GetInProgressGoalCardForHomePage{
+  int64 goalId = 1;
+  string goalTitle = 2;
+  int64 day = 3;
+}
+message ListOfGetInProgressGoalCardForHomePage{
+  repeated GetInProgressGoalCardForHomePage getInProgressGoalCardForHomePage = 1;
+}
+
+message RequestToScheduleGoal{
+  int64 goalID = 1;
+  int64 userID = 3;
+  heartintune.common.GoalCategory goalCategory = 4;
+  repeated SelectedDateAndTimeWithCalendarEvent selectedDateAndTimeWithCalendarEvent = 5;
+  heartintune.common.LocaleType selectedLanguage = 6;
+  google.protobuf.Timestamp startOfDay = 18;
+  google.protobuf.Timestamp endOfDay = 19;
+  bool hfn = 20;
+  int64 todaySeconds = 21;
+}
+
+message SelectedDateAndTimeWithCalendarEvent{
+  google.protobuf.Timestamp selectedDateAndTime = 1;
+  string calendarEventId = 2;
+  int32 durationMinutes = 3;
+  bool completedStatus = 4;
+  google.protobuf.Timestamp startTime = 5;
+}
+
+
+message TrackerInfo{
+  int64 id = 1;
+  heartintune.common.MeditationType meditationType = 2;
+  google.protobuf.Timestamp startDate = 3;
+  google.protobuf.Timestamp endDate = 4;
+  int64 playCount = 5;
+  int64 pauseCount = 6;
+  int64 totalSeconds = 7;
+  uint32 completedPercentage = 8;
+  int64 userId = 9;
+  int64 meditationId = 10;
+  int64 liveSessionId = 11;
+  heartintune.common.Activity userActivity = 12;
+  heartintune.common.LogMeditation logMeditationType = 13; // not a mandatory field in any case
+  heartintune.common.MeditationCategory meditationCategory = 14;
+  heartintune.common.LocaleType selectedLanguage = 15;
+  int64 badgeId = 16;
+  int32 badgeCount = 17;
+  google.protobuf.Timestamp startOfDay = 18;
+  google.protobuf.Timestamp endOfDay = 19;
+  int64 goalId = 20;
+}
+message TrackerWithBadge{
+  TrackerInfo trackerInfo = 1;
+  int64 badgeId = 2;
+  string badgeName = 3;
+  string badgeURL = 4;
+  bool goalCompletedStatus = 5;
+  bool donationPopup = 6;
+  string goalTitle = 7;
+  uint32 badgeCount = 8;
+  repeated badge.BadgeDetailsV2 badgeDetailsV2 = 9;
+  int64 completedGoalId = 10;
+}
+message CustomGoalRequest{
+  RequestToScheduleGoal scheduleV2 = 1;
+  AddNewGoalInfoV2Request goalDetails = 2;
+}
+message CustomGoalResponse{
+  ResponseGoalInfoV2 responseGoalInfoV2 = 1;
+  Status status = 2;
+}
+message MeditationCategoryForDate{
+  int64 userId = 1;
+  google.protobuf.Timestamp date = 2;
+  repeated heartintune.common.MeditationCategory meditationCategoryList = 3;
+}
+
+message RequestUserWeeklyStats{
+  int64 UserId = 1;
+  google.protobuf.Timestamp currentDate = 2;
+  int32 noOfdays = 3;
+}
+
+message IdAndSelectedLanguageRequest {
+  int64 id = 1;
+  int64 userId = 2;
+  heartintune.common.LocaleType selectedLanguage = 4;
+}
+
+message RequestBetweenDates {
+  int64 userId = 1;
+  google.protobuf.Timestamp startDateTime = 2;
+  google.protobuf.Timestamp endDateTime = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  RequestPageable pageable = 5;
+}
+
+message GetUserBadgesByMeditationHoursRequest {
+  int64 totalSeconds = 1;
+  int64 userId = 2;
+  heartintune.common.LocaleType selectedLanguage = 3;
+}
+
+message CampaignDetails {
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  bool isActive = 4;
+  repeated int32 listOfDays = 5;
+  int32 donationPeriod = 6;
+}
+
+message CampaignDetailsList {
+  repeated CampaignDetails campaignDetails = 1;
+}
+
+message CampaignChannelDetails {
+  int64 id = 1;
+  int64 campaignId = 2;
+  heartintune.common.Channel channel = 3;
+  heartintune.common.Locale template = 4;
+  int32 day = 5;
+  string deepLink = 6;
+  heartintune.common.Locale notificationTitle = 7;
+  string screenName = 8;
+}
+
+message CampaignChannelDetailsList {
+  repeated CampaignChannelDetails campaignChannelDetails = 1;
+}
+
+service GamificationService {
+  rpc Test (Empty) returns (TestResponse) {};
+  rpc AddNewBadge (badge.AddNewBadgeRequest) returns (badge.Badge) {};
+  rpc GetAllBadges (Empty) returns (badge.GetAllBadgesResponse) {};
+  rpc DeleteBadgeById (badge.DeleteBadgeByIdRequest) returns (badge.DeleteBadgeByIdResponse) {};
+  rpc UpdateBadgeById (badge.UpdateBadgeByIdRequest) returns (badge.Badge) {};
+  rpc FindDefaultBadge (Empty) returns (badge.Badge) {};
+  rpc AddNewGoal (goal.AddNewGoalRequest) returns (ResponseGoal) {};
+  rpc UpdateGoal (goal.Goal) returns (ResponseGoal) {};
+  rpc GetAllGoals(Empty) returns (GetAllGoalsResponse) {};
+  rpc DeleteGoalByID (DeleteGoalByIdRequest) returns (DeleteGoalByIdResponse) {}; // TODO relationship between Badge and Goal is oneToOne, but this may change later
+  rpc UploadFile (UploadFileRequest) returns (UploadFileResponse) {};
+  rpc DeleteFileFromGCP(DeleteFileRequest) returns (ResponseStatus) {};
+  rpc GetBadgeByID (RequestGetBadgeByID) returns (badge.Badge) {};
+  rpc GetGoalByID (GetGoalByIdRequest) returns (ResponseGoal) {};
+  rpc GetBadgeByName(GetBadgeByNameRequest) returns (GetBadgeByNameResponse) {} ;
+
+  rpc AddNewBadgeInfo(badge.AddNewBadgeInfoRequest) returns (badge.BadgeDetails) {};
+  rpc UpdateBadgeInfoById (badge.BadgeDetails) returns (badge.BadgeDetails) {};
+  rpc DeleteBadgeDetailsById (badge.DeleteBadgeByIdRequest) returns (badge.DeleteBadgeDetailsByIdResponse) {};
+  rpc GetBadgeDetailsByID (RequestGetBadgeByID) returns (badge.Badge) {};
+  rpc GetBadgeDetailsByName(GetBadgeDetailsByNameRequest) returns (GetBadgeByNameResponse) {} ;
+  rpc GetAllBadgesDetails (RequestForGetAllBadgeDetails) returns (badge.GetAllBadgesDetailsResponse) {};
+
+  rpc AddNewGoalDetails (goal.AddNewGoalDetailsRequest) returns (ResponseGoalDetails) {};
+  rpc UpdateGoalDetails (goal.GoalDetails) returns (ResponseGoalDetails) {};
+  rpc GetAllGoalsDetails(RequestForGetAllGoalDetails) returns (GetAllGoalDetailsResponse) {};
+  rpc GetAllDefaultGoalDetails(Empty) returns (GetAllGoalDetailsResponse) {};
+  rpc DeleteGoalDetailsByID (DeleteGoalByIdRequest) returns (DeleteGoalDetailsByIdResponse) {};
+  rpc GetGoalDetailsByID (GetGoalByIdRequestWithSelectedLanguage) returns (ResponseGoal) {};
+
+  rpc AddNewGoalInfoV2(AddNewGoalInfoV2Request) returns (ResponseGoalInfoV2) {};
+  rpc UpdateGoalInfoV2(updateGoalInfoV2Request) returns (ResponseGoalInfoV2) {};
+  rpc GetAllGoalInfoV2(GetAllGoalInfoV2Request) returns (ResponseForGetAllGoalInfoV2) {};
+
+  rpc DeleteGoalInfoV2ByID(ID) returns (DeleteGoalInfoV2ByIdResponse) {};
+  rpc GetGoalInfoV2ById(GetGoalInfoV2ByIdRequest) returns (GetGoalInfoV2Response) {};
+  rpc GetAllGoalInfoV2ForAdminV2(RequestPageable) returns (GetAllGoalInfoV2ResponseForAdminV2) {};
+  rpc GetAllBadgeInfoDetailsForAdmin(RequestPageable) returns (GetAllBadgeDetailsForAdminResponse) {};
+  rpc AddGoalCategory(AddGoalCategoryDetailsRequest) returns (GoalCategoryDetailsResponse) {};
+  rpc UpdateGoalCategory(ResponseForUpdateGoalCategory) returns (Status) {};
+  rpc GetAllGoalStatusByUser(GetAllGoalStatusByUserRequest) returns (GetAllGoalStatusByUserResponse) {};
+  rpc GetGoalCountByUser(ID) returns (GetGoalStatusCount) {};
+  rpc GetUserAcceptedGoalIds(GetAllGoalStatusByUserRequest) returns (ListOfIDs) {};
+  rpc EndGoalById(ID) returns (Status) {}
+  rpc CreateDonation(DonationCreateRequest) returns (DonationDetails) {};
+  rpc UpdateDonation(DonationDetails) returns (DonationDetails) {};
+  rpc DeleteDonationByID(ID) returns (ResponseStatus) {};
+  rpc GetDonationByID(GetGoalInfoV2ByIdRequest) returns (DonationResponseWithLocale) {};
+  rpc GetAllDonationDetailsForAdmin(RequestPageable) returns (ListOfDonationDetailsResponse) {};
+  rpc DeleteGoalCategoryById(AddGoalCategoryDetailsRequest) returns (Status){};
+
+  rpc AddMoodDetails(AddMoodRequest) returns (Status) {};
+  rpc GetAllMoodDetails(Empty) returns (ListOfMoodDetailsResponse) {};
+  rpc UpdateMoodDetails(MoodDetails) returns (MoodDetails) {};
+  rpc DeleteMood(ID) returns (Status){};
+  rpc GetMoodDetailsByID(ID) returns (MoodDetails){};
+  rpc GetMoodDetailsByIDWithLocale(MoodIdWithSelectedLanguageRequest) returns (MoodDetailsWithSelectedLanguageResponse){};
+  rpc GetAllMoodListWithSelectedLanguage(LocaleType) returns (MoodDetailsListWithLocaleResponse){};
+
+  rpc AddContent(ContentRequest) returns (ContentResponse) {};
+  rpc UpdateContent(ContentResponse) returns (ContentResponse) {};
+  rpc GetContentByID(GetGoalByIdRequestWithSelectedLanguage) returns (ContentLocaleResponse) {};
+  rpc DeleteContentByIDAndCategory(ContentCategoryRequest) returns (Status) {};
+  rpc GetAllContent(GetAllContentRequest) returns (ListOfContentResponse) {};
+  rpc GetContentByCategoryAndId(ContentCategoryRequest) returns (ContentLocaleResponse) {};
+  rpc GetContentByCategory(ContentCategoryRequest) returns (ListOfContentResponse) {};
+  rpc GetSelfDevelopmentContentByCategory(SelfDevelopmentContentRequest) returns (SelfDevelopmentContentResponse) {};
+  rpc GetSelfDevelopmentContentWithAllLanguage(SelfDevelopmentContentRequest) returns (SelfDevelopmentContentResponseWithAllLanguage) {};
+  rpc GetContentByCategories(ContentCategoriesRequest) returns (ContentCategoriesResponse);
+  rpc AddPersonalityQuiz(PersonalityQuizRequest) returns (PersonalityQuizResponse) {};
+  rpc UpdatePersonalityQuiz(PersonalityQuizResponse) returns (PersonalityQuizResponse) {};
+  rpc GetPersonalityQuizByID(GetGoalByIdRequestWithSelectedLanguage) returns (PersonalityQuizLocale) {};
+  rpc GetAllPersonalityQuiz(RequestPageable) returns (ListOfPersonalityQuizResponse) {};
+  rpc DeletePersonalityQuizByID(DeleteGoalByIdRequest) returns (Status) {};
+
+
+  rpc AddQuotes(AddQuoteRequest) returns (Status){};
+  rpc GetAllQuotes(RequestPageable) returns (ListOfQuoteDetails){};
+  rpc UpdateQuotes(QuoteDetails) returns (QuoteDetails) {};
+  rpc DeleteQuotes(ID) returns (Status) {};
+  rpc BulkUploadQuotes(URLRequest) returns (BulkUploadQuoteResponse) {};
+  rpc GetQuoteById(ID) returns (QuoteDetails) {};
+
+
+  rpc GetQuoteByRandom(Empty) returns (QuoteDetails){};
+  rpc GetQuoteByScreenName(ScreenNameRequest) returns(QuoteDetails){};
+
+  rpc AddContentFilter(ContentFilterRequest) returns (ContentFilterResponse) {};
+  rpc UpdateContentFilter(ContentFilterResponse) returns (ContentFilterResponse) {};
+  rpc DeleteContentFilter(ID) returns (Status) {};
+  rpc GetAllContentFilter(LocaleType) returns (GetAllContentFilterResponse) {};
+  rpc GetAllContentFilterForAdmin(RequestPageable) returns (GetAllContentFilterResponse) {};
+
+  rpc AddMoodTrigger(MoodTriggerRequest) returns (MoodTriggerResponse) {};
+  rpc UpdateMoodTrigger(MoodTriggerResponse) returns (MoodTriggerResponse) {};
+  rpc DeleteMoodTrigger(ID) returns (Status) {};
+  rpc GetAllMoodTrigger(LocaleType) returns (GetAllMoodTriggerResponse) {};
+  rpc GetAllMoodTriggerForAdmin(RequestPageable) returns (GetAllMoodTriggerResponse) {};
+
+  rpc GetQuoteByRandomWithLocale(LocaleType) returns (QuoteDetailsWithLocaleSupport){};
+  rpc GetQuoteByScreenNameWithLocale(ScreenNameLocaleTypeRequest) returns(QuoteDetailsWithLocaleSupport){};
+
+  rpc AddFAQs(FAQsRequest) returns (FAQsResponse) {};
+  rpc UpdateFAQs(FAQsResponse) returns (FAQsResponse) {};
+  rpc DeleteFAQsByID(ID) returns (Status) {};
+  rpc GetAllFAQs(RequestPageable) returns (GetAllFAQsResponse) {};
+  rpc GetAllFAQsWithLanguageSupport(LocaleType) returns (GetAllFAQsWithLanguageSupportResponse) {};
+  rpc CreateOrUpdateContentTags(Tag) returns (Tag){};
+  rpc GetAllContentTags(RequestPageable) returns(TagsList){};
+  rpc GetContentByTag(Tag) returns(TagWithContent){};
+  rpc AddOrUpdateMultipleTags(Tags)returns(Tags){};
+
+  rpc GetRecentlySharedDocumentsForPreceptor(SharedInfoRequest) returns (ListOfAllContentLocaleResponse) {};
+  rpc ShareDocumentToSeekers(SeekerInfoRequest) returns (google.protobuf.BoolValue) {};
+
+  rpc GetListOfContentByIdsAndContentCategories(ContentCategoryWithListOfContentIds) returns (ListOfContentResponse) {};
+
+  rpc DeleteGoalsByUserId(ID) returns (Status) {};
+  rpc ScheduleGoal(RequestToScheduleGoal) returns (Status) {};
+  rpc LogMeditation(TrackerInfo) returns (TrackerWithBadge) {};
+  rpc UpdateUserTrackerDetailsV2(TrackerInfo) returns (TrackerWithBadge) {};
+  rpc CreateCustomGoals(CustomGoalRequest) returns (CustomGoalResponse){};
+  rpc GetAllGoalsForMySignUpV2(RequestV2GetAllMySignUp)returns(ResponseV2GetAllMySignUp){};
+  rpc GetMeditationCategoryForDate(MeditationCategoryForDate) returns (MeditationCategoryForDate){};
+  rpc GetGoalCardsForHomePage(RequestV2GetAllMySignUp) returns (GetAllGoalStatusByUserResponse){};
+  rpc MeditationTrackerStatusById(RequestGoalByUserId) returns (MeditationTrackerStatusResponse){};
+  rpc GetGoalStatusByUserId(RequestGoalByUserId) returns (ResponseGoalInfoV2){};
+  rpc GetWeeklyStatsForGoals(RequestUserWeeklyStats) returns (GetGoalStatusCount){};
+
+  rpc CreateProgram(program.ProgramDetails) returns (program.ProgramDetails) {};
+  rpc UpdateProgram(program.ProgramDetails) returns (program.ProgramDetails) {};
+  rpc GetProgramById(IdAndSelectedLanguageRequest) returns (program.ProgramWithSelectedLanguage) {};
+  rpc DeleteProgram(ID) returns (program.ProgramDetails) {};
+  rpc GetAllPrograms(program.GetAllProgramsRequest) returns (program.ProgramList) {};
+
+  rpc RegisterProgram(program.RegisterProgram) returns (Status) {};
+  rpc IsUserRegisteredForProgram(ID) returns (Status) {};
+
+  rpc CreateTask(program.TaskDetails) returns (program.TaskDetails) {};
+  rpc UpdateTask(program.TaskDetails) returns (program.TaskDetails) {};
+  rpc GetTaskById(IdAndSelectedLanguageRequest) returns (program.TaskWithSelectedLanguage) {};
+  rpc DeleteTask(ID) returns (program.TaskDetails) {};
+  rpc GetTaskList(heartintune.common.RequestPageable) returns (program.ListOfTask) {};
+  rpc GetTaskListBetweenDates(RequestBetweenDates) returns (program.ListOfTask) {};
+  rpc AddProgramTaskTrackerDetails(program.ProgramTaskTrackerDetails) returns (program.ProgramTaskTrackerDetails) {};
+  rpc GetProgramWithTasksAndTheme(program.ProgramWithTaskAndThemeRequest) returns(program.ProgramWithTaskAndTheme){};
+
+  rpc CreateTheme(program.ThemeDetails) returns (program.ThemeDetails);
+  rpc UpdateTheme(program.ThemeDetails) returns (program.ThemeDetails);
+  rpc DeleteTheme(ID) returns (program.ThemeDetails);
+  rpc GetThemeById(ID) returns (program.ThemeDetails);
+  rpc GetAllThemes(program.GetAllThemesRequest) returns (program.ThemeList);
+  rpc GetUserBadgesByMeditationHours(GetUserBadgesByMeditationHoursRequest) returns (badge.GetAllBadgesDetailsResponse) {};
+
+  rpc CreateCampaign(CampaignDetails) returns (CampaignDetails) {};
+  rpc UpdateCampaign(CampaignDetails) returns (CampaignDetails) {};
+  rpc GetAllCampaign(CampaignDetails) returns (CampaignDetailsList) {};
+  rpc DeleteCampaign(ID) returns (Status) {};
+
+  rpc CreateCampaignChannel(CampaignChannelDetails) returns (CampaignChannelDetails) {};
+  rpc UpdateCampaignChannel(CampaignChannelDetails) returns (CampaignChannelDetails) {};
+  rpc GetAllCampaignChannel(ID) returns (CampaignChannelDetailsList) {};
+  rpc DeleteCampaignChannel(ID) returns (Status) {};
+}

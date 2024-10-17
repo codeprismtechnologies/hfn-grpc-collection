@@ -1,0 +1,88 @@
+{
+  "scheduleV2": {
+    "goalID": "113",
+    "userID": "483",
+    "goalCategory": "GUIDED_MEDITATION",
+    "selectedDateAndTimeWithCalendarEvent": [
+      {
+        "selectedDateAndTime": "1970-01-01T00:14:54.000000122Z",
+        "calendarEventId": "{{ faker.random.uuid }}",
+        "durationMinutes": 41,
+        "completedStatus": false,
+        "startTime": "1970-01-01T00:12:37.000000644Z"
+      },
+      {
+        "selectedDateAndTime": "1970-01-01T00:04:55.000000262Z",
+        "calendarEventId": "{{ faker.random.uuid }}",
+        "durationMinutes": 595,
+        "completedStatus": false,
+        "startTime": "1970-01-01T00:03:00.000000956Z"
+      }
+    ],
+    "selectedLanguage": "FR",
+    "hfn": false,
+    "todaySeconds": "413"
+  },
+  "goalDetails": {
+    "title": {
+      "defaultContent": "Path Canadian Dollar paradigms",
+      "en": "magenta Frozen",
+      "hi": "Curve web-enabled Developer",
+      "te": "Home Loan Account end-to-end Maryland",
+      "gu": "Incredible Horizontal matrix",
+      "ta": "Locks TCP",
+      "ka": "Open-architected Handcrafted Cambridgeshire",
+      "mr": "heuristic",
+      "it": "benchmark deposit",
+      "ru": "input tan Principal",
+      "es": "Engineer",
+      "fr": "Malaysian Ringgit",
+      "pt": "bleeding-edge",
+      "de": "Integrated",
+      "bn": "communities Granite",
+      "ml": "back-end Bedfordshire Vista",
+      "uk": "Viaduct Games connect",
+      "od": "Handcrafted Metal Computer azure",
+      "enUs": "multi-byte Meadow",
+      "enAu": "cutting-edge cross-platform payment"
+    },
+    "description": {
+      "defaultContent": "Electronics & Electronics",
+      "en": "customized Producer feed",
+      "hi": "Multi-lateral",
+      "te": "Vista Cambridgeshire Automated",
+      "gu": "invoice",
+      "ta": "Identity encompassing",
+      "ka": "Concrete Dynamic",
+      "mr": "Designer bi-directional",
+      "it": "paradigm",
+      "ru": "Tunisian Dinar bypass",
+      "es": "matrix Hollow Response",
+      "fr": "override silver Cambridgeshire",
+      "pt": "De-engineered Rustic Fresh Salad",
+      "de": "primary",
+      "bn": "PCI Handcrafted Plastic Chicken Buckinghamshire",
+      "ml": "Concrete Parkway analyzer",
+      "uk": "Divide",
+      "od": "website",
+      "enUs": "Tasty",
+      "enAu": "Garden, Industrial & Beauty Ergonomic Concrete Pants sky blue"
+    },
+    "requiredTimes": 569,
+    "requiredDays": 696,
+    "goalCategory": "PURPOSEFUL_MEDITATION",
+    "associatedBadgeID": "801",
+    "badgeCount": 644,
+    "duration": 547,
+    "requiredIDs": [
+      "961",
+      "678"
+    ],
+    "publishGoal": true,
+    "meditationCategory": "GUIDANCE_MEDITATION",
+    "userId": "953",
+    "selectedLanguage": "TA",
+    "goalTitle": "Handcrafted Wooden Shirt",
+    "goalDescription": "Sleek Metal Tuna"
+  }
+}

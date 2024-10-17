@@ -1,0 +1,12 @@
+{
+  "id": "996",
+  "cardData": "protocol system-worthy",
+  "isPublished": false,
+  "selectedLanguage": "UNKNOWN_TYPE",
+  "type": "{{ faker.database.type }}",
+  "sortOrder": 534,
+  "createdBy": "Representative bus hierarchy",
+  "createdDate": "1970-01-01T00:06:26.000000975Z",
+  "updatedDate": "1970-01-01T00:06:33.000000586Z",
+  "version": 85
+}

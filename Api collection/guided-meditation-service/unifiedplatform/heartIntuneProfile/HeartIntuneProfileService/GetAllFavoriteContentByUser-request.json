@@ -1,0 +1,10 @@
+{
+  "userId": "983",
+  "contentId": "986",
+  "contentCategory": "BOOKS",
+  "selectedLanguage": "UK",
+  "paginationRequest": {
+    "pageNumber": 25,
+    "pageSize": 214
+  }
+}

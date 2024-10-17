@@ -1,0 +1,13 @@
+{
+  "userId": "505",
+  "name": "{{ faker.name.last_name }}",
+  "email": "{{ faker.internet.example_email }}",
+  "phoneNumber": "{{ faker.phone.phone_number }}",
+  "pageable": {
+    "pageSize": 629,
+    "pageNumber": 965
+  },
+  "isMyCircle": false,
+  "isLastActivity": true,
+  "inviteStatus": "HOLD"
+}

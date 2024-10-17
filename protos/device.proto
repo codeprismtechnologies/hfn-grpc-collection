@@ -1,0 +1,44 @@
+// Version of syntax used in this proto file is proto3
+syntax = 'proto3';
+package unifiedplatform.heartIntuneProfile.device;
+option java_package = "org.heartfulness.unifiedplatform.heartIntuneProfile.device";
+option java_multiple_files = true;
+import 'google/protobuf/timestamp.proto';
+
+// User's device info form which user is logged in
+message Device{
+  int64 id = 1;
+  string UUID = 2;
+  string platform = 3;
+  string name = 4;
+  string versionBaseOS = 5;
+  string manufacturer = 6;
+  string model = 7;
+  bool isPhysicalDevice = 8;
+  string appVersion = 9;
+  string fcmToken = 10;
+  string buildCodeVersion = 11;
+  google.protobuf.Timestamp createdDate = 12;
+  google.protobuf.Timestamp modifiedDate = 13;
+  string firebaseId = 14;
+}
+
+message DeviceRequest {
+  string UUID = 1;
+  string platform = 2;
+  string name = 3;
+  string versionBaseOS = 4;
+  string manufacturer = 5;
+  string model = 6;
+  bool isPhysicalDevice = 7;
+  string appVersion = 8;
+  string fcmToken = 9;
+  string buildCodeVersion = 10;
+  google.protobuf.Timestamp modifiedDate = 11;
+  string firebaseId = 12;
+}
+
+message ListOfDevices {
+  repeated Device deviceList = 1;
+}
+

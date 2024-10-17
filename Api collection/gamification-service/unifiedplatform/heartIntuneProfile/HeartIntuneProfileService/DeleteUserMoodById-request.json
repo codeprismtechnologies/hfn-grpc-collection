@@ -1,0 +1,9 @@
+{
+  "ID": "276",
+  "userID": "729",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "project Shore",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Creative Berkshire Fantastic Rubber Mouse",
+  "email": "{{ faker.internet.example_email }}"
+}

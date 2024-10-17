@@ -1,0 +1,12 @@
+{
+  "id": "881",
+  "cardData": "Auto Loan Account Practical",
+  "isPublished": true,
+  "selectedLanguage": "FR",
+  "type": "{{ faker.database.type }}",
+  "sortOrder": 125,
+  "createdBy": "SSL Home Loan Account Cotton",
+  "createdDate": "1970-01-01T00:11:51.000000089Z",
+  "updatedDate": "1970-01-01T00:02:42.000000164Z",
+  "version": 523
+}

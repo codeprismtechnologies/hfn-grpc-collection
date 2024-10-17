@@ -1,0 +1,78 @@
+// Version of syntax used in this proto file is proto3
+syntax = 'proto3';
+package unifiedplatform.heartIntuneProfile.journal;
+option java_package = "org.heartfulness.unifiedplatform.heartIntuneProfile.journal";
+option java_multiple_files = true;
+
+import 'google/protobuf/timestamp.proto';
+import 'common/common.proto';
+
+message RequestJournal{
+  string journal = 1;
+  google.protobuf.Timestamp createdAt = 2;
+  bool archiveStatus = 3;
+  bool favourite = 4;
+  int64 userID = 5;
+  heartintune.common.JournalType journalType = 6;
+}
+
+message JournalInfo{
+  int64 id=1;
+  string journal = 2;
+  google.protobuf.Timestamp createdAt = 3;
+  google.protobuf.Timestamp modifiedAt = 4;
+  bool archiveStatus=5;
+  bool favourite = 6;
+  int64 userID = 7;
+  heartintune.common.JournalType journalType = 8;
+  repeated MoodDetailsAndTriggers moodDetailsAndTriggers = 9;
+}
+
+message RequestJournalId{
+  int64 journalId=1;
+}
+
+message RequestJournalDateRange{
+  google.protobuf.Timestamp fromDate = 1;
+  google.protobuf.Timestamp toDate = 2;
+  int64 userID = 3;
+  string email = 4;
+  string searchJournalsBy = 5;
+  heartintune.common.LocaleType selectedLanguage = 6;
+}
+
+message ListOfJournals{
+  repeated JournalInfo journalList = 1;
+  int32 selectedPageNumber = 2;
+  int32 selectedPageSize = 3;
+  int64 totalCount = 4;
+}
+
+message RequestJournalFavoriteStatus{
+  int64 journalId = 1;
+  bool favourite = 2;
+}
+
+message RequestJournalArchiveStatus{
+  int64 journalId = 1;
+  bool archive = 2;
+}
+message MoodDetailsAndTriggers{
+  MoodDetails moodDetails = 1;
+  repeated TriggerDetails triggerDetails = 2;
+}
+message MoodDetails{
+  int64 moodId = 1;
+  string associatedColor = 2;
+  string moodName = 3;
+  heartintune.common.MoodType moodType = 4;
+}
+message TriggerDetails{
+  int64 triggerId = 1;
+  string emoji_url = 2;
+  string triggerName = 3;
+}
+
+message SaveListOfJournalsRequest{
+  repeated RequestJournal requestJournal = 1;
+}

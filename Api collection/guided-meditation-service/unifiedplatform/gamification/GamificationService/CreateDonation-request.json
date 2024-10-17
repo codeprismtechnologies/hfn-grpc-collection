@@ -1,0 +1,53 @@
+{
+  "title": {
+    "defaultContent": "Mews Throughway wireless",
+    "en": "forecast synthesize modular",
+    "hi": "neural Outdoors",
+    "te": "Auto Loan Account",
+    "gu": "Way incremental Sri Lanka Rupee",
+    "ta": "Small Rubber Bacon Profit-focused Denar",
+    "ka": "eyeballs Incredible Personal Loan Account",
+    "mr": "Rustic Plastic Bacon Lake Data",
+    "it": "Washington primary payment",
+    "ru": "Hollow Direct invoice",
+    "es": "Practical Frozen Pizza monetize",
+    "fr": "Strategist bypass Kwacha",
+    "pt": "bypassing Associate Malagasy Ariary",
+    "de": "whiteboard leverage Fantastic Steel Towels",
+    "bn": "Maryland calculate Cambridgeshire",
+    "ml": "navigate",
+    "uk": "payment global",
+    "od": "Accounts Directives",
+    "enUs": "Vista",
+    "enAu": "Expressway content"
+  },
+  "description": {
+    "defaultContent": "Markets Creative Automotive",
+    "en": "Associate",
+    "hi": "program",
+    "te": "Checking Account Facilitator programming",
+    "gu": "deploy Estates haptic",
+    "ta": "View contingency",
+    "ka": "approach Organized Turks and Caicos Islands",
+    "mr": "Colorado",
+    "it": "Operations Tasty Danish Krone",
+    "ru": "efficient Islands",
+    "es": "paradigm Consultant Associate",
+    "fr": "Handcrafted Montana",
+    "pt": "scale",
+    "de": "payment visionary",
+    "bn": "Borders",
+    "ml": "e-commerce Iranian Rial XML",
+    "uk": "Corporate Spain Valleys",
+    "od": "card efficient",
+    "enUs": "Dynamic incentivize Savings Account",
+    "enAu": "Handcrafted Frozen Computer white"
+  },
+  "amounts": [
+    481.20587,
+    954.5352
+  ],
+  "currency": "{{ faker.finance.currency }}",
+  "country": "{{ faker.address.country }}",
+  "selectedLanguage": "Synergized"
+}

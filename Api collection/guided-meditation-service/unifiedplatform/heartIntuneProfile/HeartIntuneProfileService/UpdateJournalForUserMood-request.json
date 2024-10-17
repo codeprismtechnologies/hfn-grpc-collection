@@ -1,0 +1,57 @@
+{
+  "id": "693",
+  "userID": "580",
+  "journalInfo": {
+    "id": "957",
+    "journal": "Handmade Plastic Shirt",
+    "createdAt": "1970-01-01T00:12:17.000000949Z",
+    "modifiedAt": "1970-01-01T00:15:26.000000754Z",
+    "archiveStatus": true,
+    "favourite": false,
+    "userID": "73",
+    "journalType": "OFFLINE_JOURNAL",
+    "moodDetailsAndTriggers": [
+      {
+        "moodDetails": {
+          "moodId": "656",
+          "associatedColor": "Unions",
+          "moodName": "optimize Aruban Guilder Texas",
+          "moodType": "UNKNOWN_MOOD_TYPE"
+        },
+        "triggerDetails": [
+          {
+            "triggerId": "505",
+            "emojiUrl": "JSON",
+            "triggerName": "Cotton Data"
+          },
+          {
+            "triggerId": "659",
+            "emojiUrl": "withdrawal",
+            "triggerName": "multi-byte Practical Metal Soap"
+          }
+        ]
+      },
+      {
+        "moodDetails": {
+          "moodId": "723",
+          "associatedColor": "Checking Account Practical Rubber Soap",
+          "moodName": "Concrete New York",
+          "moodType": "MOOD_SAD"
+        },
+        "triggerDetails": [
+          {
+            "triggerId": "517",
+            "emojiUrl": "end-to-end calculating",
+            "triggerName": "Tasty Cotton Soap Fantastic Plastic Cheese"
+          },
+          {
+            "triggerId": "277",
+            "emojiUrl": "Cotton Investment Account",
+            "triggerName": "Human"
+          }
+        ]
+      }
+    ]
+  },
+  "selectedLanguage": "GU"
+}

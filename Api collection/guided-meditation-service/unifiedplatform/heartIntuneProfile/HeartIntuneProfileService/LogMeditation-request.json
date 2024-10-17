@@ -1,0 +1,18 @@
+{
+  "id": "57",
+  "meditationType": "MEDITATE_WITH_PRECEPTOR",
+  "startDate": "1970-01-01T00:07:52.000000571Z",
+  "endDate": "1970-01-01T00:01:04.000000802Z",
+  "playCount": "752",
+  "pauseCount": "477",
+  "totalSeconds": "166",
+  "completedPercentage": 566,
+  "userId": "743",
+  "meditationId": "635",
+  "liveSessionId": "963",
+  "userActivity": "SHARE_LIVE_MEDITATION_ACTIVITY",
+  "logMeditationType": "OFFLINE",
+  "meditationCategory": "PRAYER_MEDITATION",
+  "liveMeditationRating": "UNKNOWN_RATING",
+  "logMeditation": "EXTERNAL_APP"
+}

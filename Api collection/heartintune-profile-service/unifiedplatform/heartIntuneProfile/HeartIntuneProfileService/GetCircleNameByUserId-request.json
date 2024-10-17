@@ -1,0 +1,9 @@
+{
+  "ID": "393",
+  "userID": "337",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Money Market Account Fresh",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Communications",
+  "email": "{{ faker.internet.example_email }}"
+}

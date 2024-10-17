@@ -1,0 +1,22 @@
+{
+  "goalID": "425",
+  "userID": "697",
+  "goalCategory": "OFFLINE_HEARTFULNESS_PRACTICE",
+  "selectedDateAndTimeWithCalendarEvent": [
+    {
+      "selectedDateAndTime": "1970-01-01T00:00:14.000000019Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "duration": 421,
+      "completedStatus": true,
+      "startTime": "1970-01-01T00:12:36.000000659Z"
+    },
+    {
+      "selectedDateAndTime": "1970-01-01T00:00:04.000000454Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "duration": 74,
+      "completedStatus": true,
+      "startTime": "1970-01-01T00:08:11.000000183Z"
+    }
+  ],
+  "selectedLanguage": "TE"
+}

@@ -1,0 +1,9 @@
+{
+  "ID": "873",
+  "userID": "577",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "pixel",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "hack Garden, Music & Jewelery monetize",
+  "email": "{{ faker.internet.example_email }}"
+}

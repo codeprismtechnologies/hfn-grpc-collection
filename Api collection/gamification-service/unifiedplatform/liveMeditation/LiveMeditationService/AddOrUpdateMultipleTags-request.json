@@ -1,0 +1,12 @@
+{
+  "tags": [
+    {
+      "id": "786",
+      "name": "{{ faker.name.last_name }}"
+    },
+    {
+      "id": "330",
+      "name": "{{ faker.name.last_name }}"
+    }
+  ]
+}

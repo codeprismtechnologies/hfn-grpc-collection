@@ -1,0 +1,10 @@
+{
+  "requestPageable": {
+    "pageSize": 328,
+    "pageNumber": 809
+  },
+  "meditationType": "UNKNOWN_MEDITATION_TYPE",
+  "mediationCategory": "CLEANING_MEDITATION",
+  "selectedLanguage": "HI",
+  "category": true
+}

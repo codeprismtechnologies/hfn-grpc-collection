@@ -1,0 +1,13 @@
+{
+  "details": {
+    "methodFqn": "unifiedplatform.gamification.GamificationService.GetAllContent"
+  },
+  "requests": [
+    {
+      "location": "GetAllContent-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc",
+  "importStreamId": "f0ff386f-0599-4f2b-b9d5-4d62575aa0bd"
+}

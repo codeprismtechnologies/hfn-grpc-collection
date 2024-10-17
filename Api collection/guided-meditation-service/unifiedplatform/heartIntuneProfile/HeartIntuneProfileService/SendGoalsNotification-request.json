@@ -1,0 +1,227 @@
+{
+  "goalSchedulesNotification": [
+    {
+      "userId": "853",
+      "title": {
+        "defaultContent": "Advanced",
+        "en": "SMS",
+        "hi": "Specialist Iowa",
+        "te": "Handcrafted Cotton Hat Reunion",
+        "gu": "overriding Ergonomic Rubber Pants Principal",
+        "ta": "lavender",
+        "ka": "Electronics, Shoes & Electronics",
+        "mr": "Mauritania",
+        "it": "Frozen compelling Enterprise-wide",
+        "ru": "interface Directives",
+        "es": "Refined Rubber Mouse Human yellow",
+        "fr": "Garden Metrics extensible",
+        "pt": "Awesome generate",
+        "de": "schemas",
+        "bn": "sky blue",
+        "ml": "Argentina Route",
+        "uk": "Shoes, Books & Garden",
+        "od": "Group",
+        "enUs": "hack",
+        "enAu": "haptic Uruguay Lek"
+      },
+      "goalId": "270",
+      "goalStatus": "IN_PROGRESS",
+      "associatedId": "562",
+      "responseGoalInfoV2": {
+        "goalTypes": {
+          "id": "767",
+          "title": "Movies",
+          "description": "solid state content black",
+          "durationAndRequiredTime": [
+            {
+              "duration": "41",
+              "requiredTimes": "367",
+              "userCompletedRequiredTimesCount": "811"
+            },
+            {
+              "duration": "573",
+              "requiredTimes": "127",
+              "userCompletedRequiredTimesCount": "664"
+            }
+          ],
+          "requiredDays": 991,
+          "goalCategory": "PURPOSEFUL_MEDITATION",
+          "associatedBadgeID": "608",
+          "badgeCount": 695,
+          "duration": 910,
+          "hours": 997.0298714863258,
+          "requiredSessionIds": [
+            "244",
+            "237"
+          ],
+          "requiredTimes": "876"
+        },
+        "badge": {
+          "id": "954",
+          "name": "{{ faker.name.last_name }}",
+          "icon": "Brook",
+          "badgeDescription": "azure Nebraska Berkshire",
+          "badgeColor": "green bluetooth Intelligent Steel Cheese",
+          "badgeCount": 663
+        },
+        "day": 881,
+        "goalScheduledTime": "1970-01-01T00:15:01.000000035Z",
+        "daysToComplete": "813",
+        "completedGoalPercentage": 17.31941269824126,
+        "userCompletedRequiredTimesCount": "243",
+        "earnedBadgeCount": 344,
+        "listOfGoalScheduledDates": [
+          {
+            "calendarEventId": "{{ faker.random.uuid }}",
+            "duration": 455,
+            "completedStatus": false
+          },
+          {
+            "calendarEventId": "{{ faker.random.uuid }}",
+            "duration": 873,
+            "completedStatus": false
+          }
+        ],
+        "totalRegisteredUserCount": "351",
+        "isRegistered": false,
+        "badgeWithCount": [
+          {
+            "id": "583",
+            "name": "{{ faker.name.last_name }}",
+            "icon": "bypassing",
+            "badgeDescription": "Mill",
+            "badgeColor": "California transmitting",
+            "badgeCount": 969
+          },
+          {
+            "id": "956",
+            "name": "{{ faker.name.last_name }}",
+            "icon": "calculate context-sensitive Avon",
+            "badgeDescription": "Frozen Planner",
+            "badgeColor": "Platinum salmon",
+            "badgeCount": 403
+          }
+        ]
+      },
+      "isReminder": true
+    },
+    {
+      "userId": "868",
+      "title": {
+        "defaultContent": "reboot",
+        "en": "Tasty synthesizing Metal",
+        "hi": "Virgin Islands, U.S. Automotive & Beauty bypass",
+        "te": "Prairie",
+        "gu": "lime Dale Tasty Plastic Table",
+        "ta": "SMS",
+        "ka": "integrated alarm",
+        "mr": "quantifying deposit clicks-and-mortar",
+        "it": "orange",
+        "ru": "Rustic",
+        "es": "integrated",
+        "fr": "Florida",
+        "pt": "optimize",
+        "de": "generating deposit Corner",
+        "bn": "synthesizing transform",
+        "ml": "Dynamic matrix",
+        "uk": "Forward moratorium",
+        "od": "Investor",
+        "enUs": "Burundi Games",
+        "enAu": "compelling SMTP"
+      },
+      "goalId": "335",
+      "goalStatus": "IN_PROGRESS",
+      "associatedId": "929",
+      "responseGoalInfoV2": {
+        "goalTypes": {
+          "id": "811",
+          "title": "Bedfordshire",
+          "description": "TCP",
+          "durationAndRequiredTime": [
+            {
+              "duration": "35",
+              "requiredTimes": "781",
+              "userCompletedRequiredTimesCount": "617"
+            },
+            {
+              "duration": "927",
+              "requiredTimes": "997",
+              "userCompletedRequiredTimesCount": "771"
+            }
+          ],
+          "requiredDays": 737,
+          "goalCategory": "GUIDED_MEDITATION",
+          "associatedBadgeID": "188",
+          "badgeCount": 132,
+          "duration": 837,
+          "hours": 347.2455777893673,
+          "requiredSessionIds": [
+            "842",
+            "114"
+          ],
+          "requiredTimes": "750"
+        },
+        "badge": {
+          "id": "642",
+          "name": "{{ faker.name.last_name }}",
+          "icon": "Brand",
+          "badgeDescription": "Concrete CSS",
+          "badgeColor": "Organic",
+          "badgeCount": 960
+        },
+        "day": 994,
+        "goalScheduledTime": "1970-01-01T00:05:25.000000161Z",
+        "daysToComplete": "539",
+        "completedGoalPercentage": 715.2598855996534,
+        "userCompletedRequiredTimesCount": "340",
+        "earnedBadgeCount": 36,
+        "listOfGoalScheduledDates": [
+          {
+            "calendarEventId": "{{ faker.random.uuid }}",
+            "duration": 361,
+            "completedStatus": false
+          },
+          {
+            "calendarEventId": "{{ faker.random.uuid }}",
+            "duration": 436,
+            "completedStatus": false
+          }
+        ],
+        "totalRegisteredUserCount": "847",
+        "isRegistered": true,
+        "badgeWithCount": [
+          {
+            "id": "472",
+            "name": "{{ faker.name.last_name }}",
+            "icon": "Checking Account Rapids",
+            "badgeDescription": "disintermediate communities Bedfordshire",
+            "badgeColor": "Producer digital",
+            "badgeCount": 306
+          },
+          {
+            "id": "513",
+            "name": "{{ faker.name.last_name }}",
+            "icon": "Idaho",
+            "badgeDescription": "sensor intranet",
+            "badgeColor": "Mission Liaison",
+            "badgeCount": 551
+          }
+        ]
+      },
+      "isReminder": false
+    }
+  ],
+  "goalStatus": "COMPLETED",
+  "notificationDetails": {
+    "title": "Terrace Virtual",
+    "body": "Fiji content",
+    "template": "Future Identity override",
+    "category": "Horizontal Consultant",
+    "categorySubType": "Kiribati",
+    "timeToLiveInSeconds": 496,
+    "data": {
+      "Accounts bluetooth compress": "Street Kansas synthesize"
+    },
+    "sound": "Intelligent Generic Lilangeni"
+  }
+}

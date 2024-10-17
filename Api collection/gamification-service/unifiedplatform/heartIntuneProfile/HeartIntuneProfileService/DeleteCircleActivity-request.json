@@ -1,0 +1,9 @@
+{
+  "ID": "110",
+  "userID": "30",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Practical Fresh Shoes Identity",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Cove Quality-focused Streamlined",
+  "email": "{{ faker.internet.example_email }}"
+}

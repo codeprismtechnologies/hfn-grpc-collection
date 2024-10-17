@@ -1,0 +1,11 @@
+{
+  "id": "877",
+  "essentialTitle": "Mountain",
+  "name": "{{ faker.name.last_name }}",
+  "imageUrl": "Views Rubber",
+  "mobileNumber": "{{ faker.random.ushort }}",
+  "smsNumber": "{{ faker.random.ushort }}",
+  "whatsAppNumber": "{{ faker.random.ushort }}",
+  "landLineNumber": "{{ faker.random.ushort }}",
+  "directionUrl": "streamline sticky"
+}

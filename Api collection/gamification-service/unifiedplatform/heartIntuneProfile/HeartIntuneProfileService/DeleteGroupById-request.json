@@ -1,0 +1,9 @@
+{
+  "ID": "786",
+  "userID": "992",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Home Loan Account",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "orchestrate deposit",
+  "email": "{{ faker.internet.example_email }}"
+}

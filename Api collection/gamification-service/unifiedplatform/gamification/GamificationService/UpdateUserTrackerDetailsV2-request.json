@@ -1,0 +1,22 @@
+{
+  "id": "476",
+  "meditationType": "MEDITATE_WITH_GROUPS",
+  "startDate": "1970-01-01T00:15:25.000000842Z",
+  "endDate": "1970-01-01T00:10:20.000000101Z",
+  "playCount": "844",
+  "pauseCount": "58",
+  "totalSeconds": "567",
+  "completedPercentage": 164,
+  "userId": "145",
+  "meditationId": "320",
+  "liveSessionId": "975",
+  "userActivity": "GOALS_ACTIVITY",
+  "logMeditationType": "INTERNAL_APP",
+  "meditationCategory": "ANY_MEDITATION",
+  "selectedLanguage": "OD",
+  "badgeId": "918",
+  "badgeCount": 298,
+  "startOfDay": "1970-01-01T00:10:31.000000854Z",
+  "endOfDay": "1970-01-01T00:03:09.000000914Z",
+  "goalId": "127"
+}

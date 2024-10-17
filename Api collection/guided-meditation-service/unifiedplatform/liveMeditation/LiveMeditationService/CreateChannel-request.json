@@ -1,0 +1,10 @@
+{
+  "authorized": true,
+  "latencyMode": "adapter",
+  "channelName": "Clothing Decentralized",
+  "type": "{{ faker.database.type }}",
+  "tags": [
+    "withdrawal generating Customer-focused",
+    "full-range Licensed Cotton Table"
+  ]
+}

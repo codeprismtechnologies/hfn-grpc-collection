@@ -1,0 +1,9 @@
+{
+  "ID": "800",
+  "userID": "93",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Usability interface Spain",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Zimbabwe",
+  "email": "{{ faker.internet.example_email }}"
+}

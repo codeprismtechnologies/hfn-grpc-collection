@@ -1,0 +1,30 @@
+{
+  "id": "1f41f57d-1cbf-46ed-8b5e-551cd3db0981",
+  "importStreams": [
+    {
+      "id": "546337ab-2098-4c02-aac8-293b9b8c79ce",
+      "name": "hfn",
+      "importerName": "ProtoFile",
+      "createMissingOperations": true,
+      "options": {
+        "files": [
+          "../../protos"
+        ],
+        "importPaths": [
+          "../../protos"
+        ]
+      }
+    }
+  ],
+  "authConfigs": [
+    {
+      "name": "Bearer",
+      "providerName": "static",
+      "id": "46d83971-08d7-42b5-acc9-413e2ca27446",
+      "options": {
+        "value": "jwt token"
+      }
+    }
+  ],
+  "certificates": []
+}

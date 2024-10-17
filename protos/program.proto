@@ -1,0 +1,155 @@
+syntax = 'proto3';
+package unifiedplatform.gamification.program;
+import 'common/common.proto';
+option java_package = "org.heartfulness.unifiedplatform.gamification.program";
+option java_multiple_files = true;
+import 'google/protobuf/timestamp.proto';
+
+message RegisterProgram {
+  int64 id = 1;
+  int64 programId = 2;
+  int64 userId = 3;
+  google.protobuf.Timestamp createdAt = 4;
+  google.protobuf.Timestamp expiryOn = 5;
+}
+
+message ProgramDetails {
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  google.protobuf.Timestamp createdAt = 4;
+  google.protobuf.Timestamp fromDate = 5;
+  google.protobuf.Timestamp toDate = 6;
+  string programTopicName = 7;
+}
+
+message GetAllProgramsRequest {
+  int64 id = 1;
+  int64 userId = 2;
+  heartintune.common.RequestPageable pageable = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+}
+
+message ProgramWithSelectedLanguage {
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  google.protobuf.Timestamp createdAt = 4;
+  google.protobuf.Timestamp fromDate = 5;
+  google.protobuf.Timestamp toDate = 6;
+  string programTopicName = 7;
+  bool isRegistered = 8;
+}
+
+message ProgramList {
+  repeated ProgramWithSelectedLanguage programListWithSelectedLanguage = 1;
+  repeated ProgramDetails programListWithAllLanguage = 2;
+  heartintune.common.ResponsePageable responsePageable = 3;
+}
+
+enum TaskActivityType {
+  UNKNOWN = 0;
+  MEDITATION = 1;
+  CLEANING = 2;
+  PRAYER = 3;
+  VIDEO = 4;
+  AUDIO = 5;
+  READING = 6;
+  DAIRY = 7;
+  LINK = 8;
+  SHARE = 9;
+  OTHER = 10;
+}
+
+message TaskDetails {
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  heartintune.common.Locale url = 4;
+  google.protobuf.Timestamp scheduleAt = 5;
+  google.protobuf.Timestamp createdAt = 6;
+  google.protobuf.Timestamp modifiedAt = 7;
+  TaskActivityType taskActivityType = 8;
+  string userAction = 9;
+  bool isPublished = 10;
+  int64 programId = 11;
+}
+
+message TaskWithSelectedLanguage {
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  string url = 4;
+  google.protobuf.Timestamp scheduleAt = 5;
+  google.protobuf.Timestamp createdAt = 6;
+  google.protobuf.Timestamp modifiedAt = 7;
+  TaskActivityType taskActivityType = 8;
+  string userAction = 9;
+  bool isPublished = 10;
+  int64 programId = 11;
+  bool isCompleted = 12;
+}
+
+message ListOfTask {
+  repeated TaskDetails taskListWithAllLanguage = 1;
+  repeated TaskWithSelectedLanguage taskListWithSelectedLanguage = 2;
+  heartintune.common.ResponsePageable pageable = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+}
+
+message ProgramTaskTrackerDetails {
+  int64 id = 1;
+  int64 taskId = 2;
+  int64 userId = 3;
+  bool isCompleted = 4;
+  google.protobuf.Timestamp createdAt = 5;
+  int64 programId = 6;
+}
+
+message ThemeDetails {
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  google.protobuf.Timestamp createdAt = 4;
+  google.protobuf.Timestamp fromDate = 5;
+  google.protobuf.Timestamp toDate = 6;
+  int64 programId = 7;
+}
+
+message GetAllThemesRequest {
+  int64 programId = 1;
+  heartintune.common.RequestPageable pageable = 2;
+  heartintune.common.LocaleType selectedLanguage = 3;
+}
+
+message ThemeWithSelectedLanguage {
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  google.protobuf.Timestamp createdAt = 4;
+  google.protobuf.Timestamp fromDate = 5;
+  google.protobuf.Timestamp toDate = 6;
+  int64 programId = 7;
+}
+
+message ThemeList {
+  repeated ThemeWithSelectedLanguage themeListWithSelectedLanguage = 1;
+  repeated ThemeDetails themeListWithAllLanguage = 2;
+  heartintune.common.ResponsePageable responsePageable = 3;
+}
+
+message ProgramWithTaskAndThemeRequest {
+  int64 userId = 1;
+  int64 programId = 2;
+  google.protobuf.Timestamp startDateTime = 3;
+  google.protobuf.Timestamp endDateTime = 4;
+  heartintune.common.LocaleType selectedLanguage = 5;
+  heartintune.common.RequestPageable pageable = 6;
+}
+
+message ProgramWithTaskAndTheme {
+  ThemeWithSelectedLanguage themeWithSelectedLanguage = 1;
+  repeated TaskWithSelectedLanguage taskWithSelectedLanguage = 2;
+  ProgramWithSelectedLanguage programWithSelectedLanguage = 3;
+  heartintune.common.ResponsePageable pageable = 4;
+}

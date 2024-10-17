@@ -1,0 +1,9 @@
+{
+  "ID": "684",
+  "userID": "963",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Chief Metal Central",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Practical Granite Gloves",
+  "email": "{{ faker.internet.example_email }}"
+}

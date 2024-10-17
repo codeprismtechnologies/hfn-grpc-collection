@@ -1,0 +1,44 @@
+{
+  "id": "448",
+  "scheduledTime": "1970-01-01T00:01:40.000000508Z",
+  "sessionTitle": "Flats navigating",
+  "sessionSubTitle": "Awesome Soft Salad",
+  "sessionInfo": "Landing",
+  "duration": 232,
+  "registeredUserCount": 740,
+  "liveParticipantsCount": 536,
+  "aboutSession": "Cambridgeshire",
+  "meditationSteps": "Buckinghamshire",
+  "associatedCoachId": "341",
+  "associatedListOfBenefitsID": [
+    "30",
+    "355"
+  ],
+  "imageURL": "Cambridgeshire optimize",
+  "videoURL": "Garden, Industrial & Industrial Investor calculate",
+  "selectedLanguage": "ES",
+  "viewerCountStart": "851",
+  "viewerCountEnd": "922",
+  "sessionStartTime": "1970-01-01T00:15:40.000000075Z",
+  "sessionEndTime": "1970-01-01T00:02:42.000000252Z",
+  "preRecordedId": "149",
+  "preRecordedUrl": "Ergonomic Plastic Cheese Checking Account",
+  "updateAllocatedCoach": true,
+  "link": "auxiliary National Baby & Grocery",
+  "tags": [
+    {
+      "id": "806",
+      "name": "{{ faker.name.last_name }}"
+    },
+    {
+      "id": "234",
+      "name": "{{ faker.name.last_name }}"
+    }
+  ],
+  "tagIds": [
+    "250",
+    "691"
+  ],
+  "attribute": "Triple-buffered",
+  "Topic": "Coordinator"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "882",
+  "badge": {
+    "id": "953",
+    "name": "{{ faker.name.last_name }}",
+    "icon": "Accountability Research",
+    "badgeDescription": "copy reboot",
+    "badgeColor": "withdrawal benchmark Berkshire",
+    "badgeCount": 311
+  }
+}

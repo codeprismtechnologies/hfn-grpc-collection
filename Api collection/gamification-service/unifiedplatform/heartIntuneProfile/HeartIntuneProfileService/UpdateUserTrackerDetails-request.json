@@ -1,0 +1,18 @@
+{
+  "id": "969",
+  "meditationType": "MEDITATE_WITH_GROUPS",
+  "startDate": "1970-01-01T00:16:01.000000109Z",
+  "endDate": "1970-01-01T00:12:23.000000619Z",
+  "playCount": "455",
+  "pauseCount": "53",
+  "totalSeconds": "968",
+  "completedPercentage": 983,
+  "userId": "499",
+  "meditationId": "905",
+  "liveSessionId": "799",
+  "userActivity": "JOURNAL_ENTRY_ACTIVITY",
+  "logMeditationType": "OFFLINE",
+  "meditationCategory": "CLEANING_MEDITATION",
+  "liveMeditationRating": "RATING_FIVE",
+  "logMeditation": "OFFLINE"
+}

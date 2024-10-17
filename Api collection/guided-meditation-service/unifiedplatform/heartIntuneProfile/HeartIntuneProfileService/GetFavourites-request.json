@@ -1,0 +1,9 @@
+{
+  "ID": "136",
+  "userID": "230",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Unbranded Rubber Shirt morph convergence",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Turks and Caicos Islands",
+  "email": "{{ faker.internet.example_email }}"
+}

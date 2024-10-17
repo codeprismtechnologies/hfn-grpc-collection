@@ -1,0 +1,19 @@
+{
+  "selectedLanguage": "ML",
+  "contentCategory": [
+    "DAAJI_MESSAGES",
+    "ARTICLE"
+  ],
+  "videoCategory": [
+    "FEATURED",
+    "ALL_VIDEOS"
+  ],
+  "searchContent": {
+    "searchByTitle": "Refined e-markets",
+    "searchByDocumentCategory": "ALL_DOCUMENT_CATEGORY"
+  },
+  "pageable": {
+    "pageSize": 346,
+    "pageNumber": 985
+  }
+}

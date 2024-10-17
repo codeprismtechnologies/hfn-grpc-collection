@@ -1,0 +1,17 @@
+{
+  "updateBenefits": [
+    {
+      "idOfBenefit": "507",
+      "imageURL": "target",
+      "description": "Spring",
+      "removeBenefit": true
+    },
+    {
+      "idOfBenefit": "529",
+      "imageURL": "Utah 1080p",
+      "description": "Lebanese Pound Auto Loan Account Taiwan",
+      "removeBenefit": true
+    }
+  ],
+  "liveSessionID": "839"
+}

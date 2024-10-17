@@ -1,0 +1,91 @@
+{
+  "email": "{{ faker.internet.example_email }}",
+  "profileURL": "parsing",
+  "displayName": "clicks-and-mortar",
+  "gender": "MALE",
+  "dob": "1970-01-01T00:16:05.000000894Z",
+  "userID": "943",
+  "timeZone": "payment multimedia",
+  "city": "{{ faker.address.city }}",
+  "about": "sky blue Israel",
+  "feedback": "cross-platform Refined Steel Bacon toolset",
+  "rating": 694,
+  "visibilityType": "VISIBILITY_TO_ALL",
+  "user": {
+    "id": "175",
+    "status": "LOGGEDIN",
+    "provider": "FACEBOOK",
+    "email": "{{ faker.internet.example_email }}",
+    "profileURL": "Fresh",
+    "displayName": "Handcrafted implement convergence",
+    "gender": "GENDER_DONT_REVEAL",
+    "firebaseId": "{{ faker.random.uuid }}",
+    "mobileNumber": "{{ faker.random.ushort }}",
+    "heartPointsCumulative": 878.5918670977816,
+    "registeredLiveMeditationSessionID": [
+      "153",
+      "333"
+    ],
+    "completedLiveMeditationSessionID": [
+      "366",
+      "826"
+    ],
+    "acceptedGoals": [
+      "99",
+      "634"
+    ],
+    "completedGoals": [
+      "910",
+      "633"
+    ],
+    "favouriteMeditationID": [
+      "453",
+      "404"
+    ],
+    "schedule": [
+      {
+        "id": "737",
+        "associatedGoalID": "555",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "215",
+        "associatedGoalID": "962",
+        "status": "COMPLETED"
+      }
+    ],
+    "badgeIds": [
+      "880",
+      "650"
+    ],
+    "city": "{{ faker.address.city }}",
+    "addressLine": "value-added Gorgeous Wooden Pizza Graphic Interface",
+    "postalCode": "{{ faker.address.zip_code }}",
+    "citizenshipCountry": "International Tokelau expedite",
+    "taxId": "{{ faker.random.uuid }}",
+    "state": "{{ faker.address.state }}",
+    "country": "{{ faker.address.country }}",
+    "passportNumber": "{{ faker.random.ushort }}",
+    "fcmToken": "withdrawal bottom-line",
+    "role": "CUSTOM_ROLE",
+    "selectedLanguage": "EN",
+    "timeZone": "Guam",
+    "about": "Health & Electronics Checking Account deposit",
+    "userMoodExist": true,
+    "rating": 898,
+    "feedback": "Vista",
+    "inviteStatus": "REJECTED",
+    "visibilityType": "UNKNOWN_VISIBILITY",
+    "enableEmail": false,
+    "enableWhatsApp": false,
+    "mysrcmId": "521",
+    "placeOfResidence": "Fantastic Danish Krone Crest",
+    "preceptorId": 426,
+    "education": "French Guiana Generic Soft Keyboard Practical Frozen Chips",
+    "profession": "Generic withdrawal",
+    "street": "{{ faker.address.street_name }}",
+    "cityId": 49
+  },
+  "enableFeature": "ENABLE_WHATSAPP",
+  "cityId": 831
+}

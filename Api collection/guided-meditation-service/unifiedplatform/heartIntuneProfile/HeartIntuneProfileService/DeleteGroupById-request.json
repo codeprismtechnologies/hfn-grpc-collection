@@ -1,0 +1,9 @@
+{
+  "ID": "255",
+  "userID": "511",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Facilitator Philippine Peso invoice",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "deposit",
+  "email": "{{ faker.internet.example_email }}"
+}

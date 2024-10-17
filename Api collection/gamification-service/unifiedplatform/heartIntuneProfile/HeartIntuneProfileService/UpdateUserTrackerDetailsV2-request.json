@@ -1,0 +1,18 @@
+{
+  "id": "524",
+  "meditationType": "MEDITATE_WITH_CIRCLE",
+  "startDate": "1970-01-01T00:02:53.000000097Z",
+  "endDate": "1970-01-01T00:15:37.000000141Z",
+  "playCount": "441",
+  "pauseCount": "365",
+  "totalSeconds": "93",
+  "completedPercentage": 673,
+  "userId": "561",
+  "meditationId": "85",
+  "liveSessionId": "565",
+  "userActivity": "LIVE_MEDITATION_ACTIVITY",
+  "logMeditationType": "INTERNAL_APP",
+  "meditationCategory": "GUIDANCE_MEDITATION",
+  "liveMeditationRating": "NEUTRAL_RATING",
+  "logMeditation": "INTERNAL_APP"
+}

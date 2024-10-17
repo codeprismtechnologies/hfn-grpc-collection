@@ -1,0 +1,20 @@
+{
+  "requestJournal": [
+    {
+      "journal": "deposit Unbranded Fresh Keyboard Saint Kitts and Nevis",
+      "createdAt": "1970-01-01T00:06:35.000000561Z",
+      "archiveStatus": false,
+      "favourite": false,
+      "userID": "397",
+      "journalType": "MEDITATION"
+    },
+    {
+      "journal": "B2B COM Forward",
+      "createdAt": "1970-01-01T00:06:59.000000981Z",
+      "archiveStatus": false,
+      "favourite": false,
+      "userID": "444",
+      "journalType": "MOODS"
+    }
+  ]
+}

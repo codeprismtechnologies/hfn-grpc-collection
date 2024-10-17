@@ -1,0 +1,16 @@
+{
+  "UserID": "123",
+  "currentTime": "1970-01-01T00:16:38.000000145Z",
+  "paginationRequest": {
+    "pageNumber": 509,
+    "pageSize": 408
+  },
+  "selectedLanguage": "MR",
+  "status": "ACCEPTED",
+  "delayTimeInMinutes": "693",
+  "listOfInviteStatus": [
+    "DELETE",
+    "REJECTED"
+  ],
+  "endTime": "1970-01-01T00:06:29.000000419Z"
+}

@@ -1,0 +1,14 @@
+{
+  "archivesSubEventsDetailsRequest": [
+    {
+      "id": "526",
+      "subEventName": "fuchsia schemas RSS",
+      "url": "{{ faker.internet.url }}"
+    },
+    {
+      "id": "47",
+      "subEventName": "generating Paradigm XML",
+      "url": "{{ faker.internet.url }}"
+    }
+  ]
+}

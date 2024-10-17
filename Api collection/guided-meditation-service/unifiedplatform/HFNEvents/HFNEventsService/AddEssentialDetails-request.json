@@ -1,0 +1,10 @@
+{
+  "essentialTitle": "Extended withdrawal",
+  "name": "{{ faker.name.last_name }}",
+  "imageUrl": "Practical Concrete Fish turn-key Coordinator",
+  "mobileNumber": "{{ faker.random.ushort }}",
+  "smsNumber": "{{ faker.random.ushort }}",
+  "whatsAppNumber": "{{ faker.random.ushort }}",
+  "landLineNumber": "{{ faker.random.ushort }}",
+  "directionUrl": "bypassing firewall"
+}

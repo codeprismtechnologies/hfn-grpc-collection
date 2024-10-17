@@ -1,0 +1,53 @@
+{
+  "title": {
+    "defaultContent": "Intuitive clicks-and-mortar",
+    "en": "Grocery quantify Regional",
+    "hi": "data-warehouse",
+    "te": "protocol",
+    "gu": "Incredible Steel Soap",
+    "ta": "zero tolerance infrastructures paradigm",
+    "ka": "revolutionary",
+    "mr": "instruction set Persevering",
+    "it": "Soft",
+    "ru": "definition Engineer Borders",
+    "es": "Summit Buckinghamshire",
+    "fr": "indexing",
+    "pt": "Germany optical",
+    "de": "ivory GB cross-media",
+    "bn": "copy client-server Borders",
+    "ml": "Viaduct",
+    "uk": "Senior Handcrafted Developer",
+    "od": "intuitive Trafficway Ergonomic Metal Soap",
+    "enUs": "Corporate Stravenue aggregate",
+    "enAu": "Games & Music reinvent Skyway"
+  },
+  "description": {
+    "defaultContent": "Dynamic",
+    "en": "Devolved",
+    "hi": "navigating Uruguay Divide",
+    "te": "mission-critical",
+    "gu": "ADP 24/365",
+    "ta": "Court Saint Lucia",
+    "ka": "5th generation mobile",
+    "mr": "Refined Rubber Soap Legacy Handmade",
+    "it": "Credit Card Account auxiliary",
+    "ru": "Poland Lake",
+    "es": "compress Small Plastic Tuna Buckinghamshire",
+    "fr": "primary Swiss Franc programming",
+    "pt": "card Manager port",
+    "de": "New Caledonia",
+    "bn": "Consultant Self-enabling calculating",
+    "ml": "strategy",
+    "uk": "Refined Granite Shoes withdrawal",
+    "od": "Tala Burundi",
+    "enUs": "Central SSL Bypass",
+    "enAu": "back-end customized Liaison"
+  },
+  "amounts": [
+    601.1902,
+    691.5412
+  ],
+  "currency": "{{ faker.finance.currency }}",
+  "country": "{{ faker.address.country }}",
+  "selectedLanguage": "Agent"
+}

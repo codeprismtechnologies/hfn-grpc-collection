@@ -1,0 +1,11 @@
+{
+  "meditationAttendedID": "239",
+  "typeOfMeditation": "MEDITATE_WITH_GROUPS",
+  "startTime": "1970-01-01T00:05:27.000000915Z",
+  "endTime": "1970-01-01T00:00:22.000000874Z",
+  "pauseCount": 641,
+  "playCount": 273,
+  "totalDurationInMilliSeconds": 659,
+  "completedFullMeditation": true,
+  "UUID": "{{ faker.random.uuid }}"
+}

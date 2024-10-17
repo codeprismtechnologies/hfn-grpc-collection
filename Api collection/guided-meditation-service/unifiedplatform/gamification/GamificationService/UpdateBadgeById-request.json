@@ -1,0 +1,11 @@
+{
+  "id": "268",
+  "badge": {
+    "id": "836",
+    "name": "{{ faker.name.last_name }}",
+    "icon": "Global deposit gold",
+    "badgeDescription": "innovative",
+    "badgeColor": "Sao Tome and Principe",
+    "badgeCount": 899
+  }
+}

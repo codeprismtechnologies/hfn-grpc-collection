@@ -1,0 +1,9 @@
+{
+  "ID": "484",
+  "userID": "115",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "human-resource Cambridgeshire Gorgeous Frozen Keyboard",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Infrastructure",
+  "email": "{{ faker.internet.example_email }}"
+}

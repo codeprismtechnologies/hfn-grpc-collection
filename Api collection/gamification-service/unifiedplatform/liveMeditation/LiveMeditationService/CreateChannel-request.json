@@ -1,0 +1,10 @@
+{
+  "authorized": false,
+  "latencyMode": "South Dakota generate maximize",
+  "channelName": "Personal Loan Account",
+  "type": "{{ faker.database.type }}",
+  "tags": [
+    "approach",
+    "Grocery, Baby & Games Implementation Fresh"
+  ]
+}

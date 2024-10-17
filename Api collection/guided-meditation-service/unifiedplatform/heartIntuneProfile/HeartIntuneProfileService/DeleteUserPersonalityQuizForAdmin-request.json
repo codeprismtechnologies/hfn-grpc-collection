@@ -1,0 +1,9 @@
+{
+  "ID": "591",
+  "userID": "913",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Fresh Savings Account hacking",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Ergonomic Steel Bacon Handmade Soft Ball",
+  "email": "{{ faker.internet.example_email }}"
+}

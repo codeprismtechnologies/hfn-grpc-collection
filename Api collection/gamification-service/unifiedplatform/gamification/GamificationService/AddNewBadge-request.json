@@ -1,0 +1,6 @@
+{
+  "name": "{{ faker.name.last_name }}",
+  "icon": "Analyst Maryland card",
+  "badgeDescription": "Ergonomic Cotton Table Walk",
+  "badgeColor": "incubate"
+}

@@ -1,0 +1,8 @@
+{
+  "fromDate": "1970-01-01T00:08:40.000000590Z",
+  "toDate": "1970-01-01T00:10:35.000000920Z",
+  "userID": "437",
+  "email": "{{ faker.internet.example_email }}",
+  "searchJournalsBy": "Kansas Kids application",
+  "selectedLanguage": "DEFAULT"
+}

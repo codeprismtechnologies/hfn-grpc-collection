@@ -1,0 +1,57 @@
+{
+  "id": "854",
+  "userID": "841",
+  "journalInfo": {
+    "id": "725",
+    "journal": "Mississippi",
+    "createdAt": "1970-01-01T00:00:49.000000695Z",
+    "modifiedAt": "1970-01-01T00:04:05.000000289Z",
+    "archiveStatus": false,
+    "favourite": true,
+    "userID": "45",
+    "journalType": "GENERAL",
+    "moodDetailsAndTriggers": [
+      {
+        "moodDetails": {
+          "moodId": "853",
+          "associatedColor": "architecture open-source Sleek Steel Cheese",
+          "moodName": "Interactions",
+          "moodType": "MOOD_HAPPY"
+        },
+        "triggerDetails": [
+          {
+            "triggerId": "551",
+            "emojiUrl": "Computers, Tools & Automotive bandwidth RSS",
+            "triggerName": "Burg Right-sized turquoise"
+          },
+          {
+            "triggerId": "892",
+            "emojiUrl": "workforce",
+            "triggerName": "Infrastructure Officer Team-oriented"
+          }
+        ]
+      },
+      {
+        "moodDetails": {
+          "moodId": "972",
+          "associatedColor": "Rustic Metal Bacon Hungary Health",
+          "moodName": "Product white",
+          "moodType": "UNKNOWN_MOOD_TYPE"
+        },
+        "triggerDetails": [
+          {
+            "triggerId": "237",
+            "emojiUrl": "compelling HDD",
+            "triggerName": "Jewelery & Beauty Officer Sleek Rubber Pizza"
+          },
+          {
+            "triggerId": "629",
+            "emojiUrl": "Delaware discrete",
+            "triggerName": "COM Bypass"
+          }
+        ]
+      }
+    ]
+  },
+  "selectedLanguage": "DE"
+}

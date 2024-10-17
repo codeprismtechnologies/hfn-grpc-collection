@@ -1,0 +1,16 @@
+{
+  "userId": "{{ faker.random.uuid }}",
+  "deviceId": "{{ faker.random.uuid }}",
+  "notification": {
+    "title": "Wooden",
+    "body": "Saudi Arabia",
+    "template": "cross-platform Wisconsin",
+    "category": "Polarised Inlet Paradigm",
+    "categorySubType": "SQL",
+    "timeToLiveInSeconds": 4,
+    "data": {
+      "architect Pre-emptive Cambridgeshire": "solid state invoice"
+    },
+    "sound": "real-time"
+  }
+}

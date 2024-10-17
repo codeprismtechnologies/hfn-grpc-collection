@@ -1,0 +1,19 @@
+{
+  "selectedLanguage": "EN",
+  "contentCategory": [
+    "PDF_ARTICLE",
+    "STORY"
+  ],
+  "videoCategory": [
+    "WHY_I_MEDITATE",
+    "UNKNOWN_VIDEO_CATEGORY"
+  ],
+  "searchContent": {
+    "searchByTitle": "Gorgeous Steel Tuna",
+    "searchByDocumentCategory": "ALL_DOCUMENT_CATEGORY"
+  },
+  "pageable": {
+    "pageSize": 612,
+    "pageNumber": 205
+  }
+}

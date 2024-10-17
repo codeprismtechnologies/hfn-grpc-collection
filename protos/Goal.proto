@@ -1,0 +1,56 @@
+syntax = 'proto3';
+package unifiedplatform.gamification.goal;
+import 'common/common.proto';
+option java_package = "org.heartfulness.unifiedplatform.gamification.goal";
+option java_multiple_files = true;
+import 'google/protobuf/timestamp.proto';
+
+message Goal {
+  int64 id = 1;
+  uint32 days = 2;
+  uint32 durationLimitInDays = 3;
+  heartintune.common.MeditationType typeOfMeditationAssociated = 4;
+  int64 associatedBadgeID = 5;
+  string title = 6;
+  string subTitle = 7;
+  uint32 badgeCount = 8;
+  uint32  expiryDates = 9;
+}
+
+
+message AddNewGoalRequest {
+  uint32 days = 1;
+  uint32 durationLimitInDays = 2;
+  heartintune.common.MeditationType typeOfMeditationAssociated = 3;
+  int64 associatedBadgeID = 4;
+  string title = 5;
+  string subTitle = 6;
+  uint32 badgeCount = 7;
+  uint32 expiryDays = 8;
+}
+
+message GoalDetails {
+  int64 id = 1;
+  uint32 days = 2;
+  uint32 durationLimitInDays = 3;
+  heartintune.common.MeditationType typeOfMeditationAssociated = 4;
+  int64 associatedBadgeID = 5;
+  heartintune.common.Locale title = 6;
+  heartintune.common.Locale subTitle = 7;
+  uint32 badgeCount = 8;
+  uint32 expiryDays = 9;
+}
+
+
+message AddNewGoalDetailsRequest {
+  uint32 days = 1;
+  uint32 durationLimitInDays = 2;
+  heartintune.common.MeditationType typeOfMeditationAssociated = 3;
+  int64 associatedBadgeID = 4;
+  heartintune.common.Locale title = 5;
+  heartintune.common.Locale subTitle = 6;
+  uint32 badgeCount = 7;
+  uint32 expiryDays = 8;
+  heartintune.common.MeditationCategory meditationCategory = 9;
+
+}

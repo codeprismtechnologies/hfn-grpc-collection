@@ -1,0 +1,9 @@
+{
+  "ID": "470",
+  "userID": "108",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "navigating gold Avon",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "proactive Gorgeous connect",
+  "email": "{{ faker.internet.example_email }}"
+}

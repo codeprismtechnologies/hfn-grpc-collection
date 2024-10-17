@@ -1,0 +1,23 @@
+{
+  "locale": {
+    "selectedLanguage": "HI",
+    "selectedScreen": "HOME_SCREEN"
+  },
+  "pageable": {
+    "pageSize": 469,
+    "pageNumber": 504
+  },
+  "userId": "526",
+  "min": 799,
+  "max": 568,
+  "isHours": true,
+  "isDays": true,
+  "listOfGoalIds": [
+    "606",
+    "830"
+  ],
+  "hfnProfile": false,
+  "durationInMinutes": 297,
+  "isCustomGoals": false,
+  "newVersion": false
+}

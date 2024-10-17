@@ -1,0 +1,24 @@
+{
+  "goalID": "204",
+  "userID": "466",
+  "goalCategory": "SHARE_LIVE_MEDITATION",
+  "selectedDateAndTimeWithCalendarEvent": [
+    {
+      "selectedDateAndTime": "1970-01-01T00:00:45.000000332Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "durationMinutes": 964,
+      "completedStatus": true,
+      "startTime": "1970-01-01T00:09:43.000000272Z"
+    },
+    {
+      "selectedDateAndTime": "1970-01-01T00:08:34.000000948Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "durationMinutes": 194,
+      "completedStatus": true,
+      "startTime": "1970-01-01T00:06:20.000000041Z"
+    }
+  ],
+  "selectedLanguage": "ML",
+  "hfn": true,
+  "todaySeconds": "365"
+}

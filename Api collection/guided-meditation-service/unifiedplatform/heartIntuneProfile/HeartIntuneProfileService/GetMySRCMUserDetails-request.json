@@ -1,0 +1,9 @@
+{
+  "ID": "788",
+  "userID": "898",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Gorgeous Fresh Hat",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "seamless Courts superstructure",
+  "email": "{{ faker.internet.example_email }}"
+}

@@ -1,0 +1,9 @@
+{
+  "ID": "58",
+  "userID": "37",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "platforms neural-net Internal",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Bedfordshire Plastic multi-byte",
+  "email": "{{ faker.internet.example_email }}"
+}

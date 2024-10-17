@@ -1,0 +1,8 @@
+{
+  "fromDate": "1970-01-01T00:10:43.000000752Z",
+  "toDate": "1970-01-01T00:15:47.000000518Z",
+  "userID": "381",
+  "email": "{{ faker.internet.example_email }}",
+  "searchJournalsBy": "Generic Soft Fish Ways",
+  "selectedLanguage": "EN_US"
+}

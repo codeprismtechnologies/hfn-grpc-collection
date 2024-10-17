@@ -1,0 +1,9 @@
+{
+  "ID": "268",
+  "userID": "455",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Handcrafted Plains RAM",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "challenge",
+  "email": "{{ faker.internet.example_email }}"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "192",
+  "meditationType": "MEDITATE_WITH_PRECEPTOR",
+  "startDate": "1970-01-01T00:06:32.000000899Z",
+  "endDate": "1970-01-01T00:03:42.000000559Z",
+  "playCount": "465",
+  "pauseCount": "404",
+  "totalSeconds": "831",
+  "completedPercentage": 817,
+  "userId": "240",
+  "meditationId": "389",
+  "liveSessionId": "88",
+  "userActivity": "JOURNAL_ENTRY_ACTIVITY",
+  "logMeditationType": "EXTERNAL_APP",
+  "meditationCategory": "PRAYER_MEDITATION",
+  "selectedLanguage": "KA",
+  "badgeId": "828",
+  "badgeCount": 133,
+  "startOfDay": "1970-01-01T00:03:11.000000210Z",
+  "endOfDay": "1970-01-01T00:11:15.000000645Z",
+  "goalId": "625"
+}

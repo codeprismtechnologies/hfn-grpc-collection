@@ -1,0 +1,52 @@
+{
+  "id": "789",
+  "journal": "Customer support",
+  "createdAt": "1970-01-01T00:08:26.000000712Z",
+  "modifiedAt": "1970-01-01T00:04:26.000000449Z",
+  "archiveStatus": true,
+  "favourite": true,
+  "userID": "233",
+  "journalType": "OFFLINE_JOURNAL",
+  "moodDetailsAndTriggers": [
+    {
+      "moodDetails": {
+        "moodId": "690",
+        "associatedColor": "Specialist Metal",
+        "moodName": "parallelism Home, Electronics & Jewelery Money Market Account",
+        "moodType": "MOOD_HAPPY"
+      },
+      "triggerDetails": [
+        {
+          "triggerId": "774",
+          "emojiUrl": "copy Drive Corporate",
+          "triggerName": "architect Iowa JBOD"
+        },
+        {
+          "triggerId": "703",
+          "emojiUrl": "multi-byte",
+          "triggerName": "Self-enabling Gorgeous Rubber Bacon Developer"
+        }
+      ]
+    },
+    {
+      "moodDetails": {
+        "moodId": "970",
+        "associatedColor": "bluetooth",
+        "moodName": "Loaf Concrete",
+        "moodType": "UNKNOWN_MOOD_TYPE"
+      },
+      "triggerDetails": [
+        {
+          "triggerId": "42",
+          "emojiUrl": "panel",
+          "triggerName": "Infrastructure Future"
+        },
+        {
+          "triggerId": "909",
+          "emojiUrl": "Gorgeous Concrete Fish Tools, Home & Grocery payment",
+          "triggerName": "Ergonomic"
+        }
+      ]
+    }
+  ]
+}

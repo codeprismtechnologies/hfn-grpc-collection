@@ -1,0 +1,8 @@
+{
+  "fromDate": "1970-01-01T00:11:34.000000537Z",
+  "toDate": "1970-01-01T00:10:11.000000233Z",
+  "userID": "405",
+  "email": "{{ faker.internet.example_email }}",
+  "searchJournalsBy": "iterate calculating",
+  "selectedLanguage": "TE"
+}

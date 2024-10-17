@@ -1,0 +1,9 @@
+{
+  "ID": "839",
+  "userID": "605",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Money Market Account portals",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Legacy Fantastic Steel Shirt turquoise",
+  "email": "{{ faker.internet.example_email }}"
+}

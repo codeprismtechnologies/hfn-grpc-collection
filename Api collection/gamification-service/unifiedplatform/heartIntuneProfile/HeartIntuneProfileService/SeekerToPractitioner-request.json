@@ -1,0 +1,6 @@
+{
+  "dateOfJoining": "Human auxiliary Generic Wooden Pizza",
+  "notes": "Representative",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "jwtToken": "View Clothing, Games & Home"
+}

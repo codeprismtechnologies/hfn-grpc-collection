@@ -1,0 +1,22 @@
+{
+  "event": "online",
+  "eventTs": "574",
+  "payload": {
+    "accountId": "{{ faker.random.uuid }}",
+    "operator": "Tactics Prairie Internal",
+    "operatorId": "{{ faker.random.uuid }}",
+    "operation": "conglomeration",
+    "object": {
+      "id": "{{ faker.random.uuid }}",
+      "uuid": "{{ faker.random.uuid }}",
+      "hostId": "{{ faker.random.uuid }}",
+      "topic": "digital",
+      "type": 281,
+      "startTime": "Cambridgeshire Enhanced",
+      "timezone": "Wooden",
+      "duration": 155,
+      "endTime": "User-centric"
+    },
+    "plainToken": "input Books, Sports & Toys Granite"
+  }
+}

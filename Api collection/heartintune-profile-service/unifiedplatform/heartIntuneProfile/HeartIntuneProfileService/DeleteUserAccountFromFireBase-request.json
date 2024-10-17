@@ -1,0 +1,4 @@
+{
+  "fireBaseId": "{{ faker.random.uuid }}",
+  "heartInTuneUserId": "361"
+}

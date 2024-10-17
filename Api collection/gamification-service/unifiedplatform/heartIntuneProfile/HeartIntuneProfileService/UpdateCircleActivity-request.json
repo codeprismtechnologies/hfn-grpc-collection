@@ -1,0 +1,22 @@
+{
+  "circleId": "138",
+  "circleName": "Washington Run Planner",
+  "userId": "578",
+  "activityName": "Buckinghamshire teal",
+  "description": "transmit Shoal bypass",
+  "preRecordedId": "605",
+  "recurring": false,
+  "scheduleAt": "1970-01-01T00:12:21.000000964Z",
+  "dayFrequency": "CUSTOM_DAY",
+  "weekDays": [
+    133,
+    816
+  ],
+  "recurringEndTime": "1970-01-01T00:06:04.000000642Z",
+  "userIdInvite": [
+    "927",
+    "479"
+  ],
+  "circleActivityId": "438",
+  "zonalDifference": "432"
+}

@@ -1,0 +1,13 @@
+{
+  "badgeId": "{{ faker.random.uuid }}",
+  "info": {
+    "name": "{{ faker.name.last_name }}",
+    "format": "calculating Garden",
+    "size": "586",
+    "token": "multi-byte communities",
+    "chunkRange": "interfaces matrix",
+    "objectPath": "Program",
+    "type": "{{ faker.database.type }}"
+  },
+  "file": "QXdlc29tZSB0cmFuc21pdHRlciBoYWNr"
+}

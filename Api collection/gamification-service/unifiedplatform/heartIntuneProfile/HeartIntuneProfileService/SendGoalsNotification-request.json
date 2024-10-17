@@ -1,0 +1,227 @@
+{
+  "goalSchedulesNotification": [
+    {
+      "userId": "579",
+      "title": {
+        "defaultContent": "Dynamic",
+        "en": "Books, Grocery & Clothing Avon",
+        "hi": "bypassing",
+        "te": "Small Granite Car",
+        "gu": "XSS Bedfordshire",
+        "ta": "Legacy Representative Sweden",
+        "ka": "Glens Pine",
+        "mr": "digital",
+        "it": "Personal Loan Account lime",
+        "ru": "evolve bluetooth",
+        "es": "Practical Fresh Chair Awesome",
+        "fr": "systems neural Monaco",
+        "pt": "Money Market Account Meadow USB",
+        "de": "Legacy",
+        "bn": "Small Metal Sausages",
+        "ml": "Security",
+        "uk": "1080p Industrial & Kids Architect",
+        "od": "Awesome Rubber Ball Shoes, Tools & Shoes",
+        "enUs": "Liaison",
+        "enAu": "Seamless"
+      },
+      "goalId": "652",
+      "goalStatus": "COMPLETED",
+      "associatedId": "965",
+      "responseGoalInfoV2": {
+        "goalTypes": {
+          "id": "230",
+          "title": "cross-media client-server",
+          "description": "Pine",
+          "durationAndRequiredTime": [
+            {
+              "duration": "471",
+              "requiredTimes": "630",
+              "userCompletedRequiredTimesCount": "684"
+            },
+            {
+              "duration": "569",
+              "requiredTimes": "434",
+              "userCompletedRequiredTimesCount": "91"
+            }
+          ],
+          "requiredDays": 273,
+          "goalCategory": "SOCIAL_MEDIA_ACTIONS",
+          "associatedBadgeID": "534",
+          "badgeCount": 392,
+          "duration": 959,
+          "hours": 196.85357836249204,
+          "requiredSessionIds": [
+            "678",
+            "220"
+          ],
+          "requiredTimes": "259"
+        },
+        "badge": {
+          "id": "550",
+          "name": "{{ faker.name.last_name }}",
+          "icon": "data-warehouse tan Cove",
+          "badgeDescription": "Frozen",
+          "badgeColor": "Norwegian Krone",
+          "badgeCount": 562
+        },
+        "day": 307,
+        "goalScheduledTime": "1970-01-01T00:06:29.000000720Z",
+        "daysToComplete": "117",
+        "completedGoalPercentage": 286.3684366301982,
+        "userCompletedRequiredTimesCount": "276",
+        "earnedBadgeCount": 885,
+        "listOfGoalScheduledDates": [
+          {
+            "calendarEventId": "{{ faker.random.uuid }}",
+            "duration": 104,
+            "completedStatus": true
+          },
+          {
+            "calendarEventId": "{{ faker.random.uuid }}",
+            "duration": 198,
+            "completedStatus": false
+          }
+        ],
+        "totalRegisteredUserCount": "105",
+        "isRegistered": true,
+        "badgeWithCount": [
+          {
+            "id": "163",
+            "name": "{{ faker.name.last_name }}",
+            "icon": "Profit-focused Bangladesh",
+            "badgeDescription": "synthesize Quality payment",
+            "badgeColor": "Corporate Concrete Meadow",
+            "badgeCount": 779
+          },
+          {
+            "id": "885",
+            "name": "{{ faker.name.last_name }}",
+            "icon": "models",
+            "badgeDescription": "concept Soft blue",
+            "badgeColor": "Sleek Plastic Mouse Administrator Investment Account",
+            "badgeCount": 622
+          }
+        ]
+      },
+      "isReminder": true
+    },
+    {
+      "userId": "744",
+      "title": {
+        "defaultContent": "time-frame Gorgeous Wooden Chair programming",
+        "en": "Movies & Automotive Research",
+        "hi": "matrix",
+        "te": "Lights",
+        "gu": "Producer Concrete",
+        "ta": "Cotton",
+        "ka": "Home Loan Account navigate Auto Loan Account",
+        "mr": "Markets",
+        "it": "Supervisor wireless SMTP",
+        "ru": "pink Phased",
+        "es": "AI Investment Account Haven",
+        "fr": "Meadows Borders impactful",
+        "pt": "Designer didactic",
+        "de": "synthesizing Rubber",
+        "bn": "Handcrafted",
+        "ml": "Small Steel Computer Ports Re-contextualized",
+        "uk": "auxiliary web-enabled Saudi Riyal",
+        "od": "withdrawal mesh virtual",
+        "enUs": "tangible Handcrafted Cotton Gloves green",
+        "enAu": "Lights"
+      },
+      "goalId": "255",
+      "goalStatus": "MISSED",
+      "associatedId": "394",
+      "responseGoalInfoV2": {
+        "goalTypes": {
+          "id": "252",
+          "title": "Fresh connecting",
+          "description": "Jewelery, Tools & Music",
+          "durationAndRequiredTime": [
+            {
+              "duration": "740",
+              "requiredTimes": "230",
+              "userCompletedRequiredTimesCount": "841"
+            },
+            {
+              "duration": "776",
+              "requiredTimes": "447",
+              "userCompletedRequiredTimesCount": "544"
+            }
+          ],
+          "requiredDays": 514,
+          "goalCategory": "LIVE_MEDITATION_GOAL",
+          "associatedBadgeID": "748",
+          "badgeCount": 256,
+          "duration": 713,
+          "hours": 462.2229974275196,
+          "requiredSessionIds": [
+            "892",
+            "857"
+          ],
+          "requiredTimes": "407"
+        },
+        "badge": {
+          "id": "54",
+          "name": "{{ faker.name.last_name }}",
+          "icon": "Sleek",
+          "badgeDescription": "Berkshire Fresh",
+          "badgeColor": "mindshare redundant",
+          "badgeCount": 730
+        },
+        "day": 520,
+        "goalScheduledTime": "1970-01-01T00:02:52.000000671Z",
+        "daysToComplete": "402",
+        "completedGoalPercentage": 4.5613923251327115,
+        "userCompletedRequiredTimesCount": "162",
+        "earnedBadgeCount": 442,
+        "listOfGoalScheduledDates": [
+          {
+            "calendarEventId": "{{ faker.random.uuid }}",
+            "duration": 161,
+            "completedStatus": false
+          },
+          {
+            "calendarEventId": "{{ faker.random.uuid }}",
+            "duration": 512,
+            "completedStatus": true
+          }
+        ],
+        "totalRegisteredUserCount": "849",
+        "isRegistered": false,
+        "badgeWithCount": [
+          {
+            "id": "775",
+            "name": "{{ faker.name.last_name }}",
+            "icon": "invoice asymmetric Sleek Fresh Pizza",
+            "badgeDescription": "AGP markets open-source",
+            "badgeColor": "Health, Health & Music Program Agent",
+            "badgeCount": 353
+          },
+          {
+            "id": "948",
+            "name": "{{ faker.name.last_name }}",
+            "icon": "quantify",
+            "badgeDescription": "invoice upward-trending rich",
+            "badgeColor": "deliver static",
+            "badgeCount": 89
+          }
+        ]
+      },
+      "isReminder": true
+    }
+  ],
+  "goalStatus": "MISSED",
+  "notificationDetails": {
+    "title": "Money Market Account",
+    "body": "Uruguay",
+    "template": "XSS USB override",
+    "category": "Dynamic",
+    "categorySubType": "Georgia Innovative",
+    "timeToLiveInSeconds": 79,
+    "data": {
+      "deposit Ergonomic Cotton Fish": "Auto Loan Account synthesize"
+    },
+    "sound": "methodologies asynchronous Lesotho"
+  }
+}

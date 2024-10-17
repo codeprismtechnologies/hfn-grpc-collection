@@ -1,0 +1,91 @@
+{
+  "email": "{{ faker.internet.example_email }}",
+  "profileURL": "New Leu Moldovan Leu",
+  "displayName": "Metal program policy",
+  "gender": "GENDER_DONT_REVEAL",
+  "dob": "1970-01-01T00:04:22.000000775Z",
+  "userID": "604",
+  "timeZone": "JBOD",
+  "city": "{{ faker.address.city }}",
+  "about": "payment Borders protocol",
+  "feedback": "Rustic HDD",
+  "rating": 243,
+  "visibilityType": "UNKNOWN_VISIBILITY",
+  "user": {
+    "id": "75",
+    "status": "LOGGEDOUT",
+    "provider": "MOBILE",
+    "email": "{{ faker.internet.example_email }}",
+    "profileURL": "infomediaries Factors Divide",
+    "displayName": "efficient Profit-focused project",
+    "gender": "FEMALE",
+    "firebaseId": "{{ faker.random.uuid }}",
+    "mobileNumber": "{{ faker.random.ushort }}",
+    "heartPointsCumulative": 589.3262745274449,
+    "registeredLiveMeditationSessionID": [
+      "491",
+      "282"
+    ],
+    "completedLiveMeditationSessionID": [
+      "503",
+      "633"
+    ],
+    "acceptedGoals": [
+      "439",
+      "832"
+    ],
+    "completedGoals": [
+      "104",
+      "416"
+    ],
+    "favouriteMeditationID": [
+      "412",
+      "500"
+    ],
+    "schedule": [
+      {
+        "id": "734",
+        "associatedGoalID": "715",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "827",
+        "associatedGoalID": "288",
+        "status": "SCHEDULED"
+      }
+    ],
+    "badgeIds": [
+      "598",
+      "98"
+    ],
+    "city": "{{ faker.address.city }}",
+    "addressLine": "Handcrafted Soft Hat invoice",
+    "postalCode": "{{ faker.address.zip_code }}",
+    "citizenshipCountry": "Islands streamline SDD",
+    "taxId": "{{ faker.random.uuid }}",
+    "state": "{{ faker.address.state }}",
+    "country": "{{ faker.address.country }}",
+    "passportNumber": "{{ faker.random.ushort }}",
+    "fcmToken": "National Refined Fresh Chair Sports & Baby",
+    "role": "SCHEDULER",
+    "selectedLanguage": "EN",
+    "timeZone": "Parkways Mountains portals",
+    "about": "Tasty Concrete Salad",
+    "userMoodExist": false,
+    "rating": 487,
+    "feedback": "Tools & Shoes context-sensitive",
+    "inviteStatus": "ACCEPTED",
+    "visibilityType": "VISIBILITY_TO_FRIENDS",
+    "enableEmail": false,
+    "enableWhatsApp": false,
+    "mysrcmId": "240",
+    "placeOfResidence": "productize incubate explicit",
+    "preceptorId": 561,
+    "education": "Plastic engineer Rustic Soft Towels",
+    "profession": "Triple-buffered",
+    "street": "{{ faker.address.street_name }}",
+    "cityId": 871
+  },
+  "enableFeature": "UNKNOWN_FEATURE",
+  "cityId": 501
+}

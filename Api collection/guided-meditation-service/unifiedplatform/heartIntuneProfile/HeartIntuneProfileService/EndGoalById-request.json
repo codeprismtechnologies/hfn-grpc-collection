@@ -1,0 +1,9 @@
+{
+  "ID": "473",
+  "userID": "275",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Australian Dollar system Samoa",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Wooden Sleek Metal Hat",
+  "email": "{{ faker.internet.example_email }}"
+}

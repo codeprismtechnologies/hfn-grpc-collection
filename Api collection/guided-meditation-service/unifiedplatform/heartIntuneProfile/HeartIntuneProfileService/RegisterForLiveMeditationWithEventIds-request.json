@@ -1,0 +1,7 @@
+{
+  "userID": "397",
+  "liveMeditationID": "484",
+  "currentTime": "1970-01-01T00:13:49.000000845Z",
+  "liveSessionDateAndTime": "1970-01-01T00:01:21.000000312Z",
+  "calendarEventId": "{{ faker.random.uuid }}"
+}

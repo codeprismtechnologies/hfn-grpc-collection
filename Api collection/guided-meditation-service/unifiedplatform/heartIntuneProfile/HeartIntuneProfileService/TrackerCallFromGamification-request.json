@@ -1,0 +1,25 @@
+{
+  "trackerMethod": "FIND_TRACKER_FOR_DATE",
+  "trackerDetails": {
+    "id": "710",
+    "meditationType": "MEDITATE_ANY_RECORDED_CONTENT",
+    "startDate": "1970-01-01T00:05:27.000000262Z",
+    "endDate": "1970-01-01T00:15:01.000000585Z",
+    "playCount": "16",
+    "pauseCount": "912",
+    "totalSeconds": "433",
+    "completedPercentage": 530,
+    "userId": "155",
+    "meditationId": "98",
+    "liveSessionId": "152",
+    "userActivity": "SOCIAL_MEDIA_ACTIONS_ACTIVITY",
+    "logMeditationType": "EXTERNAL_APP",
+    "meditationCategory": "ANY_MEDITATION",
+    "liveMeditationRating": "SAD_RATING",
+    "logMeditation": "INTERNAL_APP"
+  },
+  "trackerId": "307",
+  "userId": "609",
+  "meditationCategory": "PRAYER_MEDITATION",
+  "isLogMeditation": false
+}

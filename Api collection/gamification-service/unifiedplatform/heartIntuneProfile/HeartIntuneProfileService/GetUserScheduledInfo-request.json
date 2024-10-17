@@ -1,0 +1,16 @@
+{
+  "requestScheduleInfo": {
+    "type": "{{ faker.database.type }}",
+    "scheduleDate": "1970-01-01T00:08:53.000000104Z",
+    "expiryDate": "1970-01-01T00:09:11.000000248Z",
+    "goalId": "331",
+    "completedStatus": true,
+    "userId": "388",
+    "meditationType": "MEDITATE_WITH_GROUPS",
+    "liveSessionId": "509"
+  },
+  "paginationRequest": {
+    "pageNumber": 265,
+    "pageSize": 840
+  }
+}

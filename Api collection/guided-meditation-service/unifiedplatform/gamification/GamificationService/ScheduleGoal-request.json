@@ -1,0 +1,24 @@
+{
+  "goalID": "536",
+  "userID": "236",
+  "goalCategory": "MEDITATION_STREAK_GOAL",
+  "selectedDateAndTimeWithCalendarEvent": [
+    {
+      "selectedDateAndTime": "1970-01-01T00:05:52.000000493Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "durationMinutes": 598,
+      "completedStatus": true,
+      "startTime": "1970-01-01T00:03:34.000000392Z"
+    },
+    {
+      "selectedDateAndTime": "1970-01-01T00:02:16.000000700Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "durationMinutes": 402,
+      "completedStatus": true,
+      "startTime": "1970-01-01T00:06:49.000000464Z"
+    }
+  ],
+  "selectedLanguage": "EN_US",
+  "hfn": true,
+  "todaySeconds": "369"
+}

@@ -1,0 +1,8 @@
+{
+  "userId": "463",
+  "coachId": "696",
+  "startTime": "1970-01-01T00:10:20.000000824Z",
+  "endTime": "1970-01-01T00:09:24.000000976Z",
+  "selectedLanguage": "DE",
+  "version": "{{ faker.system.version }}"
+}

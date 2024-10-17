@@ -1,0 +1,17 @@
+{
+  "userId": "5",
+  "userPersonalityQuizRequest": [
+    {
+      "personalityQuizId": "314",
+      "userPersonalityId": "749",
+      "selectedLanguage": "DEFAULT",
+      "selectedMeterRating": "silver"
+    },
+    {
+      "personalityQuizId": "830",
+      "userPersonalityId": "628",
+      "selectedLanguage": "RU",
+      "selectedMeterRating": "Sports"
+    }
+  ]
+}

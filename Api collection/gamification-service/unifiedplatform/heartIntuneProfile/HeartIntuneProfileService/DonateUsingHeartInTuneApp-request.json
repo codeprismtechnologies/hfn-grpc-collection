@@ -1,0 +1,82 @@
+{
+  "donateRequest": {
+    "userId": "403",
+    "donationLineItems": [
+      {
+        "donationItem": {
+          "id": "504",
+          "name": "{{ faker.name.last_name }}",
+          "description": "Lao People's Democratic Republic metrics exploit",
+          "region": "Rubber",
+          "currency": "{{ faker.finance.currency }}",
+          "billingAccountName": "Buckinghamshire",
+          "isActive": true
+        },
+        "currency": "{{ faker.finance.currency }}",
+        "amount": 195.9810758879066,
+        "isRecurring": true,
+        "recurringStartDate": "Assimilated Personal Loan Account South Dakota",
+        "recurringFrequency": "Intelligent Fresh Tuna",
+        "extras": {
+          "hard drive hacking": "bleeding-edge Oklahoma XML"
+        }
+      },
+      {
+        "donationItem": {
+          "id": "736",
+          "name": "{{ faker.name.last_name }}",
+          "description": "Arkansas",
+          "region": "bypassing Maine",
+          "currency": "{{ faker.finance.currency }}",
+          "billingAccountName": "invoice Intelligent Fresh Bike Unbranded Metal Mouse",
+          "isActive": true
+        },
+        "currency": "{{ faker.finance.currency }}",
+        "amount": 258.8755684187911,
+        "isRecurring": true,
+        "recurringStartDate": "payment",
+        "recurringFrequency": "quantifying",
+        "extras": {
+          "Liaison Handcrafted Steel Hat": "Andorra Garden & Computers"
+        }
+      }
+    ],
+    "userProfile": {
+      "userId": "885",
+      "profileId": "{{ faker.random.uuid }}",
+      "firstName": "{{ faker.name.first_name }}",
+      "lastName": "{{ faker.name.last_name }}",
+      "emailAddress": "Optimization teal",
+      "phoneNumber": "{{ faker.phone.phone_number }}",
+      "addressLine1": "Coordinator compressing",
+      "addressLine2": "River Stream",
+      "city": "{{ faker.address.city }}",
+      "state": "{{ faker.address.state }}",
+      "postalCode": "{{ faker.address.zip_code }}",
+      "country": "{{ faker.address.country }}",
+      "memberId": "{{ faker.random.uuid }}",
+      "taxId": "{{ faker.random.uuid }}",
+      "citizenshipCountry": "Small Cotton Bike cohesive cyan",
+      "passportNumber": "{{ faker.random.ushort }}",
+      "firebaseId": "{{ faker.random.uuid }}",
+      "donationIdentity": {
+        "id": "16",
+        "identityNumber": "{{ faker.random.ushort }}",
+        "identityType": "DRIVING_LICENSE",
+        "createdAt": "1970-01-01T00:12:10.000000952Z",
+        "modifiedAt": "1970-01-01T00:05:20.000000670Z",
+        "mySrcmDonationProfileId": "933",
+        "mySrcmIdentityType": 432,
+        "mySrcmIdentityName": "object-oriented Bedfordshire"
+      },
+      "mysrcmId": "360"
+    },
+    "clientId": "{{ faker.random.uuid }}",
+    "extrasJsonString": "Philippine Peso Chief",
+    "clientSuccessRedirectUrl": "application 24/7 benchmark",
+    "clientFailureRedirectUrl": "Savings Account e-commerce",
+    "idToken": "Consultant"
+  },
+  "saveProfile": true,
+  "isSelectedAvailTax": false
+}

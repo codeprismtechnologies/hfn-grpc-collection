@@ -1,0 +1,13 @@
+{
+  "badgeId": "{{ faker.random.uuid }}",
+  "info": {
+    "name": "{{ faker.name.last_name }}",
+    "format": "User-centric transparent Rubber",
+    "size": "884",
+    "token": "Cameroon program engineer",
+    "chunkRange": "synthesizing",
+    "objectPath": "Health, Movies & Sports Internal",
+    "type": "{{ faker.database.type }}"
+  },
+  "file": "c29sdXRpb24tb3JpZW50ZWQ="
+}

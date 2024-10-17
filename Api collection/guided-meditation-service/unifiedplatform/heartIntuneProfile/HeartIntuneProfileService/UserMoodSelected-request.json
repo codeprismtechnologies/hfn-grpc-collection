@@ -1,0 +1,22 @@
+{
+  "userID": "350",
+  "moodIds": [
+    "435",
+    "638"
+  ],
+  "triggerIds": [
+    "333",
+    "312"
+  ],
+  "createAt": "1970-01-01T00:05:33.000000785Z",
+  "userDefineMood": "Borders Savings Account Operative",
+  "userDefineTrigger": "Egypt content Florida",
+  "journalData": {
+    "journal": "compressing China",
+    "archiveStatus": false,
+    "favourite": true,
+    "userID": "664",
+    "journalType": "MOODS"
+  },
+  "selectedLanguage": "ML"
+}

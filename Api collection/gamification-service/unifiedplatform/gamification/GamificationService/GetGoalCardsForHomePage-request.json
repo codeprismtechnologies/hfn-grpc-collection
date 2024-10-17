@@ -1,0 +1,10 @@
+{
+  "userId": "17",
+  "startDateTime": "1970-01-01T00:13:08.000000692Z",
+  "endDateTime": "1970-01-01T00:01:03.000000152Z",
+  "selectedLanguage": "PT",
+  "pageable": {
+    "pageSize": 419,
+    "pageNumber": 131
+  }
+}

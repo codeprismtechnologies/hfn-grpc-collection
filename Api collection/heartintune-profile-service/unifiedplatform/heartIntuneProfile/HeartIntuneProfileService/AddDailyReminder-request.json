@@ -1,0 +1,12 @@
+{
+  "userId": "681",
+  "reminderTime": "1970-01-01T00:10:07.000000979Z",
+  "tuesday": true,
+  "wednesday": false,
+  "thursday": false,
+  "friday": true,
+  "saturday": false,
+  "sunday": false,
+  "monday": true,
+  "reminderType": "WAKE_UP"
+}

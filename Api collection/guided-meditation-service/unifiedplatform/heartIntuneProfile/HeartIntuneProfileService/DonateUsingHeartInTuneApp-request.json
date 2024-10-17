@@ -1,0 +1,82 @@
+{
+  "donateRequest": {
+    "userId": "498",
+    "donationLineItems": [
+      {
+        "donationItem": {
+          "id": "498",
+          "name": "{{ faker.name.last_name }}",
+          "description": "Reduced convergence",
+          "region": "Programmable",
+          "currency": "{{ faker.finance.currency }}",
+          "billingAccountName": "Games & Clothing Investment Account Assistant",
+          "isActive": true
+        },
+        "currency": "{{ faker.finance.currency }}",
+        "amount": 619.4306236064149,
+        "isRecurring": true,
+        "recurringStartDate": "Latvia",
+        "recurringFrequency": "Networked generate",
+        "extras": {
+          "payment cross-platform Investment Account": "architect Expanded"
+        }
+      },
+      {
+        "donationItem": {
+          "id": "986",
+          "name": "{{ faker.name.last_name }}",
+          "description": "Grocery & Toys",
+          "region": "Practical Steel Shirt sensor",
+          "currency": "{{ faker.finance.currency }}",
+          "billingAccountName": "payment",
+          "isActive": true
+        },
+        "currency": "{{ faker.finance.currency }}",
+        "amount": 750.9461788346256,
+        "isRecurring": true,
+        "recurringStartDate": "system primary Personal Loan Account",
+        "recurringFrequency": "Program Tools, Clothing & Shoes mindshare",
+        "extras": {
+          "Mills": "Small Granite Chicken"
+        }
+      }
+    ],
+    "userProfile": {
+      "userId": "637",
+      "profileId": "{{ faker.random.uuid }}",
+      "firstName": "{{ faker.name.first_name }}",
+      "lastName": "{{ faker.name.last_name }}",
+      "emailAddress": "Facilitator back up",
+      "phoneNumber": "{{ faker.phone.phone_number }}",
+      "addressLine1": "Valleys Organized",
+      "addressLine2": "Configuration synergies",
+      "city": "{{ faker.address.city }}",
+      "state": "{{ faker.address.state }}",
+      "postalCode": "{{ faker.address.zip_code }}",
+      "country": "{{ faker.address.country }}",
+      "memberId": "{{ faker.random.uuid }}",
+      "taxId": "{{ faker.random.uuid }}",
+      "citizenshipCountry": "Drives Web",
+      "passportNumber": "{{ faker.random.ushort }}",
+      "firebaseId": "{{ faker.random.uuid }}",
+      "donationIdentity": {
+        "id": "857",
+        "identityNumber": "{{ faker.random.ushort }}",
+        "identityType": "DRIVING_LICENSE",
+        "createdAt": "1970-01-01T00:01:09.000000358Z",
+        "modifiedAt": "1970-01-01T00:13:35.000000270Z",
+        "mySrcmDonationProfileId": "796",
+        "mySrcmIdentityType": 990,
+        "mySrcmIdentityName": "Clothing, Jewelery & Sports International e-markets"
+      },
+      "mysrcmId": "429"
+    },
+    "clientId": "{{ faker.random.uuid }}",
+    "extrasJsonString": "schemas",
+    "clientSuccessRedirectUrl": "extensible pixel",
+    "clientFailureRedirectUrl": "Buckinghamshire Executive Shoes",
+    "idToken": "Incredible Frozen Gloves methodologies productize"
+  },
+  "saveProfile": true,
+  "isSelectedAvailTax": false
+}

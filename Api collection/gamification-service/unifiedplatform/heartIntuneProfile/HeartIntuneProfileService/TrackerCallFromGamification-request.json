@@ -1,0 +1,25 @@
+{
+  "trackerMethod": "SAVE_UPDATE_TRACKER",
+  "trackerDetails": {
+    "id": "470",
+    "meditationType": "MEDITATE_WITH_PURPOSE",
+    "startDate": "1970-01-01T00:15:58.000000217Z",
+    "endDate": "1970-01-01T00:15:56.000000340Z",
+    "playCount": "569",
+    "pauseCount": "395",
+    "totalSeconds": "183",
+    "completedPercentage": 849,
+    "userId": "81",
+    "meditationId": "832",
+    "liveSessionId": "488",
+    "userActivity": "GROUPS_ACTIVIVTY",
+    "logMeditationType": "OFFLINE",
+    "meditationCategory": "CLEANING_MEDITATION",
+    "liveMeditationRating": "HAPPY_RATING",
+    "logMeditation": "OFFLINE"
+  },
+  "trackerId": "731",
+  "userId": "152",
+  "meditationCategory": "GUIDANCE_MEDITATION",
+  "isLogMeditation": true
+}

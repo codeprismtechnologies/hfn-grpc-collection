@@ -1,0 +1,77 @@
+// Version of syntax used in this proto file is proto3
+syntax = 'proto3';
+package unifiedplatform.heartIntuneProfile.tracker;
+option java_package = "org.heartfulness.unifiedplatform.heartIntuneProfile.tracker";
+option java_multiple_files = true;
+
+import 'google/protobuf/timestamp.proto';
+import 'common/common.proto';
+
+enum TrackerMethod {
+  SAVE_UPDATE_TRACKER = 0;
+  FIND_TRACKER_BY_USER_AND_START_DATE_BETWEEN = 1;
+  FIND_TRACKER_FOR_DATE = 2;
+  TOTAL_SECONDS_FOR_DATE = 3;
+}
+message RequestTrackerInfo{
+  heartintune.common.MeditationType meditationType = 1;
+  google.protobuf.Timestamp startDate = 2;
+  google.protobuf.Timestamp endDate = 3;
+  int64 playCount = 4;
+  int64 pauseCount = 5;
+  int64 totalSeconds = 6;
+  uint32 completedPercentage = 7;
+  int64 userId = 8;
+  int64 meditationId = 9;
+  int64 liveSessionId = 10;
+  bool userGroupRegister = 11;
+  int64 respectiveId = 12;
+  heartintune.common.LogMeditation logMeditationType = 13; // As of now it will required for OFFLINE(Feature) Meditation
+  heartintune.common.MeditationCategory meditationCategory = 14;
+
+}
+
+message TrackerInfo{
+  int64 id = 1;
+  heartintune.common.MeditationType meditationType = 2;
+  google.protobuf.Timestamp startDate = 3;
+  google.protobuf.Timestamp endDate = 4;
+  int64 playCount = 5;
+  int64 pauseCount = 6;
+  int64 totalSeconds = 7;
+  uint32 completedPercentage = 8;
+  int64 userId = 9;
+  int64 meditationId = 10;
+  int64 liveSessionId = 11;
+  heartintune.common.Activity userActivity = 12;
+  heartintune.common.LogMeditation logMeditationType = 13; // not a mandatory field in any case
+  heartintune.common.MeditationCategory meditationCategory = 14;
+  heartintune.common.LiveMeditationRating liveMeditationRating = 15;
+  heartintune.common.LogMeditation logMeditation = 16;
+}
+
+message TrackerByDateAndUserId{
+  int64 userId = 1;
+  google.protobuf.Timestamp date = 2;
+}
+
+message TrackerRequestFromGamification {
+  tracker.TrackerMethod trackerMethod = 1;
+  tracker.TrackerInfo tracker_details = 2;
+  int64 trackerId = 3;
+  int64 userId = 4;
+  heartintune.common.MeditationCategory meditationCategory = 5;
+  google.protobuf.Timestamp start_date_time = 6;
+  google.protobuf.Timestamp end_date_time = 7;
+  bool isLogMeditation = 8;
+}
+message TrackerResponseForGamification{
+  tracker.TrackerInfo trackerInfo = 1;
+  repeated tracker.TrackerInfo trackers = 2;
+  int64 countOrSum = 3;
+  int64 badgeId = 4;
+  int32 badgeCount = 5;
+}
+message Trackers{
+  repeated TrackerInfo trackers = 1;
+}

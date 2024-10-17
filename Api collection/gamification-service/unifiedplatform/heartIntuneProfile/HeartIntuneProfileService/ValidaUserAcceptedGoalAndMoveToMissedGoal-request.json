@@ -1,0 +1,9 @@
+{
+  "ID": "361",
+  "userID": "952",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Adaptive ADP back-end",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Small Cotton Soap open-source Kentucky",
+  "email": "{{ faker.internet.example_email }}"
+}

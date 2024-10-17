@@ -1,0 +1,52 @@
+{
+  "id": "645",
+  "journal": "generating",
+  "createdAt": "1970-01-01T00:08:19.000000606Z",
+  "modifiedAt": "1970-01-01T00:01:11.000000920Z",
+  "archiveStatus": true,
+  "favourite": false,
+  "userID": "122",
+  "journalType": "MEDITATION",
+  "moodDetailsAndTriggers": [
+    {
+      "moodDetails": {
+        "moodId": "269",
+        "associatedColor": "niches",
+        "moodName": "Rustic Wooden Gloves",
+        "moodType": "UNKNOWN_MOOD_TYPE"
+      },
+      "triggerDetails": [
+        {
+          "triggerId": "49",
+          "emojiUrl": "Center PCI time-frame",
+          "triggerName": "magenta Personal Loan Account"
+        },
+        {
+          "triggerId": "723",
+          "emojiUrl": "Global",
+          "triggerName": "Berkshire disintermediate Canyon"
+        }
+      ]
+    },
+    {
+      "moodDetails": {
+        "moodId": "912",
+        "associatedColor": "Berkshire optimizing",
+        "moodName": "Tanzanian Shilling Kwanza",
+        "moodType": "UNKNOWN_MOOD_TYPE"
+      },
+      "triggerDetails": [
+        {
+          "triggerId": "828",
+          "emojiUrl": "end-to-end",
+          "triggerName": "calculating Tactics Compatible"
+        },
+        {
+          "triggerId": "325",
+          "emojiUrl": "Planner FTP Panama",
+          "triggerName": "withdrawal generate Arizona"
+        }
+      ]
+    }
+  ]
+}

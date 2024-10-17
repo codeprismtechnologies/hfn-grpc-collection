@@ -1,0 +1,94 @@
+{
+  "email": "{{ faker.internet.example_email }}",
+  "profileURL": "Bermudian Dollar (customarily known as Bermuda Dollar) parsing",
+  "displayName": "alarm Metal",
+  "gender": "MALE",
+  "dob": "1970-01-01T00:05:26.000000671Z",
+  "userID": "310",
+  "timeZone": "Skyway",
+  "city": "{{ faker.address.city }}",
+  "about": "silver Ergonomic Frozen Sausages Fresh",
+  "feedback": "Gardens IB black",
+  "rating": 252,
+  "visibilityType": "VISIBILITY_TO_ME",
+  "user": {
+    "id": "644",
+    "status": "ANONYMOUS",
+    "provider": "APPLE",
+    "email": "{{ faker.internet.example_email }}",
+    "profileURL": "primary",
+    "displayName": "Extension firewall systemic",
+    "gender": "MALE",
+    "firebaseId": "{{ faker.random.uuid }}",
+    "mobileNumber": "{{ faker.random.ushort }}",
+    "heartPointsCumulative": 479.60543867191706,
+    "registeredLiveMeditationSessionID": [
+      "952",
+      "934"
+    ],
+    "completedLiveMeditationSessionID": [
+      "605",
+      "387"
+    ],
+    "acceptedGoals": [
+      "289",
+      "734"
+    ],
+    "completedGoals": [
+      "747",
+      "198"
+    ],
+    "favouriteMeditationID": [
+      "547",
+      "598"
+    ],
+    "schedule": [
+      {
+        "id": "82",
+        "associatedGoalID": "254",
+        "status": "SCHEDULED"
+      },
+      {
+        "id": "794",
+        "associatedGoalID": "511",
+        "status": "COMPLETED"
+      }
+    ],
+    "badgeIds": [
+      "307",
+      "787"
+    ],
+    "city": "{{ faker.address.city }}",
+    "addressLine": "Refined",
+    "postalCode": "{{ faker.address.zip_code }}",
+    "citizenshipCountry": "Intelligent Plastic Fish Ohio world-class",
+    "taxId": "{{ faker.random.uuid }}",
+    "state": "{{ faker.address.state }}",
+    "country": "{{ faker.address.country }}",
+    "passportNumber": "{{ faker.random.ushort }}",
+    "fcmToken": "Metal PNG collaboration",
+    "role": "EVENTS_ANNOUNCEMENTS_ADMIN_ROLE",
+    "selectedLanguage": "TE",
+    "timeZone": "Views card",
+    "about": "Money Market Account Montana",
+    "userMoodExist": true,
+    "rating": 361,
+    "feedback": "virtual e-commerce Rubber",
+    "inviteStatus": "ACCEPTED",
+    "visibilityType": "UNKNOWN_VISIBILITY",
+    "enableEmail": true,
+    "enableWhatsApp": false,
+    "mysrcmId": "114",
+    "placeOfResidence": "cultivate Corporate",
+    "preceptorId": 532,
+    "education": "Plastic Oklahoma Courts",
+    "profession": "Tunisia Money Market Account",
+    "street": "{{ faker.address.street_name }}",
+    "cityId": 762,
+    "anonymousId": "{{ faker.random.uuid }}",
+    "enableEmailCampaignNotification": "ENABLE_EMAIL",
+    "enablePushCampaignNotification": "ENABLE_PUSH"
+  },
+  "enableFeature": "ENABLE_PUSH",
+  "cityId": 912
+}

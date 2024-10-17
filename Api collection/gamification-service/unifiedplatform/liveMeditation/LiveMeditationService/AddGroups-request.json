@@ -1,0 +1,14 @@
+{
+  "scheduleTime": "1970-01-01T00:06:29.000000410Z",
+  "preRecordedId": "680",
+  "userJoinCount": "224",
+  "recurrence": false,
+  "recurringEndTime": "1970-01-01T00:09:20.000000593Z",
+  "dayFrequency": "NEVER",
+  "weekDays": [
+    447,
+    526
+  ],
+  "userRegisterCount": "257",
+  "zonalDifference": "588"
+}

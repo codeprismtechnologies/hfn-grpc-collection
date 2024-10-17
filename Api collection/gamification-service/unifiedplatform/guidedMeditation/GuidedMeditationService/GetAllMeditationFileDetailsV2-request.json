@@ -1,0 +1,10 @@
+{
+  "requestPageable": {
+    "pageSize": 992,
+    "pageNumber": 262
+  },
+  "meditationType": "MEDITATE_WITH_CIRCLE",
+  "mediationCategory": "PRAYER_MEDITATION",
+  "selectedLanguage": "IT",
+  "category": false
+}

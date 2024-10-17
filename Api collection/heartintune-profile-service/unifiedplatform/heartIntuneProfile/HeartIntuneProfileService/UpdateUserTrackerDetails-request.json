@@ -1,0 +1,18 @@
+{
+  "id": "812",
+  "meditationType": "MEDITATE_WITH_CIRCLE",
+  "startDate": "1970-01-01T00:01:29.000000630Z",
+  "endDate": "1970-01-01T00:12:20.000000764Z",
+  "playCount": "903",
+  "pauseCount": "867",
+  "totalSeconds": "777",
+  "completedPercentage": 362,
+  "userId": "688",
+  "meditationId": "578",
+  "liveSessionId": "628",
+  "userActivity": "OFFLINE_HEARTFULNESS_PRACTICE_ACTIVITY",
+  "logMeditationType": "INTERNAL_APP",
+  "meditationCategory": "CLEANING_MEDITATION",
+  "liveMeditationRating": "SAD_RATING",
+  "logMeditation": "OFFLINE"
+}

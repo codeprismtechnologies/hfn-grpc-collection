@@ -1,0 +1,16 @@
+{
+  "meditationType": "MEDITATE_WITH_PURPOSE",
+  "startDate": "1970-01-01T00:06:01.000000165Z",
+  "endDate": "1970-01-01T00:13:54.000000057Z",
+  "playCount": "103",
+  "pauseCount": "802",
+  "totalSeconds": "42",
+  "completedPercentage": 303,
+  "userId": "812",
+  "meditationId": "639",
+  "liveSessionId": "922",
+  "userGroupRegister": true,
+  "respectiveId": "619",
+  "logMeditationType": "EXTERNAL_APP",
+  "meditationCategory": "ANY_MEDITATION"
+}

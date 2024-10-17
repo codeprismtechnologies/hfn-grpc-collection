@@ -1,0 +1,8 @@
+{
+  "url": "{{ faker.internet.url }}",
+  "method": "exuding Credit Card Account",
+  "headers": {
+    "contentType": "hard drive",
+    "authorization": "Wooden iterate"
+  }
+}

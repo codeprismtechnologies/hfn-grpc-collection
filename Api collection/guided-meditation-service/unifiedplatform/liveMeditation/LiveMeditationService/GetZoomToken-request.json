@@ -1,0 +1,8 @@
+{
+  "url": "{{ faker.internet.url }}",
+  "method": "Avon",
+  "headers": {
+    "contentType": "Fantastic Steel Keyboard Electronics",
+    "authorization": "Seychelles Rupee"
+  }
+}

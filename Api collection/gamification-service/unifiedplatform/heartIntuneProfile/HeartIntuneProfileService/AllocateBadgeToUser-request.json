@@ -1,0 +1,9 @@
+{
+  "ID": "614",
+  "userID": "196",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "moderator Handmade",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "B2B Licensed",
+  "email": "{{ faker.internet.example_email }}"
+}

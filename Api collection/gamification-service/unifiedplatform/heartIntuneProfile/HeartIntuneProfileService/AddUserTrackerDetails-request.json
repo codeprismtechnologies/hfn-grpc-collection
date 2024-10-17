@@ -1,0 +1,16 @@
+{
+  "meditationType": "MEDITATE_WITH_PRECEPTOR",
+  "startDate": "1970-01-01T00:00:54.000000018Z",
+  "endDate": "1970-01-01T00:03:25.000000538Z",
+  "playCount": "451",
+  "pauseCount": "634",
+  "totalSeconds": "338",
+  "completedPercentage": 371,
+  "userId": "402",
+  "meditationId": "214",
+  "liveSessionId": "558",
+  "userGroupRegister": false,
+  "respectiveId": "215",
+  "logMeditationType": "INTERNAL_APP",
+  "meditationCategory": "PRAYER_MEDITATION"
+}

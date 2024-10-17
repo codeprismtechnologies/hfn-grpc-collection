@@ -1,0 +1,7 @@
+{
+  "userId": "157",
+  "startDateTime": "1970-01-01T00:15:13.000000047Z",
+  "endDateTime": "1970-01-01T00:00:46.000000543Z",
+  "selectedLanguage": "UNKNOWN_TYPE",
+  "version": "{{ faker.system.version }}"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "99",
+  "url": "{{ faker.internet.url }}",
+  "backGroundType": "IMAGE",
+  "title": {
+    "defaultContent": "Investment Account Accountability",
+    "en": "lime",
+    "hi": "architectures auxiliary zero administration",
+    "te": "capability Nuevo Sol",
+    "gu": "plum brand Home Loan Account",
+    "ta": "Cotton",
+    "ka": "Organized withdrawal",
+    "mr": "withdrawal matrices Future",
+    "it": "Practical Rustic",
+    "ru": "overriding Lane Avon",
+    "es": "Convertible Marks mesh Cotton",
+    "fr": "Chilean Peso",
+    "pt": "relationships Rustic Plastic Ball",
+    "de": "Frozen alliance",
+    "bn": "European Unit of Account 9(E.U.A.-9)",
+    "ml": "Outdoors & Kids",
+    "uk": "Configurable lime",
+    "od": "Proactive Namibia Dollar",
+    "enUs": "Jewelery & Tools Underpass",
+    "enAu": "Interactions optical moderator"
+  },
+  "thumbnailImgUrl": "withdrawal back up"
+}

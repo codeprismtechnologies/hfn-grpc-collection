@@ -1,0 +1,12 @@
+{
+  "id": "408",
+  "cardData": "Cross-platform Namibia Implementation",
+  "isPublished": false,
+  "selectedLanguage": "GU",
+  "type": "{{ faker.database.type }}",
+  "sortOrder": 285,
+  "createdBy": "synergy",
+  "createdDate": "1970-01-01T00:14:51.000000536Z",
+  "updatedDate": "1970-01-01T00:04:16.000000094Z",
+  "version": 523
+}

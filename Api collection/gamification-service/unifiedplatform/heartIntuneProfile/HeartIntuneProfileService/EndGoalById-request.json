@@ -1,0 +1,9 @@
+{
+  "ID": "48",
+  "userID": "188",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "JSON Savings Account",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Identity Generic Wooden Pants",
+  "email": "{{ faker.internet.example_email }}"
+}

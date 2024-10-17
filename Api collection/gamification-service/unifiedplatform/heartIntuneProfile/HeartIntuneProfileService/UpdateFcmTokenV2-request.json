@@ -1,0 +1,14 @@
+{
+  "UUID": "{{ faker.random.uuid }}",
+  "platform": "payment",
+  "name": "{{ faker.name.last_name }}",
+  "versionBaseOS": "Kyat Factors Crossing",
+  "manufacturer": "{{ faker.vehicle.manufacturer }}",
+  "model": "{{ faker.vehicle.model }}",
+  "isPhysicalDevice": true,
+  "appVersion": "Bedfordshire",
+  "fcmToken": "Ohio Identity Manager",
+  "buildCodeVersion": "Metal Licensed Unbranded Soft Salad",
+  "modifiedDate": "1970-01-01T00:14:09.000000171Z",
+  "firebaseId": "{{ faker.random.uuid }}"
+}

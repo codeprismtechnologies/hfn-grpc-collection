@@ -1,0 +1,7 @@
+{
+  "description": "Regional quantifying interface",
+  "KeyLocation": "Jewelery Associate Accountability",
+  "contactNumber": "{{ faker.random.ushort }}",
+  "bhandaraHelpLineType": "REPORT_ISSUE",
+  "createdAt": "1970-01-01T00:09:34.000000171Z"
+}

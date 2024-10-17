@@ -1,0 +1,17 @@
+{
+  "updateBenefits": [
+    {
+      "idOfBenefit": "531",
+      "imageURL": "neutral web services",
+      "description": "Arkansas Synergistic",
+      "removeBenefit": false
+    },
+    {
+      "idOfBenefit": "574",
+      "imageURL": "Tasty Granite Towels transmitting synthesizing",
+      "description": "Synchronised Wells",
+      "removeBenefit": false
+    }
+  ],
+  "liveSessionID": "709"
+}

@@ -1,0 +1,27 @@
+{
+  "url": "{{ faker.internet.url }}",
+  "backGroundType": "UNKNOWN_BACKGROUND",
+  "title": {
+    "defaultContent": "wireless Designer",
+    "en": "Clothing, Games & Kids HDD",
+    "hi": "Engineer Direct withdrawal",
+    "te": "override Product Principal",
+    "gu": "software",
+    "ta": "generate Bedfordshire",
+    "ka": "Borders Greenland",
+    "mr": "connect Checking Account",
+    "it": "empower Borders",
+    "ru": "Fantastic",
+    "es": "website Games & Computers",
+    "fr": "Borders Junctions",
+    "pt": "Valleys Trafficway workforce",
+    "de": "Guam mobile bypass",
+    "bn": "Investment Account",
+    "ml": "Auto Loan Account neural compressing",
+    "uk": "Toys & Beauty Principal",
+    "od": "middleware",
+    "enUs": "Automotive, Books & Jewelery generating",
+    "enAu": "Markets Producer"
+  },
+  "thumbnailImgUrl": "Designer"
+}

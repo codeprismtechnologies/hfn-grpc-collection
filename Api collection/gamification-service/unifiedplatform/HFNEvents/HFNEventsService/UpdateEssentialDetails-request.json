@@ -1,0 +1,11 @@
+{
+  "id": "825",
+  "essentialTitle": "navigating software invoice",
+  "name": "{{ faker.name.last_name }}",
+  "imageUrl": "eco-centric Multi-channelled",
+  "mobileNumber": "{{ faker.random.ushort }}",
+  "smsNumber": "{{ faker.random.ushort }}",
+  "whatsAppNumber": "{{ faker.random.ushort }}",
+  "landLineNumber": "{{ faker.random.ushort }}",
+  "directionUrl": "deploy white"
+}

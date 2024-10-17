@@ -1,0 +1,13 @@
+{
+  "details": {
+    "methodFqn": "unifiedplatform.heartIntuneProfile.HeartIntuneProfileService.GetGroupByUser"
+  },
+  "requests": [
+    {
+      "location": "GetGroupByUser-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc",
+  "importStreamId": "ab69471c-bcc4-4d29-ad83-6bb53c69abad"
+}

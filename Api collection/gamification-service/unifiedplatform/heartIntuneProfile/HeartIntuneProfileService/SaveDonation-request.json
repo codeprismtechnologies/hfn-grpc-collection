@@ -1,0 +1,7 @@
+{
+  "userId": "308",
+  "currency": "{{ faker.finance.currency }}",
+  "amount": 929.5732699331572,
+  "currentDate": "1970-01-01T00:11:00.000000013Z",
+  "donationStatus": true
+}

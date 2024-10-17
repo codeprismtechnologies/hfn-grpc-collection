@@ -1,0 +1,10 @@
+{
+  "requestPageable": {
+    "pageSize": 18,
+    "pageNumber": 868
+  },
+  "meditationType": "MEDITATE_WITH_PRECEPTOR",
+  "mediationCategory": "PRAYER_MEDITATION",
+  "selectedLanguage": "HI",
+  "category": false
+}

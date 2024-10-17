@@ -1,0 +1,32 @@
+{
+  "bcc": [
+    "orchestration",
+    "paradigm generate CFA Franc BEAC"
+  ],
+  "cc": [
+    "connect action-items SDD",
+    "SQL Designer"
+  ],
+  "replyTo": "Serbia",
+  "to": [
+    "transmit Pre-emptive",
+    "interface Checking Account Gorgeous Soft Mouse"
+  ],
+  "subject": "Avon Fantastic Customer",
+  "text": "{{ faker.lorem.text }}",
+  "html": "Colorado Cambridgeshire",
+  "attachments": [
+    {
+      "name": "{{ faker.name.last_name }}",
+      "data": "c29sdXRpb24tb3JpZW50ZWQ=",
+      "contentType": "Architect",
+      "contentId": "{{ faker.random.uuid }}"
+    },
+    {
+      "name": "{{ faker.name.last_name }}",
+      "data": "c29sdXRpb24tb3JpZW50ZWQ=",
+      "contentType": "grey Concrete",
+      "contentId": "{{ faker.random.uuid }}"
+    }
+  ]
+}

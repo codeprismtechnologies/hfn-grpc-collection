@@ -1,0 +1,8 @@
+{
+  "questionText": "ivory",
+  "userID": "41",
+  "liveSessionID": "321",
+  "userName": "{{ faker.internet.user_name }}",
+  "email": "{{ faker.internet.example_email }}",
+  "mobileNumber": "{{ faker.random.ushort }}"
+}

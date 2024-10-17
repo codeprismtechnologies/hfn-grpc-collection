@@ -1,0 +1,20 @@
+{
+  "requestJournal": [
+    {
+      "journal": "Graphical User Interface Gourde",
+      "createdAt": "1970-01-01T00:09:17.000000204Z",
+      "archiveStatus": false,
+      "favourite": true,
+      "userID": "79",
+      "journalType": "MOODS"
+    },
+    {
+      "journal": "Graphic Interface Arkansas Unbranded Metal Gloves",
+      "createdAt": "1970-01-01T00:15:18.000000617Z",
+      "archiveStatus": false,
+      "favourite": false,
+      "userID": "922",
+      "journalType": "MEDITATION"
+    }
+  ]
+}

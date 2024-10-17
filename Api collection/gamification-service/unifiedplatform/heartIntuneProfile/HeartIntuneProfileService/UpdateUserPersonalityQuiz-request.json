@@ -1,0 +1,17 @@
+{
+  "userId": "235",
+  "userPersonalityQuizRequest": [
+    {
+      "personalityQuizId": "7",
+      "userPersonalityId": "690",
+      "selectedLanguage": "EN",
+      "selectedMeterRating": "Sharable Implemented Automotive, Toys & Tools"
+    },
+    {
+      "personalityQuizId": "859",
+      "userPersonalityId": "309",
+      "selectedLanguage": "MR",
+      "selectedMeterRating": "Associate"
+    }
+  ]
+}

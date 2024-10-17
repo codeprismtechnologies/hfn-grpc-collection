@@ -1,0 +1,16 @@
+{
+  "url": "{{ faker.internet.url }}",
+  "method": "Lead",
+  "headers": {
+    "contentType": "Mews New Zealand Dollar Intelligent",
+    "authorization": "Rustic bus"
+  },
+  "action": {
+    "Licensed Plastic Sausages proactive Rustic": "Versatile"
+  },
+  "setting": {
+    "setting": {
+      "JSON Solomon Islands Dollar": "ROI Comoros monitor"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "ID": "334",
+  "userID": "553",
+  "firebaseId": "{{ faker.random.uuid }}",
+  "fcmToken": "Cross-group real-time Integration",
+  "deviceId": "{{ faker.random.uuid }}",
+  "jwtToken": "Berkshire Creek",
+  "email": "{{ faker.internet.example_email }}"
+}

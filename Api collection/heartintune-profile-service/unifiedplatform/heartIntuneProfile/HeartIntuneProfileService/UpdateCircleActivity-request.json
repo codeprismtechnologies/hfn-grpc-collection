@@ -1,0 +1,22 @@
+{
+  "circleId": "441",
+  "circleName": "ability International payment",
+  "userId": "549",
+  "activityName": "Azerbaijan Liaison",
+  "description": "Dynamic",
+  "preRecordedId": "822",
+  "recurring": true,
+  "scheduleAt": "1970-01-01T00:07:30.000000832Z",
+  "dayFrequency": "NEVER",
+  "weekDays": [
+    31,
+    673
+  ],
+  "recurringEndTime": "1970-01-01T00:15:34.000000022Z",
+  "userIdInvite": [
+    "794",
+    "598"
+  ],
+  "circleActivityId": "912",
+  "zonalDifference": "195"
+}

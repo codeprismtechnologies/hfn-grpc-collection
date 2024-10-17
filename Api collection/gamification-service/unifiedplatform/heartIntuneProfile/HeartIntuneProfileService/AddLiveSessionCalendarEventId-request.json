@@ -1,0 +1,13 @@
+{
+  "UserId": "221",
+  "liveSessionId": "250",
+  "calendarEventId": "{{ faker.random.uuid }}",
+  "meditationType": "MEDITATE_WITH_GUIDANCE",
+  "delayTimeInMinutes": 203,
+  "scheduleTime": "1970-01-01T00:13:31.000000116Z",
+  "pageable": {
+    "pageNumber": 536,
+    "pageSize": 802
+  },
+  "firebaseId": "{{ faker.random.uuid }}"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "246",
+  "meditationType": "UNKNOWN_MEDITATION_TYPE",
+  "startDate": "1970-01-01T00:04:56.000000942Z",
+  "endDate": "1970-01-01T00:01:34.000000683Z",
+  "playCount": "808",
+  "pauseCount": "863",
+  "totalSeconds": "81",
+  "completedPercentage": 896,
+  "userId": "133",
+  "meditationId": "820",
+  "liveSessionId": "676",
+  "userActivity": "MEDITATE_ON_YOUR_OWN_ACTIVITY",
+  "logMeditationType": "INTERNAL_APP",
+  "meditationCategory": "GUIDANCE_MEDITATION",
+  "liveMeditationRating": "NEUTRAL_RATING",
+  "logMeditation": "EXTERNAL_APP"
+}

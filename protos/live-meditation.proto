@@ -1,0 +1,991 @@
+/**
+ * @author : Godwin Vinny Carole Kati
+ * @created : 22/01/2021, Friday 01:45
+ * @organisation : Codeprism Technologies Pvt Ltd 
+**/
+
+syntax = 'proto3';
+import 'google/protobuf/timestamp.proto';
+import 'common/common.proto';
+
+package unifiedplatform.liveMeditation;
+
+option java_package = "org.heartfulness.unifiedplatform.livemeditation";
+option java_multiple_files = true;
+
+message Test {
+  string result = 1;
+}
+
+message Empty {
+}
+
+message TestResponse {
+  Test test = 1;
+}
+
+message CoachProfile {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+  heartintune.common.Locale profileTitle = 4;
+  heartintune.common.Locale profileSubTitle = 5;
+  heartintune.common.Locale profileDescription = 6;
+  string imageURL = 7;
+  string videoURL = 8;
+  string playBackUrl = 9;
+  string thumbnailImgUrl = 10;
+}
+
+message LocaleCoachProfile{
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+  string profileTitle = 4;
+  string profileSubTitle = 5;
+  string profileDescription = 6;
+  string imageURL = 7;
+  string videoURL = 8;
+  string playBackUrl = 9;
+  string thumbnailImgUrl = 10;
+}
+
+message GetLocaleCoachByIdRequest{
+  int64 id = 1;
+  heartintune.common.LocaleType locale = 2;
+}
+
+message AddCoachRequest {
+  string name = 1;
+  string email = 2;
+  heartintune.common.Locale profileTitle = 3;
+  heartintune.common.Locale profileSubTitle = 4;
+  heartintune.common.Locale profileDescription = 5;
+  string imageURL = 6;
+  string videoURL = 7;
+  AwsChannelRequest awsChannelInfo = 13;
+  string thumbnailImgUrl = 14;
+}
+
+message SessionBenefits {
+  int64 id = 1;
+  string imageURL = 2;
+  string description = 3;
+}
+
+message ResponseSessionBenefits {
+  repeated SessionBenefits sessionBenefits = 1;
+  int64 liveSessionID = 2;
+}
+message SessionBenefitsList{
+  string imageURL = 1;
+  string description = 2;
+}
+message RequestSessionBenefits {
+  repeated SessionBenefitsList sessionBenefitsList = 1;
+  int64 liveSessionID = 2;
+}
+
+message UpdateBenefits {
+  int64 idOfBenefit = 1;
+  string imageURL = 2;
+  string description = 3;
+  bool removeBenefit = 4;
+}
+
+message RequestUpdateBenefits{
+  repeated UpdateBenefits updateBenefits = 1;
+  int64 liveSessionID = 2;
+}
+
+message ResponseListOfBenefits {
+  int64 liveSessionID = 1;
+  repeated SessionBenefits listOfBenefits = 2;
+}
+
+message RequestForRating {
+  int64 liveSessionID = 1;
+  heartintune.common.LiveMeditationRating rating = 2;
+  heartintune.common.LiveMeditationRating decreaseRating = 3;
+}
+message ResponseForRating {
+  bool status = 1;
+}
+
+message SessionInfo {
+  int64 id = 1;
+  google.protobuf.Timestamp scheduledTime = 2;
+  string sessionTitle = 3;
+  string sessionSubTitle = 4;
+  string sessionInfo = 5;
+  uint32 duration = 6;
+  uint32 registeredUserCount = 7;
+  uint32 liveParticipantsCount = 8;
+  string aboutSession = 9;
+  string meditationSteps = 10;
+  int64 associatedCoachId = 11;
+  repeated int64 associatedListOfBenefitsID = 12;
+  string imageURL = 13;
+  string videoURL = 14;
+  heartintune.common.LocaleType selectedLanguage = 15;
+  int64 viewerCountStart = 16;
+  //int64 viewerCountMid = 17;
+  int64 viewerCountEnd = 18;
+  google.protobuf.Timestamp sessionStartTime = 19;
+  google.protobuf.Timestamp sessionEndTime = 20;
+  int64 preRecordedId = 21;
+  string preRecordedUrl = 22;
+  bool updateAllocatedCoach = 23;
+  string link = 24;
+  repeated  Tag tags=25;
+  repeated  int64 tagIds=26;
+  string attribute = 27;
+  string Topic = 28;
+}
+
+message AddLiveMeditationRequest {
+  google.protobuf.Timestamp scheduledTime = 1;
+  string sessionTitle = 2;
+  string sessionSubTitle = 3;
+  string sessionInfo = 4;
+  uint32 duration = 5;
+  uint32 registeredUserCount = 6;
+  uint32 liveParticipantsCount = 7;
+  string aboutSession = 8;
+  string meditationSteps = 9;
+  int64 associatedCoachId = 10;
+  string imageURL = 11;
+  string videoURL = 12;
+  string link = 13;
+  repeated Tag tags=14;
+//  repeated RequestSessionBenefits listOfBenefits = 11;
+  string attribute = 15;
+}
+message CreateLiveMeditationRequest{
+  google.protobuf.Timestamp scheduledTime = 1;
+  string sessionTitle = 2;
+  string sessionSubTitle = 3;
+  string sessionInfo = 4;
+  uint32 duration = 5;
+  uint32 registeredUserCount = 6;
+  uint32 liveParticipantsCount = 7;
+  string aboutSession = 8;
+  string meditationSteps = 9;
+  int64 associatedCoachId = 10;
+  string imageURL = 11;
+  string videoURL = 12;
+  heartintune.common.LocaleType languageType = 13;
+  int64 preRecordedId = 14;
+  string preRecordedUrl = 15;
+  string link = 16;
+  repeated  Tag tags=17;
+  string attribute = 18;
+}
+message ResponseLiveMeditation {
+  SessionInfo sessionInfo = 1;
+  CoachProfile associateCoach = 2;
+  repeated SessionBenefits listOfBenefits = 3;
+  repeated Question listOfQuestions = 4;
+}
+
+message ResponseLiveMeditationWithSelectedLanguage{
+  SessionInfo sessionInfo = 1;
+  LocaleCoachProfile associateCoach = 2;
+  repeated SessionBenefits listOfBenefits = 3;
+  repeated Question listOfQuestions = 4;
+}
+
+message LiveMeditation {
+  CoachProfile coachInfo = 1;
+  SessionInfo liveMeditationSessionDetails = 2;
+}
+
+message Question {
+  int64 id = 1;
+  string questionText = 2;
+  int64 userID = 3;
+  int64 liveSessionID = 4;
+  google.protobuf.Timestamp createdAt = 5;
+  string userName = 6;
+  string email = 7;
+  string mobileNumber = 8;
+}
+
+message AddQuestionRequest {
+  string questionText = 1;
+  int64 userID = 2;
+  int64 liveSessionID = 3;
+  string userName = 4;
+  string email = 5;
+  string mobile_number = 6;
+}
+
+message ListOfLiveMeditations {
+  repeated LiveMeditation listOfLiveMeditationSession = 1;
+}
+
+message ResponseListOfLiveMeditations {
+  repeated ResponseLiveMeditation listOfLiveMeditationSession = 1;
+}
+
+message ResponseListOfLiveMeditationsWithSelectedLanguage{
+  repeated ResponseLiveMeditationWithSelectedLanguage listOfLiveMeditationSession = 1;
+}
+//message CoachAddedSuccessfully {
+//  bool status = 1;
+//  CoachProfile coachProfile = 2;
+//}
+
+message SessionScheduledSuccessfully {
+  bool status = 1;
+  SessionInfo sessionInfo = 2;
+}
+
+message ID {
+  int64 ID = 1;
+}
+
+message RequestLiveSessionId{
+  int64 ID = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+  bool isExpiryCheck = 3;
+}
+
+message RequestBenefitAndSessionIDs {
+  int64 liveSessionID = 1;
+  int64 benefitsID = 2;
+}
+
+message RequestAddBenefitAndSessionIDs {
+  int64 liveSessionID = 1;
+  repeated int64 benefitsID = 2;
+}
+
+message ResponseStatus {
+  bool success = 1;
+}
+
+message ListOfCoach {
+  repeated CoachProfile listOfCoach = 1;
+}
+
+message DeleteCoachByIdResponse {
+  string message = 1;
+  CoachProfile coachProfile = 2;
+}
+
+message DeleteScheduleSessionByIDResponse {
+  string message = 1;
+  SessionInfo sessionInfo = 2;
+  CoachProfile coachProfile = 3;
+}
+
+message ListOfQuestion{
+  repeated Question question = 1;
+  int64 totalCount = 2;
+}
+
+message RequestQuestionBySessionId{
+  int64 liveSessionId = 1;
+  uint32 pageSize = 2;
+  uint32 pageNumber = 3;
+}
+
+message RequestGetAllLiveSession{
+  google.protobuf.Timestamp scheduledTime = 1;
+  uint32 delayExpiryByGivenMinutes = 2;
+}
+message RequestGetAllLiveSessionWithSelectedLanguage{
+  google.protobuf.Timestamp scheduledTime = 1;
+  uint32 delayExpiryByGivenMinutes = 2;
+  heartintune.common.LocaleType selectedLanguage = 3;
+}
+
+message Status{
+  bool Success=1;
+  string SuccessMessage = 2;
+}
+
+message AddLiveMeditationRequestDetails {
+  google.protobuf.Timestamp scheduledTime = 1;
+  heartintune.common.Locale sessionTitle = 2;
+  heartintune.common.Locale sessionSubTitle = 3;
+  heartintune.common.Locale sessionInfo = 4;
+  uint32 duration = 5;
+  uint32 registeredUserCount = 6;
+  uint32 liveParticipantsCount = 7;
+  heartintune.common.Locale aboutSession = 8;
+  heartintune.common.Locale meditationSteps = 9;
+  int64 associatedCoachId = 10;
+  string imageURL = 11;
+  string videoURL = 12;
+  //  repeated RequestSessionBenefits listOfBenefits = 11;
+}
+
+message SessionInfoDetails {
+  int64 id = 1;
+  google.protobuf.Timestamp scheduledTime = 2;
+  heartintune.common.Locale sessionTitle = 3;
+  heartintune.common.Locale sessionSubTitle = 4;
+  heartintune.common.Locale sessionInfo = 5;
+  uint32 duration = 6;
+  uint32 registeredUserCount = 7;
+  uint32 liveParticipantsCount = 8;
+  heartintune.common.Locale aboutSession = 9;
+  heartintune.common.Locale meditationSteps = 10;
+  int64 associatedCoachId = 11;
+  repeated int64 associatedListOfBenefitsID = 12;
+  string imageURL = 13;
+  string videoURL = 14;
+}
+
+message DeleteScheduleSessionDetailsByIDResponse {
+  string message = 1;
+  SessionInfoDetails sessionInfo = 2;
+}
+
+message ResponseListOfLiveMeditationsDetails {
+  repeated ResponseLiveMeditationDetails listOfLiveMeditationSession = 1;
+}
+
+message ResponseLiveMeditationDetails {
+  SessionInfoDetails sessionInfo = 1;
+  CoachProfile associateCoach = 2;
+  repeated SessionBenefitsDetails listOfBenefits = 3;
+  repeated Question listOfQuestions = 4;
+}
+message RequestSessionBenefitsDetails {
+  string imageURL = 1;
+  heartintune.common.Locale description = 2;
+}
+message RequestAddSessionBenefitsDetails{
+  repeated RequestSessionBenefitsDetails sessionBenefitsList = 1;
+  int64 liveSessionID = 3;
+}
+message SessionBenefitsDetails {
+  int64 id = 1;
+  string imageURL = 2;
+  heartintune.common.Locale description = 3;
+}
+message ResponseListOfBenefitsDetails {
+  int64 liveSessionID = 1;
+  repeated SessionBenefitsDetails listOfBenefitsDetails = 2;
+}
+message ResponseSessionBenefitsDetails{
+  repeated SessionBenefitsDetails sessionBenefitsDetails = 1;
+  int64 liveSessionID = 2;
+}
+
+message AwsChannelRequest{
+  bool authorized = 1;
+  string latencyMode = 2;
+  string channelName = 3;
+  string type = 4;
+  repeated string tags = 5;
+}
+
+message AwsChannelResponse{
+  AwsChannelInfo awsChannelInfo = 1;
+  AwsStreamKey awsStreamKey = 2;
+}
+
+message AwsChannelInfo{
+  int64 id = 1;
+  string arn = 2;
+  bool authorized = 3;
+  string ingestEndpoint = 4;
+  string latencyMode = 5;
+  string channelName = 6;
+  string playBackUrl = 7;
+  repeated string tags = 8;
+  string type = 9;
+  int64 associatedStreamId = 10;
+}
+message AwsStreamKey{
+  int64 id = 1;
+  string arn = 2;
+  string channelArn = 3;
+  repeated string tag = 4;
+  string value = 5;
+}
+
+message ChannelArn{
+  string arn = 1;
+}
+
+message AwsChannelViewerCountResponse{
+  string health = 1;
+  google.protobuf.Timestamp startTime = 2;
+  string state = 3;
+  int64 viewerCount = 4;
+}
+
+message requestAddLiveMeditationForNextFewDays{
+  google.protobuf.Timestamp currentDate = 1;
+}
+
+message ResponseAverageRating{
+  int64 liveSessionId = 1;
+  bool status = 2;
+  float averageRaring = 3;
+  float totalUsersRating = 4;
+}
+
+message RequestForLiveSessionsBetween{
+  google.protobuf.Timestamp currentDate = 1;
+  google.protobuf.Timestamp endDate = 2;
+}
+
+message ResponseForLiveSessionsBetween{
+  repeated int64 sessionId = 1;
+  google.protobuf.Timestamp nextScheduleSessionTime = 2;
+}
+
+message RequestForLiveSessionExist{
+  int64 id = 1;
+  uint32 delayExpiryByGivenMinutes = 2;
+  repeated int64 sessionIds = 3;
+}
+
+message RequestForGetLiveSessionByCoachId{
+  int64 coachId = 1;
+  uint32 pageSize = 2;
+  uint32 pageNumber = 3;
+  google.protobuf.Timestamp selectedDate = 4;
+}
+message ResponseForGetLiveSessionByCoachId{
+  repeated int64 liveSessionIds = 1;
+  int64 totalCount = 2;
+}
+message requestScheduleSessionsDateRange{
+  google.protobuf.Timestamp startDate = 1;
+  google.protobuf.Timestamp endDate = 2;
+  RequestPageable pageable = 3;
+  bool getDefineSession = 4;
+  LocaleType selectedLanguage = 5;
+}
+message scheduleSessionWithCoach{
+  SessionInfo sessionInfo = 1;
+  CoachProfile coachProfile = 2;
+}
+message responseScheduleSessionsDateRange{
+ repeated scheduleSessionWithCoach sessionInfoDetails = 1;
+  ResponsePageable pageable = 2;
+}
+message ResponseForGetAllBenefits{
+  repeated  SessionBenefits sessionBenefits = 1;
+  uint32 selectedPageSize = 2;
+  uint32 selectedPageNumber = 3;
+  int64 totalCount = 4;
+}
+message RequestForGetAllBenefits{
+  uint32 pageSize = 1;
+  uint32 pageNumber = 2;
+}
+message RequestSetLiveSessionRegisterCount{
+  int64 liveSessionId = 1;
+  uint32 count = 2;
+}
+message RequestForGetAllBenefitsByCoachId{
+  int64 coachId =1;
+  uint32 pageSize = 2;
+  uint32 pageNumber = 3;
+}
+message ResponseForGetAllBenefitsByCoachId{
+  repeated SessionBenefits sessionBenefits = 1;
+  uint32 selectedPageSize = 2;
+  uint32 selectedPageNumber = 3;
+}
+message RequestForGetAllQuestionsWithRegisterCount{
+  int64 liveSessionId = 1;
+}
+message ResponseForGetAllQuestionsWithRegisterCount{
+  repeated Question question = 1;
+  SessionInfo sessionInfo = 2;
+  CoachProfile coachProfile = 3;
+}
+message RequestForUserFeedBack{
+  int64 liveSessionId = 1;
+  int64 userId = 2;
+  string userName = 3;
+  string textIssue = 4;
+  UserReportType userReportType = 5; // either Issue or feedback may anything in future
+  string email = 6;
+  string mobileNumber = 7;
+}
+message UserLiveSessionFeedBack{
+  int64 id = 1;
+  int64 liveSessionId = 2;
+  int64 userId = 3;
+  string userName = 4;
+  string textIssue = 5;
+  google.protobuf.Timestamp timestamp = 6;
+  UserReportType userReportType = 7; // either Issue or feedback may anything in future
+  string email = 8;
+  string mobileNumber = 9;
+}
+message ListOfUserFeedBacks{
+  repeated UserLiveSessionFeedBack userLiveSessionFeedBack = 1;
+  ResponsePageable responsePageable = 2;
+}
+message RequestPageable{
+  uint32 pageSize = 2;
+  uint32 pageNumber = 3;
+  bool isUnPublished =4;
+}
+message ResponsePageable{
+  int64 totalCount = 1;
+  uint32 selectedPageSize = 2;
+  uint32 selectedPageNumber = 3;
+}
+message RequestPageableWithId{
+    RequestPageable pageable = 1;
+    int64  Id = 2;
+}
+enum LiveSessionState{
+  INIT = 0;
+  READY = 1;
+  START = 2;
+  STOP = 3;
+  CONTINUE = 4;
+  END = 5;
+  NO_STATE_FOUND = 6;
+  PRE_RECORDED_VIDEO_PLAYING = 7;
+}
+message RequestForLiveSessionState{
+  int64 liveSessionId = 1;
+}
+message ResponseForLiveSessionState{
+  LiveSessionState liveSessionState = 1;
+  int64 liveSessionId = 2;
+  AwsChannelViewerCountResponse awsChannelViewerCountResponse = 3;
+  google.protobuf.Timestamp scheduledTime = 4;
+}
+
+message RequestPreceptorSession{
+  int64 liveSessionId = 1;
+  LiveSessionState liveSessionState =2;
+}
+message Headers{
+  string contentType = 1;
+  string authorization = 2;
+}
+
+message RequestForGetZoomToken{
+  string url = 1;
+  string method = 2;
+  Headers headers = 3;
+}
+message ResponseForGetZoomToken{
+  string startUrl = 1;
+  string encryptedPassword = 2;
+  string joinUrl = 3;
+}
+message RequestForZoomWrapper{
+  string url = 1;
+  string method = 2;
+  Headers headers = 3;
+  map<string,string> action = 4;
+  Setting setting= 5;
+}
+message Setting {
+  map<string,string> setting = 1;
+}
+message Value{
+  oneof kind{
+    string string_value = 1;
+  }
+}
+message ResponseForZoomWrapper{
+  uint32 code = 1;
+  string message =2;
+}
+
+message ResponseForLiveSessionFeedBacks{
+  repeated UserLiveSessionFeedBack userLiveSessionFeedBack = 1;
+  int64 count = 2;
+}
+
+message RequestForUpcomingGetAllLiveMediationV2 {
+  google.protobuf.Timestamp scheduledTime = 1;
+  uint32 delayExpiryByGivenMinutes = 2;
+  RequestPageable requestPageable = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+}
+message ResponseForUpcomingGetAllLiveMeditationsV2 {
+  repeated ResponseLiveMeditationWithSelectedLanguage responseLiveMeditationWithSelectedLanguage = 1;
+  ResponsePageable responsePageable = 2;
+}
+message RequestGetAllLiveSessionV2{
+  google.protobuf.Timestamp scheduledTime = 1;
+  uint32 delayExpiryByGivenMinutes = 2;
+  heartintune.common.LocaleType selectedLanguage = 3;
+  RequestPageable pageable = 4;
+  repeated int64 liveSessionIds = 5;
+}
+message RequestLiveSessionV2ByCoachIdOnSpecifiedTime{
+  int64 coachId = 1;
+  google.protobuf.Timestamp startTime = 2;
+  google.protobuf.Timestamp endTime = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  RequestPageable pageable = 5;
+}
+message ResponseLiveSessionV2DetailsByCoachIdOnSpecifiedTime{
+  repeated SessionInfo sessionInfo = 1;
+  LocaleCoachProfile coachDetails = 2;
+  google.protobuf.Timestamp startTime = 3;
+  google.protobuf.Timestamp endTime = 4;
+  ResponsePageable responsePageable = 5;
+}
+enum UserReportType{
+  FEEDBACK = 0;
+  ISSUE = 1;
+}
+message ZoomUrlsResponse{
+  uint32 code = 1;
+  string join_url =2;
+  string start_url =3;
+}
+message ZoomEventRequest{
+  string event = 1;
+  int64 event_ts = 2;
+  zoomPayload payload = 3;
+}
+message zoomPayload{
+  string account_id = 1;
+  string operator = 2;
+  string operator_id = 3;
+  string operation = 4;
+  zoomObject object = 5 ;
+  string plainToken = 6;
+}
+message zoomObject{
+  string id = 1;
+  string uuid = 2;
+  string host_id = 3;
+  string topic = 4;
+  sint32 type = 5;
+  string start_time = 6;
+  string timezone = 7;
+  int32 duration = 8;
+  string end_time = 9;
+}
+message ZoomLiveStreamActionRequest{
+  string  liveStreamAction = 1; //start or stop
+}
+message ReportTypeWithIdRequest{
+  int64 id = 1;
+  UserReportType userReportType = 2;
+}
+message ZoomEventResponse{
+  string plainToken = 1;
+  string encryptedToken = 2;
+}
+message ListOfSessionViewerCount{
+  repeated SessionViewerCountResponse sessionViewerCount = 1;
+  int32 timeInterval = 2;
+}
+message SessionViewerCountResponse{
+  int64 id = 1;
+  int64 liveSessionId = 2;
+  google.protobuf.Timestamp recurring_time = 3;
+  int64 viwer_count = 4;
+}
+message PreRecordedRequest{
+  heartintune.common.Locale title = 1;
+  heartintune.common.Locale description = 2;
+  heartintune.common.Locale videoUrl = 3;
+  heartintune.common.Locale meditationSteps = 4;
+  string thumbnail = 5;
+  string imgUrl = 6;
+  heartintune.common.PreRecordedType preRecordedType = 7;
+  int64 videoDuration = 9;
+  repeated Tag tags=10;
+  heartintune.common.Locale attribute = 11;
+}
+message PreRecordedResponse{
+  int64 id = 1;
+  heartintune.common.Locale title = 2;
+  heartintune.common.Locale description = 3;
+  heartintune.common.Locale videoUrl = 4;
+  heartintune.common.Locale meditationSteps = 5;
+  string thumbnail = 6;
+  string imgUrl = 7;
+  heartintune.common.PreRecordedType preRecordedType = 8;
+  int64 videoDuration = 9;
+  repeated Tag tags=10;
+  heartintune.common.Locale attribute = 11;
+}
+message LocaleType{
+  heartintune.common.LocaleType selectedLanguage = 1;
+  int64 id = 2;
+  int64 respectiveId = 3;
+}
+message PreRecordedWithLocaleResponse{
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  string videoUrl = 4;
+  string meditationSteps = 5;
+  string thumbnail = 6;
+  string imgUrl = 7;
+  heartintune.common.PreRecordedType preRecordedType = 8;
+  int64 videoDuration = 9;
+  string attribute = 10;
+}
+message GetAllPreRecordedResponse{
+  repeated PreRecordedResponse preRecordeds = 1;
+  ResponsePageable pageable = 2;
+}
+message GroupsRequest{
+  google.protobuf.Timestamp scheduleTime = 1;
+  int64 preRecordedId = 2;
+  int64 userJoinCount = 3;
+  bool recurrence = 4;
+  google.protobuf.Timestamp recurringEndTime = 5;
+  heartintune.common.DayFrequency dayFrequency = 6;
+  repeated int32 weekDays = 7; // this is useful when day frequency = 2;
+  int64 userRegisterCount = 8;
+  int64 zonalDifference = 9;
+}
+message GroupsResponse{
+  int64 id = 1;
+  google.protobuf.Timestamp scheduleTime = 2;
+  google.protobuf.Timestamp createAt = 3;
+  PreRecordedResponse preRecorded = 4;
+  int64 userJoinCount = 5;
+  bool recurrence = 6;
+  google.protobuf.Timestamp recurringEndTime = 7;
+  heartintune.common.DayFrequency dayFrequency = 8;
+  repeated int32 weekDays = 9; // this is useful when day frequency = 2;
+  int64 userRegisterCount = 10;
+  string firebaseTopicName = 11;
+  bool publish = 12;
+  int64 groupOccurrenceId = 13;
+  int64 zonalDifference = 14;
+}
+message GroupsResponseWithLocaleType{
+  int64 id = 1;
+  google.protobuf.Timestamp scheduleTime = 2;
+  google.protobuf.Timestamp createAt = 3;
+  PreRecordedWithLocaleResponse preRecorded = 4;
+  int64 userJoinCount = 5;
+  bool recurrence = 6;
+  google.protobuf.Timestamp recurringEndTime = 7;
+  heartintune.common.DayFrequency dayFrequency = 8;
+  repeated int32 weekDays = 9; // this is useful when day frequency = 2;
+  int64 userRegisterCount = 10;
+  string firebaseTopicName = 11;
+  bool publish = 12;
+  int64 groupOccurrenceId = 13;
+}
+message ListOfGroups{
+ repeated GroupsResponse groups = 1;
+  ResponsePageable pageable = 2;
+}
+message ListOfGroupsWithSelectLanguage{
+  repeated GroupsResponseWithLocaleType groups = 1;
+  ResponsePageable pageable = 2;
+}
+message RequestGroupsBetweenDateRange{
+  google.protobuf.Timestamp startDate = 1;
+  google.protobuf.Timestamp endDate = 2;
+  RequestPageable pageable = 3;
+}
+message UpcomingGroupsRequest{
+  heartintune.common.LocaleType selectedLanguage = 1;
+  RequestPageable pageable = 2;
+  google.protobuf.Timestamp currentTime = 3;
+  repeated int64 groupId = 4;
+  bool registeredList = 5;
+}
+message GroupsUserCountRequest{
+  int64 id = 1;
+  bool increment = 2;
+  bool decrement = 3;
+}
+message PreRecordedTypeRequest{
+  heartintune.common.LocaleType selectedLanguage = 1;
+  heartintune.common.PreRecordedType preRecordedType = 2;
+  RequestPageable pageable = 3;
+  string searchElement = 4;
+}
+message ListOfPreRecordedLocaleResponse{
+  repeated PreRecordedResponse preRecorded = 1;
+  repeated PreRecordedWithLocaleResponse preRecordedLocale = 2;
+  ResponsePageable pageable = 3;
+}
+
+message PublishOrUnPublishGroupRequest{
+  int64 groupId = 1;
+  bool isPublish = 2;
+}
+
+message GroupIdRequest{
+  int64 groupId = 1;
+  google.protobuf.Timestamp startDate = 2;
+  google.protobuf.Timestamp endDate = 3;
+  RequestPageable pageable = 4;
+}
+message GroupOccurrencesDetails {
+  int64 id = 1;
+  google.protobuf.Timestamp scheduledTime = 2;
+  int64 userJoinCount = 3;
+}
+message ListOfGroupOccurrences{
+  repeated GroupOccurrencesDetails GroupOccurrences = 1;
+  ResponsePageable pageable = 2;
+  google.protobuf.Timestamp recurrenceEndDate = 4;
+}
+
+message Tag{
+  int64 id=1;
+  string name=2;
+}
+message TagWithSession{
+  int64 id=1;
+  string name=2;
+  repeated SessionInfo contents=3;
+}
+message TagWithPrerecorded{
+  int64 id=1;
+  string name=2;
+  repeated PreRecordedResponse contents=3;
+}
+message TagsList{
+  repeated Tag tags=1;
+  ResponsePageable pageable = 2;
+}
+
+message RequestUserWeeklyStats{
+  int64 UserId = 1;
+  google.protobuf.Timestamp currentDate = 2;
+  int32 noOfdays = 3;
+}
+
+message Tags{
+  repeated Tag tags=1;
+}
+service LiveMeditationService {
+  rpc Test (Empty) returns (TestResponse) {};
+  rpc AddCoach (AddCoachRequest) returns (CoachProfile) {};
+  rpc GetAllCoach (Empty) returns (ListOfCoach) {};
+  rpc GetCoachByID (ID) returns (CoachProfile) {};
+  rpc GetLocaleCoachByID (GetLocaleCoachByIdRequest) returns (LocaleCoachProfile) {};
+  rpc UpdateCoach (CoachProfile) returns (CoachProfile) {};
+  rpc DeleteCoachByID (ID) returns (DeleteCoachByIdResponse) {};
+  rpc AddQuestion (AddQuestionRequest) returns (Question) {};
+  rpc AddQuestionByUser (AddQuestionRequest) returns (Question) {};
+  rpc GetAllQuestionBySessionID (RequestQuestionBySessionId) returns (ListOfQuestion) {};
+  rpc GetAllUserQuestionBySessionID (RequestQuestionBySessionId) returns (ListOfQuestion) {};
+  rpc ScheduleSession(AddLiveMeditationRequest) returns (SessionInfo) {};
+  rpc createSession(CreateLiveMeditationRequest) returns (SessionInfo) {};
+  rpc GetAllScheduleSessionsBetweenDateRange(requestScheduleSessionsDateRange) returns (responseScheduleSessionsDateRange) {};
+  rpc UpdateScheduleSession(SessionInfo) returns (SessionInfo) {};
+  rpc DeleteScheduleSessionByID(ID) returns (DeleteScheduleSessionByIDResponse) {};
+  //this rpc will return when the liveSession is not expired
+  rpc GetLiveSessionByID(ID) returns (ResponseLiveMeditation) {} ;
+  rpc GetLiveSessionByIDWithSelectedLanguage(RequestLiveSessionId) returns (ResponseLiveMeditationWithSelectedLanguage) {} ;
+  rpc GetLiveSessionByIDWithDelayTime(RequestForLiveSessionExist) returns (ResponseLiveMeditationWithSelectedLanguage) {} ;
+  rpc GetAllLiveSession(RequestGetAllLiveSession) returns (ResponseListOfLiveMeditations) {} ;
+  rpc GetAllLiveSessionWithSelectedLanguage(RequestGetAllLiveSessionWithSelectedLanguage) returns (ResponseListOfLiveMeditationsWithSelectedLanguage) {} ;
+  rpc UpcomingLiveMeditation(RequestGetAllLiveSession) returns (ResponseLiveMeditation) {} ;
+  rpc UpcomingLiveMeditationWithSelectedLanguage(RequestGetAllLiveSessionWithSelectedLanguage) returns (ResponseLiveMeditationWithSelectedLanguage) {} ;
+  rpc AddRegisterCount(ID) returns (Status) {};
+  rpc DecreaseRegisterCount(ID) returns (Status) {};
+  rpc AddSessionBenefits(RequestSessionBenefits) returns (ResponseSessionBenefits) {};
+  rpc UpdateSessionBenefits(RequestUpdateBenefits) returns (Status) {};
+  rpc GetAllBenefitsBySessionID(ID) returns (ResponseListOfBenefits) {};
+  rpc addBenefitsToSession(RequestAddBenefitAndSessionIDs) returns (Status) {};
+  rpc CheckLiveSessionIdExisted(RequestForLiveSessionExist) returns (SessionInfo);
+  rpc addLiveMeditationForNextFewDays(requestAddLiveMeditationForNextFewDays) returns (Status);
+  rpc RateLiveMeditationSession(RequestForRating) returns (ResponseForRating);
+  rpc GetAverageRatingBySessionId(ID) returns (ResponseAverageRating);
+//  this rpc will return the liveSession by id if its expired also
+  rpc GetCompletedLiveSessionsById(ID) returns (ResponseLiveMeditation);
+  rpc GetLiveMeditationsScheduleBetween(RequestForLiveSessionsBetween) returns (ResponseForLiveSessionsBetween);
+  //this rpc will return the liveSession ids which are allocated to particular coach
+  rpc GetLiveSessionsByCoachId(RequestForGetLiveSessionByCoachId) returns (ResponseForGetLiveSessionByCoachId);
+  rpc GetQuestionsByLiveSessionId(ID) returns (Status);
+  rpc GetAllBenefits(RequestForGetAllBenefits) returns (ResponseForGetAllBenefits);
+  rpc GetAllBenefitsByCoachId(RequestForGetAllBenefitsByCoachId) returns (ResponseForGetAllBenefitsByCoachId);
+  rpc GetAllQuestionsWithRegisterCount(RequestForGetAllQuestionsWithRegisterCount) returns (ResponseForGetAllQuestionsWithRegisterCount);
+  rpc GetLiveSessionState(RequestForLiveSessionState) returns (stream ResponseForLiveSessionState);
+
+  rpc PreceptorSession(RequestPreceptorSession) returns (ResponseForLiveSessionState);
+  rpc GetZoomToken(RequestForGetZoomToken) returns (ResponseForGetZoomToken);
+  rpc ZoomWrapperInterFace(RequestForZoomWrapper) returns (ResponseForZoomWrapper);
+
+  rpc ScheduleSessionDetails(AddLiveMeditationRequestDetails) returns (SessionInfoDetails) {};
+  rpc UpdateScheduleSessionDetails(SessionInfoDetails) returns (SessionInfoDetails) {};
+  rpc DeleteScheduleSessionDetailsByID(ID) returns (DeleteScheduleSessionDetailsByIDResponse) {};
+  rpc GetAllLiveSessionDetails(RequestGetAllLiveSession) returns (ResponseListOfLiveMeditationsDetails) {};
+  rpc GetLiveSessionDetailsByID(ID) returns (ResponseLiveMeditationDetails) {} ;
+  rpc UpcomingLiveMeditationDetails(RequestGetAllLiveSession) returns (ResponseLiveMeditation) {} ;
+  rpc AddUserLiveSessionFeedBack(RequestForUserFeedBack) returns(UserLiveSessionFeedBack);
+  rpc GetAllUserFeedBacksByLiveSessionId(RequestPageableWithId) returns (ListOfUserFeedBacks);
+
+  rpc AddSessionBenefitsDetails(RequestAddSessionBenefitsDetails) returns (ResponseSessionBenefitsDetails) {};
+  rpc UpdateSessionBenefitsDetails(SessionBenefitsDetails) returns (SessionBenefitsDetails) {};
+  rpc GetAllBenefitDetailsBySessionID(ID) returns (ResponseListOfBenefitsDetails) {};
+  rpc AddBenefitsToSessionDetails(RequestBenefitAndSessionIDs) returns (SessionInfoDetails) {};
+  rpc RemoveBenefitsFromSessionDetails(RequestBenefitAndSessionIDs) returns (SessionInfoDetails) {};
+  rpc SetLiveSessionRegisteredCount(RequestSetLiveSessionRegisterCount) returns (Status) {};
+
+  rpc CreateChannel(AwsChannelRequest) returns (AwsChannelResponse) {};
+  rpc DeleteChannel(ChannelArn) returns (Status) {};
+  rpc GetChannelByArm(ChannelArn) returns (AwsChannelResponse) {};
+  rpc GetLiveSessionViewersCount(ID) returns (AwsChannelViewerCountResponse) {};
+
+  rpc GetLiveSessionsFeedBack(ID) returns (ResponseForLiveSessionFeedBacks) {};
+  rpc GetDynamicFeedBacks(ID) returns (stream ResponseForLiveSessionFeedBacks) {};
+  rpc GetDynamicFeedBacksV2(ReportTypeWithIdRequest) returns(stream ResponseForLiveSessionFeedBacks){};
+  rpc GetLiveSessionCurrentState(RequestForLiveSessionState) returns (ResponseForLiveSessionState) {};
+  rpc getUpcomingLiveMeditationV2(RequestForUpcomingGetAllLiveMediationV2) returns (ResponseForUpcomingGetAllLiveMeditationsV2) {};
+  rpc getDynamicLiveSessionViewerCountV2(ID) returns (stream AwsChannelViewerCountResponse) {};
+  rpc GetAllDynamicUserQuestionBySessionIDV2(RequestQuestionBySessionId) returns (stream ListOfQuestion) {};
+  rpc GetAllLiveSessionV2(RequestGetAllLiveSessionV2) returns (ResponseListOfLiveMeditationsWithSelectedLanguage) {};
+
+  //For getting details of upcoming live sessions along with coach details by COACH ID with pagination, language
+  rpc GetListOfLiveSessionV2ByCoachIdOnSpecifiedTime(RequestLiveSessionV2ByCoachIdOnSpecifiedTime) returns (ResponseLiveSessionV2DetailsByCoachIdOnSpecifiedTime){};
+
+  //For ZOOM API Calls
+  rpc getZoomUrl(Empty) returns (ZoomUrlsResponse) {};
+  rpc endZoomUrl(Empty) returns (Status) {};
+  rpc UpdateZoomLiveStreamStatus(ZoomLiveStreamActionRequest) returns (ResponseForZoomWrapper){};
+  rpc EventNotificationZoomWebhookEndUrl(ZoomEventRequest) returns (ZoomEventResponse) {};
+
+  rpc DeleteQuestionsByUserId(ID) returns (Status) {};
+  rpc DeleteFeedBacksByUserId(ID) returns (Status) {};
+
+  rpc GetAllSessionViewerCount(ID) returns (ListOfSessionViewerCount) {};
+
+  /// CRUD API FOR PRE-RECORDED
+  rpc AddPreRecorded(PreRecordedRequest) returns (PreRecordedResponse) {};
+  rpc UpdatePreRecorded(PreRecordedResponse) returns (PreRecordedResponse) {};
+  rpc DeletePreRecorded(ID) returns (Status) {};
+  rpc GetAllPreRecorded(RequestPageable) returns (GetAllPreRecordedResponse) {};
+  rpc GetAllPreRecordedByPreRecordedType(PreRecordedTypeRequest) returns (ListOfPreRecordedLocaleResponse) {};
+  rpc GetPreRecordedByIdWithSelectedLanguage(LocaleType) returns (PreRecordedWithLocaleResponse){};
+  rpc SearchPreRecordedByTitle(PreRecordedTypeRequest) returns (ListOfPreRecordedLocaleResponse){};
+
+  //Create, Update, Delete and Upcoming Groups rpcs.
+  rpc AddGroups(GroupsRequest) returns (GroupsResponse) {};
+  rpc UpdateGroups(GroupsResponse) returns (GroupsResponse) {};
+  rpc DeleteGroups(ID) returns (Status) {};
+  rpc GetAllGroupsBetweenDateRange(RequestGroupsBetweenDateRange) returns (ListOfGroups) {};
+  rpc UpcomingGroups(UpcomingGroupsRequest) returns (ListOfGroupsWithSelectLanguage) {};
+  rpc GetGroupsByIDWithLocaleSupport(LocaleType) returns (GroupsResponseWithLocaleType) {};
+  rpc RegisterOrUnregisterForGroups(GroupsUserCountRequest) returns (GroupsResponse) {};
+  rpc IncreaseJoinCountForGroupOccurrence(GroupsUserCountRequest) returns (GroupsResponse){};
+  rpc PublishOrUnPublishGroup(PublishOrUnPublishGroupRequest) returns (Status) {};
+  rpc GetAllGroups(RequestPageable) returns (ListOfGroups){};
+  rpc GetAllGroupOccurrencesBetweenDateRange(GroupIdRequest) returns (ListOfGroupOccurrences){};
+  rpc GetGroupOccurrenceById(ID) returns (GroupOccurrencesDetails){};
+  rpc CreateOrUpdateContentTags(Tag) returns (Tag){};
+  rpc GetAllContentTags(RequestPageable) returns(TagsList){};
+  rpc AddOrUpdateMultipleTags(Tags)returns(Tags){};
+  rpc GetLiveSessionByTag(Tag)returns(TagWithSession){};
+  rpc GetPrerecordedVideoByTag(Tag)returns(TagWithPrerecorded){};
+  rpc CheckListOfLiveSessionIdsExisted(RequestForLiveSessionExist) returns (ResponseForGetLiveSessionByCoachId);
+}

@@ -1,0 +1,1681 @@
+/**
+ * @author : Godwin Vinny Carole Kati
+ * @created : 03/02/2021, Wednesday 18:48
+ * @organisation : Codeprism Technologies Pvt Ltd
+**/
+syntax = 'proto3';
+package unifiedplatform.heartIntuneProfile;
+import 'google/protobuf/timestamp.proto';
+import 'device.proto';
+import 'stats.proto';
+import 'journal.proto';
+import 'tracker.proto';
+import 'notification.proto';
+import 'donation.proto';
+import 'common/common.proto';
+import 'schedule.proto';
+
+
+
+option java_package = "org.heartfulness.unifiedplatform.heartIntuneProfile";
+option java_multiple_files = true;
+
+
+
+// To be ignored - only for testing boot strap of this code
+message Empty {
+  int32 lastHours = 1; // This lastHours field is using in getAllUsersCount() rpc
+}
+
+// To be ignored - only for testing boot strap of this code
+message TestResponse {
+  string result = 1;
+}
+
+message totalUsers{
+  int64 count = 1;
+  int64 totalMeditationMinutes = 2;
+}
+
+// This is the enum for user's status
+enum LoginStatus {
+  UNKNOWN_STATUS = 0;
+  ANONYMOUS = 1; // when ANONYMOUS user has logged in.
+  LOGGEDIN = 2;
+  LOGGEDOUT = 3;
+}
+
+// This is enum for user's auth service provider
+enum Provider {
+  UNKNOWN_PROVIDER = 0; //when user logs in as ANONYMOUS i.e. 'try us now' method
+  FACEBOOK = 1;
+  GOOGLE = 2;
+  APPLE = 3;
+  EMAIL = 4;
+  MOBILE = 5;
+  //  WHATSAPP = 6; // When User Login with WhatsAppOTPLess.
+
+}
+// Enum for user's gender
+enum Gender {
+  UNKNOWN_GENDER = 0;
+  MALE = 1;
+  FEMALE = 2;
+  GENDER_DONT_REVEAL = 3;
+}
+
+enum Role{
+  UNKNOWN_ROLE = 0;
+  SUPER_ADMIN = 1;
+  ADMIN = 2;
+  CONTENT_OWNER = 3;
+  USER = 4;
+  PRECEPTOR = 5;
+  CUSTOM_ROLE = 6;
+  SCHEDULER = 7;
+  EVENTS_ANNOUNCEMENTS_ADMIN_ROLE = 8;
+  BHE_CONTENT_MANAGER = 9;
+}
+// Structure for users
+message User {
+  int64 id = 1; // Unique identifier of users
+  LoginStatus status = 2; // User's status whether user is logged in or not
+  Provider provider = 3; // User's auth provider
+  string email = 4; // User's email id
+  string profileURL = 5; // Url of user's profile
+  string displayName = 6;
+  google.protobuf.Timestamp createdAt = 7; // Time of the user's creation
+  google.protobuf.Timestamp lastLogin = 8; // Timestamp of user's last login
+  Gender gender = 9; // Gender of the user
+  google.protobuf.Timestamp dob = 10; // user's date of birth
+  string firebaseId = 11; // User's UUID from firebase
+  string mobileNumber = 12; //User's mobile number with international code e.g. +919341222803
+  double heartPointsCumulative = 13 ; //these are the points that are awarded to the user based on his progress and challenges
+  repeated int64 registeredLiveMeditationSessionID = 14; //List of liveMeditationSessionID and timestamp of when registered
+  repeated int64 completedLiveMeditationSessionID = 15; //List of liveMeditationSessionID and timestamp of when registered
+  repeated int64 acceptedGoals = 16; //List of GoalID and timestamp of when started
+  repeated int64 completedGoals = 17; //List of GoalID and timestamp of when completed
+  repeated int64 favouriteMeditationID = 18; // For recorded meditation, maintain favourites list for this user
+  repeated stats.MeditationScheduled schedule = 19;
+  repeated int64 badgeIds = 20;
+  string city = 21;
+  string addressLine = 22; //this field is used for differentiating the roles while creating from admin panel
+  string postalCode = 23;
+  string citizenshipCountry = 24;
+  string taxId = 25;
+  string state = 26;
+  string country = 27;
+  string passportNumber = 28;
+  string fcm_token = 29;
+  Role role = 30;
+  heartintune.common.LocaleType selectedLanguage = 31;
+  string timeZone = 32;
+  string about = 33;
+  bool userMoodExist = 34;
+  int32 rating = 35;
+  string feedback = 36;
+  heartintune.common.InviteStatus inviteStatus = 37;
+  heartintune.common.VisibilityType visibilityType = 38;
+  bool enableEmail = 39;
+  bool enableWhatsApp = 40;
+  int64 mysrcmId = 41;
+  string placeOfResidence = 42;
+  int32 preceptorId = 43;
+  string education = 44;
+  string profession = 45;
+  string street = 46;
+  int32 cityId = 47;
+  google.protobuf.Timestamp lastSeenAt = 48;
+  string anonymousId = 49;
+  heartintune.common.EnableFeature enableEmailCampaignNotification = 50;
+  heartintune.common.EnableFeature enablePushCampaignNotification = 51;
+}
+
+message SubscribedGoal {
+  int64 id = 1;
+  int64 goalID = 2;
+  repeated google.protobuf.Timestamp selectedDateAndTime = 3;
+  bool status = 4;
+  google.protobuf.Timestamp startedOn = 5;
+  google.protobuf.Timestamp expiryDate = 6;
+}
+
+message RequestSubscribeToGoal{
+  int64 goalID = 1;
+  int64 userID = 2;
+  repeated SelectedDateAndTimeWithCalendarEvent selectedDateAndTimeWithCalendarEvent = 3;
+}
+message SelectedDateAndTimeWithCalendarEvent{
+  google.protobuf.Timestamp selectedDateAndTime = 1;
+  string calendarEventId = 2;
+  int32 duration = 3;
+  bool completedStatus = 4;
+  google.protobuf.Timestamp startTime = 5;
+}
+
+message RequestUpdateToGoal{
+  int64 goalID = 1;
+  int64 userID = 2;
+  repeated UpdateSelectedDateAndTimeWithCalendarEvent selectedDateAndTimeWithCalendarEvent = 3;
+}
+message UpdateSelectedDateAndTimeWithCalendarEvent{
+  google.protobuf.Timestamp selectedDateAndTime = 1;
+  string calendarEventId = 2;
+  int64 scheduleId = 3;
+}
+
+message ConnectUserRequest {
+  LoginStatus status = 1; // User's status whether user is logged in or not
+  Provider provider = 2; // User's auth provider
+  string email = 3; // User's email id
+  string profileURL = 4; // Url of user's profile
+  string displayName = 5;
+  Gender gender = 6; // Gender of the user
+  google.protobuf.Timestamp dob = 7; // user's date of birth
+  device.DeviceRequest device = 8; // user's device info
+  string firebaseId = 9; // User's UUID from firebase
+  string mobileNumber = 10; //User's mobile number with international code e.g. + <international code> <Mobile number>
+  double heartPoints = 11 ; //Awarded points //TODO remove it
+  stats.MeditationStats stats = 12; //TODO remove it
+  string city = 13;
+  string addressLine = 14; //this field is used for differentiating the roles while creating from admin panel
+  string postalCode = 15;
+  string citizenshipCountry = 16;
+  string taxId = 17;
+  string country = 18;
+  string state = 19;
+  string passportNumber = 20;
+  string fcmToken = 21;
+  string timeZone = 22;
+  Role userRole = 23;
+  string anonymousId = 24;
+}
+
+message ConnectUserResponse {
+  User user = 1;
+  device.Device device = 2;
+  bool isNewUser = 3;
+  stats.MeditationStats stats = 4;
+}
+
+message LoginRequest {
+  string firebaseId = 1; // User's UUID from firebase
+  string displayName = 2;
+  Provider provider = 3; // User's auth provider
+  string mobileNumber = 4; //User's mobile number with international code e.g. +919341222803
+  string email = 5; // User's email id
+  string profileURL = 6; // Url of user's profile
+  Gender gender = 7; // Gender of the user
+  google.protobuf.Timestamp dob = 8; // user's date of birth
+
+}
+
+message LoginResponse {
+  User user = 1;
+  device.Device device = 2;
+  bool existingFirebaseId = 3;
+  bool existingEmail = 4;
+  bool existingMobileNumber = 5;
+}
+
+message LogoutRequest {
+  User user = 1;
+  device.Device device = 2;
+}
+
+message LogoutResponse {
+  User user = 1;
+  device.Device device = 2;
+  bool existingFirebaseId = 3;
+  bool existingEmail = 4;
+  bool existingMobileNumber = 5;
+}
+
+message FetchStatsFor {
+  int64 userID = 1;
+  int64 deviceID = 2;
+}
+
+message UserStatsInfo {
+  string userName = 1;
+  double heartPointsCumulative = 2;
+  uint32 totalDurationMeditated = 3;
+  uint32 totalNumberOfMeditationSessions = 4;
+  map<string, uint32> last7DaysData = 5;  //TODO how to send data for last 7 days? Will it be map of "DayOfWeek" with "Duration" or simple array of another message
+}
+
+message RegistrationDetails {
+  int64 userID = 1;
+  int64 liveMeditationSessionID = 2;
+}
+
+message RequestForRegistrationDetails{
+  int64 userID = 1;
+  int64 liveMeditationID = 2;
+  google.protobuf.Timestamp currentTime = 3;
+  google.protobuf.Timestamp liveSessionDateAndTime = 4;
+  string calendarEventId = 5;
+}
+
+message ResponseForUnRegisterLiveSessionId{
+  int64 userID = 1;
+  int64 liveMeditationID = 2;
+  string calendarEventId = 3;
+}
+
+message ListOfIDs {
+  int64 userID = 1;
+  repeated int64 IDs = 2;
+}
+
+message Status {
+  bool Success = 1;
+  string  message = 2;
+}
+
+message ID {
+  int64 ID = 1;
+  int64 userID = 2;
+  string firebaseId = 3;
+  string fcmToken = 4;
+  string deviceId = 5;
+  string jwtToken = 6;
+  string email = 7;
+}
+
+message Favourites {
+  int64 UserID = 1;
+  repeated int64 favouriteMeditationID = 2;
+}
+
+message RequestSetFavourite {
+  int64 UserID = 1;
+  int64 favouriteMeditationID = 2;
+}
+message RequestUsersWithMeditation{
+  int64 UserID = 1;
+  int64 MeditationID = 2;
+}
+
+message RequestUserID{
+  int64 UserID = 1;
+  uint32 pageSize = 2;
+  uint32 pageNumber = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  string platform = 5; // to skip updating user last_seen_at for each request
+}
+
+message UserInfo{
+  User user = 1;
+  repeated device.Device Device = 2;
+  repeated journal.JournalInfo JournalInfo = 3;
+  repeated FcmToken fcmToken = 4;
+}
+
+message FcmToken{
+  string fcmToken = 1;
+  string accessToken = 2;
+}
+
+message ListOfUserInfo{
+  repeated User userInfo = 1;
+  int64 totalCount = 2;
+  uint32 selectedPageSize = 3;
+  uint32 selectedPageNumber = 4;
+}
+
+message ResponseUserStats{
+  User user = 1;
+  int64 totalMeditationSeconds = 2;
+  int64 completedSessionCounts = 3;
+  int64 longestMeditationSeconds = 4;
+  int64 currentMeditationSessionStreak = 5;
+  repeated int64 completedGoalsId = 6;
+  int64 userCompletedGuidedMeditationsCount = 7;
+  int64 userCompletedPurposefulMeditationsCount = 8;
+  int64 userCompletedLiveMeditationsCount = 9;
+}
+
+message DailyMeditationData{
+  google.protobuf.Timestamp timeStamp = 1;
+  int64 meditationSeconds = 2;
+}
+
+message RequestUserWeeklyStats{
+  int64 UserId = 1;
+  google.protobuf.Timestamp currentDate = 2;
+  int32 noOfdays = 3;
+}
+
+message ResponseUserWeeklyStats{
+  User user = 1;
+  repeated DailyMeditationData dailyMeditationData = 2;
+  int64 weeklyAverageMeditationSeconds = 3;
+  int64 weeklyTotalMeditationSeconds = 4;
+  int64 guidedMeditationsCount = 5;
+  int64 purposefulMeditationsCount = 6;
+  int64 liveMeditationCount = 7;
+  int64 longestMeditationInMinutes = 8;
+  int64 totalMeditationCount = 9;
+  int64 totalAcceptedGoalCount = 10;
+  int64 totalCompletedGoalCount = 11;
+  int64 totalMissedGoalCount = 12;
+}
+
+message ResponseCompletedLiveMeditation{
+  int64 userId = 1;
+  int64 badgeId = 2;
+}
+
+message TrackerWithBadge{
+  tracker.TrackerInfo trackerInfo = 1;
+  int64 badgeId = 2;
+  string badgeName = 3;
+  string badgeURL = 4;
+  bool goalCompletedStatus = 5;
+  bool donationPopup = 6;
+  string goalTitle = 7;
+  uint32 badgeCount = 8;
+  repeated BadgeDetailsV2 badgeDetailsV2 = 9;
+}
+
+message UpdateUserRequest{
+  string email = 1; // User's email id
+  string profileURL = 2; // Url of user's profile
+  string displayName = 3;
+  Gender gender = 4; // Gender of the user
+  google.protobuf.Timestamp dob = 5;// user's date of birth
+  int64 userID = 6;
+  string timeZone = 7;
+  string city = 8;
+  string about = 9;
+  string feedback = 10;
+  int32 rating = 11;
+  heartintune.common.VisibilityType visibilityType = 12;
+  User user = 13;
+  heartintune.common.EnableFeature enableFeature = 14;
+  int32 cityId = 15;
+}
+message UpdateUserLanguageRequest{
+  int64 userId = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+}
+message BadgeDetailsByUser{
+  int64 badgeId = 1;
+  string badgeName = 2;
+  string badgeURL = 3;
+  int32  badgesEarnedCount = 4;
+  string meditateToGetGemsDescription = 5;
+  int64 hours = 6;
+  int64 minutes = 7;
+}
+message ResponseBadgesByUserId{
+  repeated BadgeDetailsByUser badgeDetailsByUser = 1;
+  int32 totalEarnedGemsByUser = 2;
+}
+
+message ResponseUserMonthlyStats{
+  User user = 1;
+  repeated WeeklyMeditationData weeklyMeditationData = 2;
+}
+message WeeklyMeditationData{
+  uint32 week = 1;
+  int64 meditationSeconds = 2;
+}
+
+message SaveDonationRequest{
+  int64 userId = 1;
+  string currency = 2;
+  double amount = 3;
+  google.protobuf.Timestamp currentDate = 4;
+  bool donationStatus = 5;
+}
+
+message DonationInfoRequest {
+  donation.DonateRequest donateRequest = 1;
+  bool saveProfile = 2;
+  bool isSelectedAvailTax = 3;
+}
+
+message RequestGoalByUserId{
+  int64 userId = 1;
+  int64 goalId = 2;
+}
+message ResponseScheduleGoal{
+  int64 goalID = 1;
+  int64 userID = 2;
+  repeated ResponseSelectedDateAndTimeWithCalendarEvent selectedDateAndTimeWithCalendarEvent = 3;
+  bool status = 4;
+}
+message ResponseSelectedDateAndTimeWithCalendarEvent{
+  google.protobuf.Timestamp selectedDateAndTime = 1;
+  string calendarEventId = 2;
+  int64 scheduleId = 3;
+  bool completedStatus = 4;
+}
+message RequestForRegisterLiveMeditationId{
+  int64 userId = 1;
+  uint32 delayExpiryByGivenMinutes = 2;
+}
+message RequestUserDetailsByEmail{
+  string email = 1;
+  string mobileNumber = 2;
+  string firebaseId = 3;
+  bool checkEmailExistInFireBase = 4;
+}
+message ResponseUserDetailsByEmail{
+  repeated User userList = 1;
+  bool existInFirebase = 2;
+  string uid = 3;
+  repeated string provider = 4;
+}
+message RequestForDeleteSchedule{
+  int64 userId = 1;
+  int64 goalId = 2;
+}
+message RequestUserIDByPageable{
+  int64 UserID = 1;
+  uint32 pageSize = 2;
+  uint32 pageNumber = 3;
+  bool flag = 4;
+  heartintune.common.InviteStatus inviteStatus = 5;
+}
+message ResponseListOfIDs{
+  int64 userID = 1;
+  repeated int64 IDs = 2;
+  uint32 totalCount = 3;
+  uint32 selectedPageSize = 4;
+  uint32 selectedPageNumber = 5;
+}
+message RequestForDeleteLiveSessionId{
+  int64 userId = 1;
+  int64 liveSessionId = 2;
+  bool removeCompletedLiveSessionId = 3;
+}
+message RequestForClearUserDataForDeletedLiveSessions{
+  int64 liveSessionId = 1;
+  bool removeFromCompletedLiveSessionIdList = 2;
+  bool removeFromRegisteredLiveSessionIdList = 3;
+  string value = 4;
+}
+message RequestForHotFixMigrationsForMobileUsers{
+  string oldFireBaseId = 1;
+  string newFireBaseId = 2;
+}
+message ResponseForHotFixMigrationsForMobileUsers{
+  bool status = 1;
+}
+message RequestForGetUserDetails{
+  uint32 pageSize = 1;
+  uint32 pageNumber = 2;
+}
+message RequestForSearchUserByDetails{
+  string searchInput = 1;
+  RequestForGetUserDetails pageable = 2;
+}
+message ResponseForSearchUserByDetails{
+  repeated User user = 1;
+  int32 selectedPageNumber = 2;
+  int32 selectedPageSize = 3;
+  int64 totalCount = 4;
+}
+message RequestForDeleteUserAccountFromFireBase{
+  string fireBaseId = 1;
+  int64 heartInTuneUserId = 2;
+}
+message RequestSetUserRole{
+  int64 userId = 1;
+  Role userRole = 2;
+}
+message RequestForSendEmailToCoachWithQuestionsAndUserRegisterCount{
+  int64 liveSessionId = 1;
+  string email = 2;
+}
+message AnnouncementRequest{
+  string topic = 1;
+  string announcementText = 2;
+  google.protobuf.Timestamp scheduledAt = 3;
+  string locationUrl = 4;
+  heartintune.common.PublishContent publishStatus = 5;
+}
+message AnnouncementDetails{
+  int64 id = 1;
+  string announcementText = 2;
+  google.protobuf.Timestamp scheduledAt = 3;
+  string locationUrl = 4;
+  heartintune.common.PublishContent publishStatus = 5;
+}
+message NotificationPageableResponse{
+  int64  notificationId = 1;
+  string title = 2;
+  string subTitle = 3;
+  google.protobuf.Timestamp TriggeredTime = 4;
+  bool  isRead = 5;
+  int64  userId = 6;
+  bool isMute = 7;
+  string thumbnailUrl = 8;
+  heartintune.common.Activity activityType = 9;
+  int64 meditationId = 10;
+  bool visibility = 11;
+}
+message ListOfNotificationPageableResponse{
+  repeated NotificationPageableResponse notificationPageableResponse = 1;
+  int32 selectedPageNumber = 2;
+  int32 selectedPageSize = 3;
+  int64 totalCount = 4;
+  repeated NotificationPageableResponse unReadNotificationList = 5;
+}
+message ReadNotificationRequest{
+  int64  notificationId = 1;
+  bool  isRead = 2;
+}
+
+message SubscribeToTopicByAllUsers{
+  string singleUserFirebaseId = 1;
+}
+message RequestToGenerateOtpForEmail{
+  string email = 1;
+}
+message RequestOtpForEmailValidation{
+  string email = 1;
+  string otp = 2;
+}
+
+message CarouselDetails{
+  string carouselJson = 1;
+}
+
+message RequestToScheduleGoal{
+  int64 goalID = 1;
+  int64 userID = 3;
+  heartintune.common.GoalCategory goalCategory = 4;
+  repeated SelectedDateAndTimeWithCalendarEvent selectedDateAndTimeWithCalendarEvent = 5;
+  heartintune.common.LocaleType selectedLanguage = 6;
+}
+
+message AddLiveSessionCalendarEventIdRequest{
+  int64 UserId = 1;
+  int64 liveSessionId = 2;
+  string calendarEventId = 3;
+  heartintune.common.MeditationType meditationType = 4;
+  uint32 delayTimeInMinutes = 5;
+  google.protobuf.Timestamp scheduleTime = 6; // as of now using for schedule for 3 day master class videos
+  PaginationRequest pageable = 7;
+  string firebaseId = 8;
+}
+
+message SessionInfoV2 {
+  int64 id = 1;
+  google.protobuf.Timestamp scheduledTime = 2;
+  string sessionTitle = 3;
+  string sessionSubTitle = 4;
+  string sessionInfo = 5;
+  uint32 duration = 6;
+  uint32 registeredUserCount = 7;
+  uint32 liveParticipantsCount = 8;
+  string aboutSession = 9;
+  string meditationSteps = 10;
+  int64 associatedCoachId = 11;
+  string imageURL = 13;
+  string videoURL = 14;
+  heartintune.common.LocaleType selectedLanguage = 15;
+  string attribute = 16;
+}
+
+message CoachProfileV2{
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+  string profileTitle = 4;
+  string profileSubTitle = 5;
+  string profileDescription = 6;
+  string imageURL = 7;
+  string videoURL = 8;
+  string playBackUrl = 9;
+}
+
+message DurationAndRequiredTime{
+  int64 duration = 1;
+  int64 requiredTimes = 2;
+  int64 userCompletedRequiredTimesCount = 3;
+}
+
+message GoalInfoV2ResponseV2{
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  repeated DurationAndRequiredTime durationAndRequiredTime = 4;
+  uint32 requiredDays = 5;
+  heartintune.common.GoalCategory goalCategory = 6;
+  int64 associatedBadgeID = 8;
+  uint32 badgeCount = 9;
+  uint32 duration = 10;
+  double hours = 11;
+  repeated int64 requiredSessionIds = 12;
+  int64 requiredTimes = 13;
+  heartintune.common.Locale goalTitle = 14;
+  heartintune.common.Locale goalDescription = 15;
+}
+
+message BadgeDetailsV2 {
+  int64 id = 1;
+  string name = 2;
+  string icon = 3;
+  string badgeDescription = 4;
+  string badgeColor = 5;
+  uint32 badgeCount = 6;
+}
+
+message ResponseLiveMeditationV2 {
+  SessionInfoV2 sessionInfo = 1;
+  CoachProfileV2 associateCoach = 2;
+}
+
+message ResponseGoalInfoV2 {
+  GoalInfoV2ResponseV2 goalTypes = 1;
+  BadgeDetailsV2 badge = 2;
+  int32 day = 3;
+  google.protobuf.Timestamp goalScheduledTime = 4;
+  int64 daysToComplete = 5;
+  double completedGoalPercentage = 6;
+  int64 userCompletedRequiredTimesCount = 7;
+  int32 earnedBadgeCount = 8;
+  repeated SelectedDateAndTimeWithCalendarEvent listOfGoalScheduledDates = 9;
+  int64 totalRegisteredUserCount = 10;
+  bool isRegistered = 11;
+  repeated BadgeDetailsV2 badgeWithCount = 12;
+}
+
+message RequestV2GetAllMySignUp{
+  int64 userId = 1;
+  google.protobuf.Timestamp startDateTime = 2;
+  google.protobuf.Timestamp endDateTime = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  string version = 5;
+}
+
+message ResponseV2GetAllMySignUp{
+  repeated ResponseLiveMeditationV2 listOfRegisteredUpcomingLiveSession = 1;
+  repeated ResponseGoalInfoV2 goalDetailsActiveOnGivenDay = 2;
+  repeated ResponseLiveMeditationV2 UnRegisteredUpcomingLiveSession = 3;
+  repeated GroupsResponseHeartInTune groupsResponseHeartInTune = 4;
+  repeated schedule.ScheduleInfo ThreeDayMasterClassScheduleDetails = 5;
+  repeated CircleActivityDetails circleActivity = 6;
+}
+message LiveSessionDetailsAndUserRegistrationStatusResponse{
+  int64 userId = 1;
+  int64 coachId = 2;
+  google.protobuf.Timestamp startTime = 3;
+  google.protobuf.Timestamp endTime = 4;
+  SessionInfoV2 sessionInfo = 5;
+  CoachProfileV2 associateCoach = 6;
+  bool registeredForLiveSession = 10 ;
+}
+
+message LiveSessionDetailsAndUserRegistrationStatusRequest{
+  int64 userId = 1;
+  int64 coachId = 2;
+  google.protobuf.Timestamp startTime = 3;
+  google.protobuf.Timestamp endTime = 4;
+  heartintune.common.LocaleType selectedLanguage = 5;
+  string version = 6;
+}
+
+message StayConnectedWithUsRequest{
+  int64 userId = 1;
+  heartintune.common.SharedVia sharedVia = 2;
+  heartintune.common.SharedContent sharedContent = 3;
+  string sharedLink = 4;
+  int64 sharedContentId = 5;
+}
+
+message StayConnectedWithUsDetails{
+  int64 id = 1;
+  heartintune.common.SharedVia sharedVia = 2;
+  heartintune.common.SharedContent sharedContent = 3;
+  string sharedLink = 4;
+  int64 sharedContentId = 5;
+  google.protobuf.Timestamp sharedDateTime = 6;
+  int64 userId = 7;
+}
+
+message LiveSessionRatingRequest {
+  int64 liveSessionID = 1;
+  int64 userID = 2;
+  heartintune.common.LiveMeditationRating rating = 3;
+}
+
+message GetAllGoalStatusByUserRequest{
+  int64 userId = 1;
+  heartintune.common.GoalStatus goalStatus = 2;
+  heartintune.common.LocaleType selectLanguage = 3;
+  int64 goalId = 4;
+  bool imported = 5;
+  PaginationRequest pageable = 6;
+}
+
+message GetAllGoalStatusByUserResponse{
+  repeated ResponseGoalInfoV2 responseGoalInfoV2 = 1;
+  int64 totalGoalsCount = 2;
+  heartintune.common.GoalStatus goalStatus = 3;
+  PaginationRequest pageable = 6;
+}
+
+message GetGoalCountByUserResponse {
+  int64 userAcceptedGoalCount = 1;
+  int64 userMissedGoalCount = 2;
+  int64 userCompletedGoalCount = 3;
+}
+/*message  AddUserMoodRequest{
+  int64 userID = 1;
+  //One User can Select 3 Mood Details from Gamification Mood
+  int32 moodIdOne = 2;
+  int32 moodIdTwo = 3;
+  int32 moodIdThree = 4;
+
+  //One User Rate for Mood details
+  int32 moodOneRating = 5;
+  int32 moodTwoRating = 6;
+  int32 moodThreeRating = 7;
+
+  heartintune.common.MoodTriggerType moodOneTrigger = 8;
+  heartintune.common.MoodTriggerType moodTwoTrigger = 9;
+  heartintune.common.MoodTriggerType moodThreeTrigger = 10;
+
+  google.protobuf.Timestamp createAt = 11;
+  string userDefineMood = 12;
+  string userDefineTrigger = 13;
+  journal.RequestJournal journalData = 14;
+}
+message  UserMoodDetails{
+  int64 id = 1;
+  int64 userID = 2;
+  int64 moodIdOne = 3;
+  int64 moodIdTwo = 4;
+  int64 moodIdThree = 5;
+  int32 moodOneRating = 6;
+  int32 moodTwoRating = 7;
+  int32 moodThreeRating = 8;
+  heartintune.common.MoodTriggerType moodOneTrigger = 9;
+  heartintune.common.MoodTriggerType moodTwoTrigger = 10;
+  heartintune.common.MoodTriggerType moodThreeTrigger = 11;
+  google.protobuf.Timestamp scheduledTime = 12;
+  string userDefineMood = 13;
+  journal.JournalInfo journalInfo = 14;
+}*/
+message UserMoodRequestBySpecifiedTime{
+  int64 userId = 1;
+  google.protobuf.Timestamp startTime = 2;
+  google.protobuf.Timestamp endTime = 3;
+  int32 pageNumber = 4;
+  int32 pageSize = 5;
+  heartintune.common.LocaleType selectedLanguage = 6;
+}
+message UserMoodResponseBySpecifiedTime{
+  google.protobuf.Timestamp startTime = 1;
+  google.protobuf.Timestamp endTime = 2;
+  repeated UserMoodDetails moodMatterDetails = 3; //Getting all Mood Matters details of specified time range
+  int32 selectedPageNumber = 4;
+  int32 selectedPageSize = 5;
+  int64 totalCount = 6;                             //total count of specified time range
+}
+/*message MoodCheckInsWithPercentResponse{
+  int64 userId = 1;
+  google.protobuf.Timestamp startTime = 2;
+  google.protobuf.Timestamp endTime = 3;
+  int64 checkIn = 4;
+  int64 ratingOnePercent = 5;
+  int64 ratingTwoPercent = 6;
+  int64 ratingThreePercent = 7;
+  int64 ratingFourPercent = 8;
+  int64 ratingFivePercent = 9;
+  int64 highestPercent = 10;
+  int32 triggerOnePercent = 11;
+  int32 triggerTwoPercent = 12;
+  int32 triggerThreePercent = 13;
+  int32 triggerFourPercent = 14;
+  int32 triggerFivePercent = 15;
+}*/
+message UserMoodMapResponse{
+  int64 userId = 1;
+  google.protobuf.Timestamp startTime = 2;
+  google.protobuf.Timestamp endTime = 3;
+  repeated UserMoodMap moodMap = 4;
+}
+message UserMoodMap{
+  int64 moodId = 1;
+  int32 totalCheckIn = 2;
+  int32 ratingOne = 3;
+  int32 ratingTwo = 4;
+  int32 ratingThree = 5;
+  int32 ratingFour = 6;
+  int32 ratingFive = 7;
+  string lowerName = 8;
+  string upperName = 9;
+}
+message ReminderRequest{
+  int64 userId = 1;
+  google.protobuf.Timestamp reminderTime = 2; //set Only Time
+  bool tuesday = 3;
+  bool wednesday = 4;
+  bool thursday = 5;
+  bool friday = 6;
+  bool saturday = 7;
+  bool sunday = 8;
+  bool monday = 9;
+  heartintune.common.ReminderType reminderType = 10;
+}
+message ReminderDetails{
+  int64 Id = 1;
+  int64 userId = 2;
+  google.protobuf.Timestamp reminderTime = 3;
+  bool tuesday = 4;
+  bool wednesday = 5;
+  bool thursday = 6;
+  bool friday = 7;
+  bool saturday = 8;
+  bool sunday = 9;
+  bool monday = 10;
+  heartintune.common.ReminderType reminderType = 11;
+}
+message MoodCheckInDetailsResponse{
+  int64 userId = 1;
+  google.protobuf.Timestamp startTime = 2;
+  google.protobuf.Timestamp endTime = 3;
+  repeated ListOfMoodRatings listOfMoodRatings = 4;
+  int32 selectedPageNumber = 5;
+  int32 selectedPageSize = 6;
+  int64 totalCount = 7;
+}
+message ListOfMoodRatings{
+  int64 moodId = 1;
+  string moodUpperName = 2;
+  string moodLowerName = 3;
+  int32 rating = 4;
+  google.protobuf.Timestamp createdAt = 5;
+}
+message ReminderTypeRequest{
+  int64 UserId = 1;
+  heartintune.common.ReminderType reminderType = 2;
+}
+message UserPreferredBackgroundRequest {
+  int64 userId = 1;
+  int64 backgroundMusicId = 2; //Get this Id from guidedMeditations microservice
+  int64 backgroundImageId = 3; //Get this Id from guidedMeditations microservice
+}
+message UserIdRequest {
+  int64 userId = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+  int64 id = 3;
+  int64 respectiveId = 4;
+  heartintune.common.InviteStatus status = 5;
+  repeated heartintune.common.InviteStatus listOfInviteStatus = 6;
+
+}
+message UserPreferredBackgroundResponse {
+  int64 userId = 1;
+  int64 backgroundTypeImageId = 2;
+  string backgroundImageUrl = 3;
+  int64 backgroundTypeMusicId = 4;
+  string backgroundMusicUrl = 5;
+  string backgroundTypeMusicImageUrl = 6;
+}
+
+message GetInProgressGoalCardForHomePage{
+  int64 goalId = 1;
+  string goalTitle = 2;
+  int64 day = 3;
+}
+message ListOfGetInProgressGoalCardForHomePage{
+  repeated GetInProgressGoalCardForHomePage getInProgressGoalCardForHomePage = 1;
+}
+
+message FavoriteRequest{
+  int64 userId = 1;
+  int64 contentId = 2;
+  heartintune.common.ContentCategory contentCategory = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  PaginationRequest paginationRequest = 5;
+}
+
+message HeartInTuneContentLocaleResponse{
+  int64 id = 1;
+  string title = 2;
+  string subtitle = 3;
+  string author = 4;
+  string image = 5;
+  string content = 6;
+  int32 readingTime = 7;
+  google.protobuf.Timestamp createdAt = 8;
+  google.protobuf.Timestamp modifiedAt = 9;
+  string tag = 10;
+  string webViewUrl = 11;
+  heartintune.common.ContentCategory contentCategory = 12;
+  string videoUrl = 13;
+  string featuredImage = 14;
+  string thumbnail = 15;
+  heartintune.common.VideoCategory videoCategory = 16;
+  heartintune.common.FeaturedContent featuredContent = 17;
+  repeated int64 filterIds = 18;
+  string attribute = 19;
+}
+
+message ListOfContentLocaleResponse{
+  repeated HeartInTuneContentLocaleResponse content = 1;
+  PaginationResponse pagination = 2;
+}
+
+message UserPersonalityQuizRequest{
+  int64 personalityQuizId = 1; // while save it is required
+  int64 userPersonalityId = 2; // While update it is required
+  heartintune.common.LocaleType selectedLanguage = 3;
+  string selectedMeterRating = 4;
+}
+
+message UserPersonalityRequest{
+  int64 userId = 1;
+  repeated UserPersonalityQuizRequest userPersonalityQuizRequest = 2;
+}
+
+message HeartInTunePersonalityQuizLocale{
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  string meterRating = 4;
+}
+
+message ListOfHeartInTunePersonalityQuizLocale{
+  repeated HeartInTunePersonalityQuizLocale heartInTunePersonalityQuizLocale = 1;
+}
+
+message GetAllUserPersonalityQuizRequest{
+  int64 userID = 1;
+  heartintune.common.LocaleType selectedLanguage = 2;
+}
+
+message HeartInTuneNotificationRequest{
+  int64 userId = 1;
+  notification.DeviceNotificationRequest deviceNotificationRequest = 2;
+  string userIdsWithCommaSeperated = 3;
+}
+message EmailHeartspotRequest{
+  string heartspotEmail = 1;
+  google.protobuf.Timestamp visitAt = 2;
+  string message = 3;
+  int64 userId = 4;
+}
+message QuoteActivityRequest{
+  int64 userId = 1;
+  heartintune.common.Activity quoteActivity = 2;
+  heartintune.common.LocaleType selectedLanguage = 3;
+}
+message QuotesResponse{
+  int64 id = 1;
+  string author = 2;
+  string quote = 3;
+  string tagOne = 4;
+  string tagTwo = 5;
+  string tagThree = 6;
+  string screen = 7;
+}
+message MoodDetails{
+  int64 moodId = 1;
+  string associatedColor = 2;
+  string moodName = 3;
+  heartintune.common.MoodType moodType = 4;
+}
+message TriggerDetails{
+  int64 triggerId = 1;
+  string emoji_url = 2;
+  string triggerName = 3;
+}
+message  AddUserMoodRequest{
+  int64 userID = 1;
+  repeated int64 moodIds = 2;
+  repeated int64 triggerIds = 3;
+  google.protobuf.Timestamp createAt = 4;
+  string userDefineMood = 5;
+  string userDefineTrigger = 6;
+  journal.RequestJournal journalData = 7;
+  heartintune.common.LocaleType selectedLanguage = 8;
+}
+message UserMoodDetails{
+  int64 id = 1;
+  int64 userID = 2;
+  repeated MoodDetails moodDetails = 3;
+  repeated TriggerDetails triggerDetails = 4;
+  google.protobuf.Timestamp createTime = 5;
+  string userDefineMood = 6;
+  journal.JournalInfo journalInfo = 7;
+  repeated MoodDetailsAndTriggers moodDetailsAndTriggers = 8;
+  string userDefineTrigger = 9;
+}
+message MoodDetailsAndTriggers{
+  MoodDetails moodDetails = 1;
+  repeated TriggerDetails triggerDetails = 2;
+}
+message MoodCheckInsWithPercentResponse{
+  int64 userId = 1;
+  google.protobuf.Timestamp startTime = 2;
+  google.protobuf.Timestamp endTime = 3;
+  int64 checkInCount = 4;
+  int64 happyCheckInCount = 5;
+  int64 sadCheckInCount = 6;
+  int64 happyPercent = 7;
+  int64 sadPercent = 8;
+}
+
+message FavoriteContentIsExistOrNotForUserRequest{
+  int64 userId = 1;
+  int64 contentId = 2;
+  heartintune.common.ContentCategory contentCategory = 3;
+}
+
+message UserMoodJournalRequest{
+  int64 id = 1;
+  int64 userID = 2;
+  journal.JournalInfo journalInfo = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+}
+message MoodIdAndTriggerIdRequest{
+  int64 moodId = 1;
+  int64 triggerId = 2;
+}
+message UserGroupsRequest{
+  int64 user_id = 1;
+  int64 group_id = 2;
+  bool register = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  bool join = 5;
+  int64 group_occurrence_id = 6;
+  PaginationRequest pagination = 7;
+  google.protobuf.Timestamp currentTime = 8;
+}
+message ListOfGroupIDsResponse{
+  repeated int64 groupIds = 1;
+  repeated GroupsResponseHeartInTune groupResponse = 2;
+  PaginationResponse paginationResponse = 3;
+}
+message TimeWithIdRequest{
+  int64 userId = 1;
+  google.protobuf.Timestamp currentTime = 2;
+}
+//message CircleRequest{
+//  int64 userId = 1;
+//  string circleName = 2;
+//  string activityName = 10;
+//  string description = 3;
+//  int64 preRecordedId = 4;
+//  bool recurring = 5;
+//  repeated int64 userIdInvite = 6;
+//  google.protobuf.Timestamp scheduleAt = 7;
+//  heartintune.common.LocaleType selectedLanguage = 8;
+//  int64 circleId = 9;
+//  int64 circleMetadataId = 11;
+//}
+//message CircleResponse{
+//  int64 id = 1;
+//  int64 userId = 2;
+//  string circleName = 3;
+//  int64 circleId = 4;
+//  repeated CircleMetadataDetails circleMetadata = 5;
+//  int64 totalCount = 6;
+//  uint32 selectedPageSize = 7;
+//  uint32 selectedPageNumber = 8;
+//}
+message CircleActivityDetails{
+  int64 id = 1;
+  string activityName = 2;
+  string description = 3;
+  int64 preRecordedId = 4;
+  bool recurring = 5;
+  google.protobuf.Timestamp scheduleAt = 6;
+  google.protobuf.Timestamp createAt = 7;
+  google.protobuf.Timestamp recurringEndTime = 8;
+  int64 joinUserCount = 9;
+  string preRecordedImageUrl = 10;
+  int64 totalAcceptedCount = 11;
+  heartintune.common.DayFrequency dayFrequency = 12;
+  repeated int32 weekDays = 13;
+  PreRecordedWithLocaleResponseHeartInTune preRecordedObject = 14;
+  repeated CircleActivityInviteDetails circleActivityInviteDetails = 15;
+  int64 circleActivityOccurrenceId = 16;
+}
+message CircleActivityInviteDetails{
+  int64 id = 1;
+  int64 userInviteId = 2;
+  int64 circleActivityId = 3;
+  heartintune.common.InviteStatus InviteStatus = 4;
+  User user = 5;
+}
+message UserCircleRequest{
+  RequestUserIDByPageable userIdAndPagination = 1;
+  bool lastActivity = 2;
+  int64 circleMetadataId = 3;
+}
+message FetchUserByGroupIdRequest{
+  int64 groupId = 1;
+  bool register = 2;
+  int32 listOfUserInfoDetails = 3;
+}
+
+message PreRecordedWithLocaleResponseHeartInTune{
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  string videoUrl = 4;
+  string meditationSteps = 5;
+  string thumbnail = 6;
+  string imgUrl = 7;
+  heartintune.common.PreRecordedType preRecordedType = 8;
+  int64 videoDuration = 9;
+  string attribute = 10;
+}
+
+message GroupsResponseHeartInTune{
+  int64 id = 1;
+  google.protobuf.Timestamp scheduleTime = 2;
+  google.protobuf.Timestamp createAt = 3;
+  PreRecordedWithLocaleResponseHeartInTune preRecorded = 4;
+  int64 userJoinCount = 5;
+  bool recurrence = 6;
+  google.protobuf.Timestamp recurringEndTime = 7;
+  heartintune.common.DayFrequency dayFrequency = 8;
+  repeated int32 weekDays = 9; // this is useful when day frequency = 2;
+  int64 userRegisterCount = 10;
+  string firebaseTopicName = 11;
+  bool publish = 12;          //for updating Groups.
+  bool forcefullyUpdate = 13;
+  Status status = 14;         //In case of
+  int64 groupOccurrenceId = 15;
+  bool userRegistered = 16;
+}
+
+message UserActionForCircleInvitationRequest{
+  int64 userId = 1;
+  int64 circleOrMetadataId = 2;
+  heartintune.common.Activity activity = 3;
+  heartintune.common.InviteStatus inviteStatus = 4;
+}
+
+message CircleInvitationRequest{
+  int64 userId = 1;
+  int64 circleOrActivityId = 2;
+  repeated int64 userInviteId = 3;
+}
+
+message NotificationAlertsRequestDetails{
+  int64 id = 1;
+  string image = 2;
+  string userName = 3;
+  string title = 4;
+  heartintune.common.Activity activity = 5;
+  int64 circleOrMetaDataId = 6;
+  google.protobuf.Timestamp timestamp = 7;
+  int64 userInviteId = 8;
+  heartintune.common.InviteStatus inviteStatus = 9;
+}
+
+message ListOfNotificationRequestAlertsDetails{
+  repeated NotificationAlertsRequestDetails requestAlertsDetails = 1;
+  int32 pageNumber = 2;
+  int32 pageSize = 3;
+  int64 totalCount = 4;
+}
+
+message SearchUserByDetailsRequest{
+  int64 userId = 1;
+  string name = 2;
+  string email = 3;
+  string phoneNumber = 4;
+  RequestForGetUserDetails pageable = 5;
+  bool isMyCircle = 6;
+  bool isLastActivity = 7;
+  heartintune.common.InviteStatus inviteStatus = 8;
+}
+
+message CircleRequest{
+  int64 userId = 1;
+  string circleName = 2;
+}
+
+message CircleResponse{
+  int64 id = 1;
+  int64 userId = 2;
+  string circleName = 3;
+  int64 totalUsersInviteCount = 4;
+}
+
+message CircleActivityRequest{
+  int64 circleId = 1;
+  string circleName = 2;
+  int64 userId = 3;
+  string activityName = 4;
+  string description = 5;
+  int64 preRecordedId = 6;
+  bool recurring = 7;
+  google.protobuf.Timestamp scheduleAt = 8;
+  heartintune.common.DayFrequency dayFrequency = 9;
+  repeated int32 weekDays = 10;
+  google.protobuf.Timestamp recurringEndTime = 11;
+  repeated int64 userIdInvite = 12;  //For Sending Activity Invitation.
+  int64 circleActivityId = 13;
+  int64 zonalDifference = 14;
+}
+
+message PaginationRequest {
+  int32 pageNumber = 1;
+  int32 pageSize = 2;
+}
+
+message PaginationResponse{
+  int32 selectedPageNumber = 1;
+  int32 selectedPageSize = 2;
+  int64 totalCount = 3;
+}
+
+message ListOfCircleActivityDetailsResponse{
+  repeated CircleActivityDetails circleActivity = 1;
+  PaginationResponse paginationResponse = 2;
+}
+
+message GetUpcomingActivityDetailsRequest{
+  int64 UserID = 1;
+  google.protobuf.Timestamp currentTime = 2;
+  PaginationRequest paginationRequest = 3;
+  heartintune.common.LocaleType selectedLanguage = 4;
+  heartintune.common.InviteStatus status = 5;
+  int64 delayTimeInMinutes = 6;
+  repeated heartintune.common.InviteStatus listOfInviteStatus = 7;
+  google.protobuf.Timestamp endTime = 8;
+}
+
+message EditCircleOrActivityInvitationRequest{
+  int64 userId = 1;
+  repeated int64 removedUsersList = 2;
+  repeated int64 addUsersList = 3;
+  int64 circleOrActivityId = 4;
+  bool isCircleInvitation = 5;
+}
+
+message CircleInviteDetails{
+  int64 id = 1;
+  int64 userInviteId = 2;
+  int64 circleId = 3;
+  heartintune.common.InviteStatus InviteStatus = 4;
+  User user = 5;
+}
+
+message GetUsersFromMyCircleResponse{
+  repeated CircleInviteDetails circleInviteDetails = 1;
+  repeated CircleActivityInviteDetails circleActivityInviteDetails = 2;
+  PaginationResponse paginationResponse = 3;
+}
+
+message repeatedFcmToken{
+  int64 userId = 1;
+  repeated string fcmToken = 2;
+  bool clearAll = 3;
+}
+
+message ResponseUserPersona {
+  google.protobuf.Timestamp createdAt = 1;
+  google.protobuf.Timestamp lastLogin = 2;
+  google.protobuf.Timestamp thirdSittingDate = 3;
+}
+
+message RequestUserScheduleInfo{
+  schedule.RequestScheduleInfo requestScheduleInfo = 1;
+  PaginationRequest paginationRequest = 2;
+}
+
+message UserScheduledInfo{
+  repeated schedule.ScheduleInfo scheduleInfo = 1;
+  PaginationResponse paginationResponse = 2;
+}
+
+message GcpPubSubRequest {
+  string topicId = 1;
+  string subscriptionId = 2;
+  string message = 3; //format is UserId (this userId will used by front-end)- message
+}
+
+message MYSRCMDetails {
+  string displayName = 1;
+  string profileUrl = 2;
+  string refId = 3; //Qr id
+  string dateOfJoining = 4;
+  string recordType = 5; //s - Seeker, n - New Practitioner, a - Practitioner, t - Trainer
+  string mobileNumber = 6;
+  string issuedBy = 7;
+  string gender = 8; //[ M, F, U ]
+  string email = 9;
+  string dob = 10; //("YY/MM/DD")
+  int32 mySrcmId = 11;
+  string city = 12;
+  string profession = 13;
+  string street = 14;
+  string state = 15;
+  string country = 16;
+  string postalCode = 17;
+  int32 cityId = 18;
+  bool idCardAppliedFromHfnOrNot = 19;
+  bool isPopupShownFlag = 20;
+}
+
+message MySRCMPractitioner{
+  string dateOfJoining = 1;
+  string notes = 2;
+  string firebaseId = 3;
+  string jwtToken = 4;
+}
+
+message MeditationReminderDetails{
+  int64 id = 1;
+  int32 meditationId = 2;
+  int32 dayCompleted = 3;
+  google.protobuf.Timestamp completedAt = 4;
+  google.protobuf.Timestamp lastNotified = 5;
+  int32 sentNotificationCount = 6;
+  int64 userId = 7;
+  bool notifyStatus = 8;
+}
+//message WhatsappOTPLessLoginRequest {
+//  string waId = 1;
+//}
+
+message AddAndUpdateListOfUsersTrackerDetails{
+  repeated tracker.RequestTrackerInfo requestTrackerInfo = 1;
+  repeated tracker.TrackerInfo trackerInfo = 2;
+  repeated int64 trackerIds = 3;
+  PaginationResponse paginationResponse = 4;
+}
+
+message DiscoverCountResponse{
+  int64 userId = 1;
+  map<string, string> discoveredCount = 2;
+}
+message UserAcceptedGoalsV2Response{
+  int64 id = 1;
+  int64 associatedGoalId = 2 ;
+  int64 associatedGoalCategoryId = 3 ;
+  heartintune.common.GoalCategory goalCategory = 4;
+  google.protobuf.Timestamp createdOn = 5;
+  google.protobuf.Timestamp expiryOn = 6;
+  int64 user = 7;
+  heartintune.common.GoalStatus status = 8;
+}
+message UserGoalsResponse{
+  repeated UserAcceptedGoalsV2Response userAcceptedGoalsV2Response = 1;
+}
+
+message GoalSchedulesNotification {
+  int64 userId = 1;
+  heartintune.common.Locale title = 2;
+  int64 goalId = 3;
+  heartintune.common.GoalStatus goalStatus = 4;
+  int64 associatedId = 5;
+  ResponseGoalInfoV2 responseGoalInfoV2 = 6;
+  bool isReminder = 7;
+
+}
+
+message GoalSchedulesNotifications{
+  repeated GoalSchedulesNotification goalSchedulesNotification = 1;
+  heartintune.common.GoalStatus goalStatus = 2;
+  notification.Notification notificationDetails = 3;
+}
+
+
+message CampaignStat{
+  int64 id = 1;
+  int64 userId = 2;
+  bool hasDonated = 3;
+  string cause = 4;
+  heartintune.common.Channel channel = 5;
+  int64 campaignId = 6;
+  bool isNotificationSent = 7;
+  google.protobuf.Timestamp createdAt = 8;
+  bool isBirthdayRequest = 9;
+  bool hasClicked = 10;
+  string uuid = 11;
+ }
+
+service HeartIntuneProfileService {
+  rpc Test (Empty) returns (TestResponse) {};
+  rpc ConnectUser (ConnectUserRequest) returns (ConnectUserResponse) {};
+  rpc TryUsNow (ConnectUserRequest) returns (ConnectUserResponse) {} ;
+  rpc UserLogin (ConnectUserRequest) returns (ConnectUserResponse) {} ;
+  rpc UserLogout (ConnectUserRequest) returns (ConnectUserResponse) {} ;
+  rpc UpdateUser (UpdateUserRequest) returns (User) {} ;
+  rpc UpdateUserLanguage (UpdateUserLanguageRequest) returns (User) {} ;
+  rpc setUserRole (RequestSetUserRole) returns (Status) {} ;
+  rpc GetUserDetailsByID (RequestUserID) returns (UserInfo) {} ;
+  rpc GetUserDetails (RequestForGetUserDetails) returns (ListOfUserInfo) {} ;//how does logout work? The Flutter App will call Firebase logout? And if sucessful then Flutter app informs this server
+  rpc SearchUserByDetails(RequestForSearchUserByDetails) returns (ResponseForSearchUserByDetails);
+  rpc UpdateStats (stats.MeditationStatsRequest) returns (stats.StatsUpdateStatus) {};
+  rpc GetStats (FetchStatsFor) returns (UserStatsInfo) {};
+  rpc UnregisterForLiveSession (RegistrationDetails) returns (Status) {} ;
+  rpc UnregisterForLiveSessionAndGetEventIds (RegistrationDetails) returns (ResponseForUnRegisterLiveSessionId) {} ;
+  rpc GetFavourites (ID) returns (Favourites) {};
+  rpc SetFavourites (RequestSetFavourite) returns (Status) {};
+  rpc SetUnFavourites (RequestSetFavourite) returns (Status) {};
+  rpc GetRegisteredLiveMeditationID (RequestForRegisterLiveMeditationId) returns (ListOfIDs) {};
+  rpc GetCompletedLiveMeditationID (RequestUserID) returns (ListOfIDs) {};
+  rpc GetCompletedLiveMeditationIDByPageable (RequestUserIDByPageable) returns (ResponseListOfIDs) {};
+  rpc StartGoal (RequestSubscribeToGoal) returns(Status) ;
+  rpc UpdateGoal (RequestUpdateToGoal) returns(Status) ;
+  rpc GetListOfGoalsInProgress (RequestUserID) returns(ListOfIDs);
+  rpc AllocateBadgeToUser (ID) returns (Status) {};
+  rpc SetProgressGuidedMeditation (RequestUsersWithMeditation) returns (Status) {};
+  rpc SetCompletedGuidedMeditation (RequestUsersWithMeditation) returns (ResponseCompletedLiveMeditation) {};
+  rpc RegisterForCompletedLiveMeditation (RegistrationDetails) returns (Status) {};
+  rpc RegisterForLiveMeditation(RegistrationDetails) returns (Status) {};
+  rpc RegisterForLiveMeditationWithEventIds(RequestForRegistrationDetails) returns (Status) {};
+  rpc AddJournal(journal.RequestJournal) returns (journal.JournalInfo) {};
+  rpc UpdateJournal(journal.JournalInfo) returns (journal.JournalInfo) {};
+  rpc ToggleJournalFavouriteStatus(journal.RequestJournalFavoriteStatus) returns (journal.JournalInfo) {};
+  rpc ToggleJournalArchiveStatus(journal.RequestJournalArchiveStatus) returns (journal.JournalInfo) {};
+  rpc DeleteJournal(journal.RequestJournalId) returns (Status) {};
+  rpc GetJournalByDateRange(journal.RequestJournalDateRange) returns (journal.ListOfJournals) {};
+  rpc GetAllJournalsByUserId(RequestUserID) returns (journal.ListOfJournals) {};
+  rpc AddUserTrackerDetails(tracker.RequestTrackerInfo) returns (TrackerWithBadge) {};
+  rpc UpdateUserTrackerDetails(tracker.TrackerInfo) returns (TrackerWithBadge) {};
+  rpc GetStatsByUserId(RequestUserID) returns (ResponseUserStats) {};
+  rpc GetWeeklyStatsByUserId(RequestUserWeeklyStats) returns (ResponseUserWeeklyStats) {};
+  rpc GetMonthlyStatsByUserId(RequestUserWeeklyStats) returns (ResponseUserMonthlyStats) {};
+  rpc GetAllBadgesByUserId(RequestUserID) returns (ResponseBadgesByUserId){};
+  rpc GetAllBadgesV2ByUserId(RequestUserID) returns (ResponseBadgesByUserId){};
+  rpc SaveDonation(SaveDonationRequest) returns (Status) {};
+  rpc DeleteUserAccount(RequestUserID) returns (Status) {} ;
+  rpc DeleteUserAccountFromFireBase(RequestForDeleteUserAccountFromFireBase) returns (Status) {} ;
+  rpc SendUserJournalsToEmail(journal.RequestJournalDateRange) returns (Empty){};
+  rpc GetGoalByUserId(RequestGoalByUserId) returns (ResponseScheduleGoal) {};
+  rpc GetDonationDetailsByUserId(RequestUserID) returns (donation.DonationResponseUserDetails);
+  rpc GetUserDetailsByEmail(RequestUserDetailsByEmail) returns (ResponseUserDetailsByEmail);
+  rpc DeleteScheduleData(RequestForDeleteSchedule) returns (Status);
+  rpc DeleteUserRegisteredLiveSessionId(RequestForDeleteLiveSessionId) returns (Status);
+  rpc ClearUserDataForDeletedLiveSessions(RequestForClearUserDataForDeletedLiveSessions) returns (Status);
+  rpc HotFixMigrationsForMobileUsers(RequestForHotFixMigrationsForMobileUsers) returns (ResponseForHotFixMigrationsForMobileUsers);
+  rpc SendQuestionsToCoachEmail(RequestForSendEmailToCoachWithQuestionsAndUserRegisterCount) returns (Status);
+  rpc CancelLiveSessionById(ID) returns (Status);
+  rpc SendUserNotificationFromHeartInTune(HeartInTuneNotificationRequest) returns (notification.DeviceNotificationResponse);
+  rpc GetAllUsersByListofIds(ListOfIDs) returns (ListOfUserInfo);
+
+  rpc SendTopicNotification(notification.TopicNotificationRequest) returns (notification.TopicNotificationResponse);
+  rpc SendDeviceNotification(notification.DeviceNotificationRequest) returns (notification.DeviceNotificationResponse);
+  rpc SendUserNotification(notification.UserNotificationRequest) returns (notification.UserNotificationResponse);
+  rpc SubscribeToTopic(notification.TopicSubscribeRequest) returns (notification.TopicSubscribeResponse);
+  rpc UnSubscribeFromTopic(notification.TopicUnsubscribeRequest) returns (notification.TopicUnsubscribeResponse);
+  rpc SendEmailNotification(notification.EmailNotificationRequest) returns (notification.EmailNotificationResponse);
+  /**
+    Donate to the selected donation line items.
+    Request has optional user name, email and phone for payment related communication.
+    Response has the Donation Id and the payment gateway URL.
+    User should be redirected to this URL.
+  */
+  rpc DonateUsingHeartInTuneApp(DonationInfoRequest) returns (donation.DonateResponse) {};
+  rpc getAllUsersCount(Empty) returns (totalUsers) {};
+
+  /**
+    It will call the hfn-events-service microservice (inter-communication)
+    And it will publish the announcement in announcement entity (hfn-events-service).
+    If the announcement is created successfully then we will send the notification to the all logged in users.
+   */
+  rpc PublishAnnouncementInBhandara (AnnouncementRequest) returns (AnnouncementDetails) {};
+  rpc GetAllNotificationsByUserId(RequestUserIDByPageable) returns (ListOfNotificationPageableResponse) {};
+  rpc UpdateNotificationReadById(ReadNotificationRequest) returns (Status){};
+  rpc ScheduleGoalV2(RequestToScheduleGoal) returns (Status) {};
+  rpc AddLiveSessionCalendarEventId(AddLiveSessionCalendarEventIdRequest) returns (Status) {};
+  rpc GetAllMySignUpV2(RequestV2GetAllMySignUp) returns (ResponseV2GetAllMySignUp) {};
+
+  //GetLiveSessionWithUserRegisteredStatusByCoachIdOnSpecifiedTime
+  rpc GetLiveSessionDetailsV2ByCoachId(LiveSessionDetailsAndUserRegistrationStatusRequest) returns (LiveSessionDetailsAndUserRegistrationStatusResponse) {};
+
+
+  rpc ScriptForSubscribingToTopicByAllHeartInTuneUsersOrSingleUser(SubscribeToTopicByAllUsers) returns (Status);
+
+
+  /**
+   SaveCarousel will save the list of carousel in DB , in the order how we are getting in request.
+   DeleteCarouselById will delete the carousel from DB based on requested carouselId.
+   GetAllCarousels will fetch the carousels by order, like how we saved from admin portal
+   UpdateCarouselById will update the carousels in DB based on carouselRequest.
+   */
+
+  rpc SaveCarousel (CarouselDetails) returns (Status);//Saving and updating
+  rpc GetCarousel (Empty) returns (CarouselDetails);
+
+  //Sending Email OTP Digit to user
+  rpc SendOTPForEmailVerification(RequestToGenerateOtpForEmail) returns (Status) {};
+  rpc ValidatedEmailOTP(RequestOtpForEmailValidation) returns (Status) {};
+  //  rpc AuthenticateWhatsAppOTPLessLogin(WhatsappOTPLessLoginRequest) returns (ConnectUserRequest) {};
+
+  rpc UpdateUserTrackerDetailsV2(tracker.TrackerInfo) returns (TrackerWithBadge) {};
+  rpc AddStayConnectedWithUsDetails(StayConnectedWithUsRequest) returns (StayConnectedWithUsDetails) {};
+  rpc UpdateStayConnectedWithUsDetails(StayConnectedWithUsDetails) returns (StayConnectedWithUsDetails) {};
+  rpc RateLiveMeditationSessionV2(LiveSessionRatingRequest) returns (Status);
+  rpc GetAllGoalStatusByUser(GetAllGoalStatusByUserRequest) returns (GetAllGoalStatusByUserResponse) {};
+  rpc GetGoalCountByUser(ID) returns (GetGoalCountByUserResponse) {};
+  rpc GetUserAcceptedGoalIds(GetAllGoalStatusByUserRequest) returns (ListOfIDs) {};
+  rpc EndGoalById(ID) returns (Status) {}
+  rpc GetInProgressGoalCardForHomePage(RequestV2GetAllMySignUp) returns (ListOfGetInProgressGoalCardForHomePage) {};
+
+  // Operation for User Mood Matters.
+  rpc UserMoodSelected(AddUserMoodRequest) returns (UserMoodDetails) {};
+  rpc GetUserMoodBySpecifiedTime(UserMoodRequestBySpecifiedTime) returns (UserMoodResponseBySpecifiedTime){};
+  rpc DeleteUserMoodBySpecifiedTime(UserMoodRequestBySpecifiedTime) returns (Status){};
+  rpc GetMoodCheckInsWithPercent(UserMoodRequestBySpecifiedTime) returns (MoodCheckInsWithPercentResponse) {};
+  //rpc GetUserMoodMap(UserMoodRequestBySpecifiedTime) returns (UserMoodMapResponse) {};
+  //rpc GetUserMoodCheckInDetails(UserMoodRequestBySpecifiedTime) returns (MoodCheckInDetailsResponse){};
+  //rpc UserMoodExistForToday(UserMoodRequestBySpecifiedTime) returns (Status){};
+
+  //Crud Operation for reminder for daily meditation session
+  rpc AddDailyReminder(ReminderRequest) returns (Status){};
+  rpc EditDailyReminder(ReminderDetails) returns (ReminderDetails){};
+  rpc ShowDailyReminder(ReminderTypeRequest) returns (ReminderDetails){};
+  rpc DeleteDailyReminder(ReminderTypeRequest) returns (Status){};
+
+  //For User Preferred Background Image and Background Music.
+  rpc SaveUserPreferredBackground(UserPreferredBackgroundRequest) returns (Status) {};
+  rpc GetUserPreferredBackground(UserIdRequest) returns (UserPreferredBackgroundResponse) {};
+
+  // For User Favorite Content
+  rpc AddFavoriteContent(FavoriteRequest) returns (Status) {};
+  rpc GetAllFavoriteContentByUser(FavoriteRequest) returns (ListOfContentLocaleResponse) {};
+  rpc UnRegisteredFavoriteContent(FavoriteRequest) returns (Status) {};
+  rpc IsFavoriteContentExistOrNotForUser(FavoriteContentIsExistOrNotForUserRequest) returns (Status) {};
+
+  // For User PersonalityQuiz
+  rpc SaveUserPersonalityQuiz(UserPersonalityRequest) returns (Status) {};
+  rpc UpdateUserPersonalityQuiz(UserPersonalityRequest) returns (Status) {};
+  rpc DeleteUserPersonalityQuizForAdmin(ID) returns (Status) {};
+  rpc getAllPersonalityQuizByUser(GetAllUserPersonalityQuizRequest) returns (ListOfHeartInTunePersonalityQuizLocale) {};
+
+  rpc LogMeditation(tracker.TrackerInfo) returns (TrackerWithBadge) {};
+  rpc GetUserCompletedMeditationCount(RequestV2GetAllMySignUp) returns (totalUsers) {};
+
+  //Regarding HeartSpots rpc
+  rpc SendEmailToHeartspotTeam(EmailHeartspotRequest) returns (Status) {};
+  rpc GetQuoteByUserActivity(QuoteActivityRequest) returns (QuotesResponse){};
+
+  rpc DeleteUserMoodById(ID) returns (Status) {};
+  rpc UpdateJournalForUserMood(UserMoodJournalRequest) returns (UserMoodDetails) {};//Add or update journal only in usermod
+  // rpc DeleteAllUserMoodByMoodIdOrTriggerId(MoodIdAndTriggerIdRequest) returns (Status) {};
+
+  rpc DeleteContentByIdAndCategory(FavoriteContentIsExistOrNotForUserRequest) returns (Status) {};
+
+  //User Register for groups.
+  rpc RegisterAndJoinActionsForUserGroups(UserGroupsRequest) returns (Status){};
+  rpc ListOfUserRegisterGroupIds(TimeWithIdRequest) returns (ListOfGroupIDsResponse){};
+  rpc DeleteGroupById(ID) returns (Status){};
+  rpc GetGroupByUser(UserIdRequest) returns (GroupsResponseHeartInTune){};
+  rpc GetUserInfoByGroupId(FetchUserByGroupIdRequest) returns (ListOfUserInfo){};
+  rpc UpdateGroupById(GroupsResponseHeartInTune) returns (GroupsResponseHeartInTune){};
+  rpc UnPublishGroupById(FetchUserByGroupIdRequest) returns (Status){};
+  rpc GetUpcomingGroupsByUserId(UserGroupsRequest) returns (ListOfGroupIDsResponse){};
+
+
+  //rpc CreateOrUpdateCircle(CircleRequest) returns (Status){};
+  //rpc GetMyCircleByUserId(UserCircleRequest) returns (CircleResponse){};
+  //rpc GetAllUserInviteByLastActivity(UserCircleRequest) returns (CircleMetadataDetails){};
+  //rpc GetAllCircleMetadataAcceptedByUserId(UserCircleRequest) returns (CircleResponse){};
+
+
+  //For Circles.
+  rpc UpdateCircle(CircleResponse) returns (CircleResponse){};
+  rpc CreateCircleActivity(CircleActivityRequest) returns (Status){};
+  rpc GetCircleNameByUserId(ID) returns (CircleResponse){};
+  rpc UpdateCircleActivity(CircleActivityRequest) returns (Status){};
+  rpc DeleteCircleActivity(ID) returns (Status){};
+  rpc LeaveCircleActivity(ID) returns (Status){};
+  rpc DeleteCircle(ID) returns (Status) {};
+
+  rpc CircleInvitation(CircleInvitationRequest) returns (Status);
+  rpc UserActionForCircleInvitation(UserActionForCircleInvitationRequest) returns (Status) {};
+  rpc GetAllNotificationRequestByUserId(RequestUserIDByPageable) returns (ListOfNotificationRequestAlertsDetails) {};
+  rpc SearchUserDetails(SearchUserByDetailsRequest) returns (ResponseForSearchUserByDetails){};
+  rpc GetUsersFromMyCircle(RequestUserIDByPageable) returns (GetUsersFromMyCircleResponse) {};
+  rpc CircleActivityInvitation(CircleInvitationRequest) returns (Status) {};
+  rpc EditParticipantsForCircleInvitation(EditCircleOrActivityInvitationRequest) returns (Status) {};
+  rpc GetMyUpcomingActivityDetails(GetUpcomingActivityDetailsRequest) returns (ListOfCircleActivityDetailsResponse) {};
+  rpc GetMyAcceptedUpcomingActivityDetails(GetUpcomingActivityDetailsRequest) returns (ListOfCircleActivityDetailsResponse) {};
+  rpc GetActivityDetailsByIDWithLanguageSupport(UserIdRequest) returns (CircleActivityDetails) {};
+  //for multiple notifications
+  rpc clearFcmTokens(repeatedFcmToken) returns (Status);
+  rpc GetUserScheduledInfo(RequestUserScheduleInfo) returns (UserScheduledInfo) {};
+
+  // RPC calls for GCP PUB/SUB
+  rpc GcpCreateTopic(GcpPubSubRequest) returns (Status) {};
+  rpc GcpPublishTopic(GcpPubSubRequest) returns (Status) {};
+  rpc GcpCreateSubscriptionAndSubscribeToTopic(GcpPubSubRequest) returns (Status) {};
+  rpc GcpDeleteSubscription(GcpPubSubRequest) returns (Status) {};
+
+  rpc UpdateFcmToken(ID) returns (Status) {};
+  rpc GetMySRCMUserDetails(ID) returns (MYSRCMDetails) {};
+  rpc SaveListOfJournals(journal.SaveListOfJournalsRequest) returns (Status) {};
+
+  // for 3day master class notification and reminder
+  rpc SaveMeditationReminderDetails(MeditationReminderDetails) returns (MeditationReminderDetails) {};
+  rpc ValidaUserAcceptedGoalAndMoveToMissedGoal(ID) returns (Status) {};
+  rpc AddListOfUsersTrackerDetails(AddAndUpdateListOfUsersTrackerDetails) returns (AddAndUpdateListOfUsersTrackerDetails) {};
+  rpc UpdateListOfUsersTrackerDetails(AddAndUpdateListOfUsersTrackerDetails) returns (Status) {};
+
+  //Display count of each relative card on discover page.
+  rpc GetCountOnDiscoverByUserId(RequestUserID) returns (DiscoverCountResponse){};
+  // Api to clear the all notifications by user
+  rpc ClearAllNotificationsByUserId(TimeWithIdRequest) returns (Status) {};
+  rpc SeekerToPractitioner(MySRCMPractitioner) returns (Status) {};
+
+  rpc GetUserById(RequestUserID) returns (User);
+  rpc SaveUserNotification(NotificationPageableResponse) returns (Empty){};
+  rpc TrackerCallFromGamification(tracker.TrackerRequestFromGamification) returns(tracker.TrackerResponseForGamification){};
+  rpc SendGoalsNotification(GoalSchedulesNotifications) returns(Empty);
+
+  rpc SaveOrUpdateDonationProfile(donation.UserProfile) returns (Status) {};
+  rpc UpdateFcmTokenV2(device.DeviceRequest) returns (Status) {};
+  rpc GetFcmRegistrationTokens(ID) returns (device.ListOfDevices) {};
+  rpc FetchRecentlyPracticedMediationByUser(AddLiveSessionCalendarEventIdRequest) returns (AddAndUpdateListOfUsersTrackerDetails) {};
+
+  rpc CreateOrUpdateMetricDetails (CampaignStat) returns (CampaignStat) {};
+}

@@ -1,0 +1,29 @@
+{
+  "id": "784",
+  "url": "{{ faker.internet.url }}",
+  "backGroundType": "MUSIC",
+  "title": {
+    "defaultContent": "bottom-line Bolivia",
+    "en": "backing up",
+    "hi": "partnerships Steel Dynamic",
+    "te": "Licensed Granite Chips",
+    "gu": "sensor",
+    "ta": "Dam orchestrate",
+    "ka": "black Directives hybrid",
+    "mr": "partnerships capacitor",
+    "it": "cross-platform virtual",
+    "ru": "Fantastic Proactive",
+    "es": "Intelligent Metal Hat Ergonomic Metal Pants",
+    "fr": "Borders Granite",
+    "pt": "invoice",
+    "de": "Integration integrate",
+    "bn": "Fantastic Future-proofed",
+    "ml": "Handmade Concrete Salad",
+    "uk": "Fiji Dollar",
+    "od": "Reverse-engineered Consultant withdrawal",
+    "enUs": "Frozen",
+    "enAu": "Intelligent Rubber Sausages bluetooth",
+    "pa": "parallelism"
+  },
+  "thumbnailImgUrl": "Seamless"
+}

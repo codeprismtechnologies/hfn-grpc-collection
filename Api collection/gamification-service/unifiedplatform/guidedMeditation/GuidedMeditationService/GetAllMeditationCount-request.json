@@ -1,0 +1,10 @@
+{
+  "requestPageable": {
+    "pageSize": 183,
+    "pageNumber": 636
+  },
+  "meditationType": "MEDITATE_WITH_TRAINER",
+  "mediationCategory": "PRAYER_MEDITATION",
+  "selectedLanguage": "EN",
+  "category": false
+}

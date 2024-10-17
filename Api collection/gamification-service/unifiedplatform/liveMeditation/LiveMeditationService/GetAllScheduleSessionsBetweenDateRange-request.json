@@ -1,0 +1,15 @@
+{
+  "startDate": "1970-01-01T00:16:01.000000798Z",
+  "endDate": "1970-01-01T00:05:17.000000825Z",
+  "pageable": {
+    "pageSize": 484,
+    "pageNumber": 152,
+    "isUnPublished": true
+  },
+  "getDefineSession": true,
+  "selectedLanguage": {
+    "selectedLanguage": "DE",
+    "id": "376",
+    "respectiveId": "943"
+  }
+}

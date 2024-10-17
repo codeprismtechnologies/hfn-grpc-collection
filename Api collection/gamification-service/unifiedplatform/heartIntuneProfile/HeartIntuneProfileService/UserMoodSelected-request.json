@@ -1,0 +1,22 @@
+{
+  "userID": "780",
+  "moodIds": [
+    "714",
+    "970"
+  ],
+  "triggerIds": [
+    "486",
+    "154"
+  ],
+  "createAt": "1970-01-01T00:11:10.000000043Z",
+  "userDefineMood": "Applications",
+  "userDefineTrigger": "Soft View Investment Account",
+  "journalData": {
+    "journal": "matrix French Southern Territories",
+    "archiveStatus": true,
+    "favourite": false,
+    "userID": "60",
+    "journalType": "OFFLINE_JOURNAL"
+  },
+  "selectedLanguage": "IT"
+}

@@ -1,0 +1,16 @@
+{
+  "goalID": "144",
+  "userID": "820",
+  "selectedDateAndTimeWithCalendarEvent": [
+    {
+      "selectedDateAndTime": "1970-01-01T00:14:19.000000750Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "scheduleId": "100"
+    },
+    {
+      "selectedDateAndTime": "1970-01-01T00:07:17.000000133Z",
+      "calendarEventId": "{{ faker.random.uuid }}",
+      "scheduleId": "290"
+    }
+  ]
+}

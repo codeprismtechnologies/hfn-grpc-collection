@@ -1,0 +1,8 @@
+{
+  "questionText": "Tasty Steel Fish global",
+  "userID": "897",
+  "liveSessionID": "976",
+  "userName": "{{ faker.internet.user_name }}",
+  "email": "{{ faker.internet.example_email }}",
+  "mobileNumber": "{{ faker.random.ushort }}"
+}

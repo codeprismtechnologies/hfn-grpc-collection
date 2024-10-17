@@ -1,0 +1,57 @@
+{
+  "id": "584",
+  "userID": "274",
+  "journalInfo": {
+    "id": "321",
+    "journal": "multi-tasking Avon Illinois",
+    "createdAt": "1970-01-01T00:12:26.000000553Z",
+    "modifiedAt": "1970-01-01T00:07:57.000000043Z",
+    "archiveStatus": false,
+    "favourite": true,
+    "userID": "340",
+    "journalType": "OFFLINE_JOURNAL",
+    "moodDetailsAndTriggers": [
+      {
+        "moodDetails": {
+          "moodId": "72",
+          "associatedColor": "Rustic Frozen Gloves 24/365 Mill",
+          "moodName": "Markets Drives",
+          "moodType": "MOOD_SAD"
+        },
+        "triggerDetails": [
+          {
+            "triggerId": "666",
+            "emojiUrl": "Steel firewall transmit",
+            "triggerName": "Alley Checking Account"
+          },
+          {
+            "triggerId": "502",
+            "emojiUrl": "Junction salmon",
+            "triggerName": "Concrete plum Rapids"
+          }
+        ]
+      },
+      {
+        "moodDetails": {
+          "moodId": "732",
+          "associatedColor": "adapter Alaska",
+          "moodName": "Metrics Canyon firewall",
+          "moodType": "UNKNOWN_MOOD_TYPE"
+        },
+        "triggerDetails": [
+          {
+            "triggerId": "948",
+            "emojiUrl": "connect",
+            "triggerName": "Refined Glens"
+          },
+          {
+            "triggerId": "99",
+            "emojiUrl": "Visionary Cordoba Oro Liaison",
+            "triggerName": "auxiliary"
+          }
+        ]
+      }
+    ]
+  },
+  "selectedLanguage": "DEFAULT"
+}
