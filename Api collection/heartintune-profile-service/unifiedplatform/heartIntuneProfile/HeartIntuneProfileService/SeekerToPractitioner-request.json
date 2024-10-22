@@ -1,6 +1,0 @@
-{
-  "dateOfJoining": "Refined Plastic Shoes",
-  "notes": "encompassing withdrawal",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "jwtToken": "well-modulated Fresh"
-}

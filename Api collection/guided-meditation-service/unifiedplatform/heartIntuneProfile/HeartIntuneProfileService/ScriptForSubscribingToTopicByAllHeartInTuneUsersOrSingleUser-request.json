@@ -1,3 +1,0 @@
-{
-  "singleUserFirebaseId": "{{ faker.random.uuid }}"
-}

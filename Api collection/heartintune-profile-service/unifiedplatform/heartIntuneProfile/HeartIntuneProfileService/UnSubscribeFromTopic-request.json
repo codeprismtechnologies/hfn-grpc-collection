@@ -1,5 +1,0 @@
-{
-  "topic": "Summit",
-  "userId": "{{ faker.random.uuid }}",
-  "deviceId": "{{ faker.random.uuid }}"
-}

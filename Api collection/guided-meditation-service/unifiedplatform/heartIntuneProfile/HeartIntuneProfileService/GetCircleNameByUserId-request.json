@@ -1,9 +1,0 @@
-{
-  "ID": "590",
-  "userID": "511",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "fcmToken": "neural transmit port",
-  "deviceId": "{{ faker.random.uuid }}",
-  "jwtToken": "Cross-group Granite PCI",
-  "email": "{{ faker.internet.example_email }}"
-}

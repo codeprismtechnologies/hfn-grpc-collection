@@ -1,9 +1,0 @@
-{
-  "ID": "72",
-  "userID": "27",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "fcmToken": "Trace Handcrafted Plastic Pizza",
-  "deviceId": "{{ faker.random.uuid }}",
-  "jwtToken": "Generic Concrete Hat Congo",
-  "email": "{{ faker.internet.example_email }}"
-}

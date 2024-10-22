@@ -1,8 +1,0 @@
-{
-  "questionText": "Refined Legacy Awesome Plastic Bike",
-  "userID": "439",
-  "liveSessionID": "139",
-  "userName": "{{ faker.internet.user_name }}",
-  "email": "{{ faker.internet.example_email }}",
-  "mobileNumber": "{{ faker.random.ushort }}"
-}

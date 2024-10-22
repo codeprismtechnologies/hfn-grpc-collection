@@ -1,9 +1,0 @@
-{
-  "ID": "781",
-  "userID": "800",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "fcmToken": "Panama synthesizing",
-  "deviceId": "{{ faker.random.uuid }}",
-  "jwtToken": "South Dakota",
-  "email": "{{ faker.internet.example_email }}"
-}

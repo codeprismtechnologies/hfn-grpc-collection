@@ -1,9 +1,0 @@
-{
-  "ID": "241",
-  "userID": "477",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "fcmToken": "complexity payment reboot",
-  "deviceId": "{{ faker.random.uuid }}",
-  "jwtToken": "empowering",
-  "email": "{{ faker.internet.example_email }}"
-}

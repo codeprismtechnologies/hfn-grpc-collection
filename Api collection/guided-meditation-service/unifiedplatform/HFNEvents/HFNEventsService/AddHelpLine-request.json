@@ -1,7 +1,0 @@
-{
-  "description": "Field Wooden Handcrafted Plastic Cheese",
-  "KeyLocation": "Cloned Principal",
-  "contactNumber": "{{ faker.random.ushort }}",
-  "bhandaraHelpLineType": "REPORT_ISSUE",
-  "createdAt": "1970-01-01T00:06:37.000000038Z"
-}

@@ -1,4 +1,0 @@
-{
-  "liveSessionId": "417",
-  "email": "{{ faker.internet.example_email }}"
-}

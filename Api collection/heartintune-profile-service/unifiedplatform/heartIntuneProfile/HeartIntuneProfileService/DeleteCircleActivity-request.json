@@ -1,9 +1,0 @@
-{
-  "ID": "737",
-  "userID": "371",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "fcmToken": "navigate optimize synergies",
-  "deviceId": "{{ faker.random.uuid }}",
-  "jwtToken": "Global Mayotte end-to-end",
-  "email": "{{ faker.internet.example_email }}"
-}

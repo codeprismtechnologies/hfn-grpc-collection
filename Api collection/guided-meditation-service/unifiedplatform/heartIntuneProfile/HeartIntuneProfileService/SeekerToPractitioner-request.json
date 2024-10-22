@@ -1,6 +1,0 @@
-{
-  "dateOfJoining": "Buckinghamshire",
-  "notes": "interfaces Small Consultant",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "jwtToken": "North Dakota"
-}

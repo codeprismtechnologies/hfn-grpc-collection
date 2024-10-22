@@ -1,8 +1,0 @@
-{
-  "userId": "689",
-  "coachId": "516",
-  "startTime": "1970-01-01T00:02:25.000000063Z",
-  "endTime": "1970-01-01T00:14:39.000000475Z",
-  "selectedLanguage": "TA",
-  "version": "{{ faker.system.version }}"
-}

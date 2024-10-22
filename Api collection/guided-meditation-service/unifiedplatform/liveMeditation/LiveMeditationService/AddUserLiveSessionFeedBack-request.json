@@ -1,9 +1,0 @@
-{
-  "liveSessionId": "863",
-  "userId": "576",
-  "userName": "{{ faker.internet.user_name }}",
-  "textIssue": "Balanced",
-  "userReportType": "ISSUE",
-  "email": "{{ faker.internet.example_email }}",
-  "mobileNumber": "{{ faker.random.ushort }}"
-}

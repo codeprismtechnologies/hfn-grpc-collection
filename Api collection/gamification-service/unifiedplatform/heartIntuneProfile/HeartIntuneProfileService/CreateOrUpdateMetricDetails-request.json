@@ -1,0 +1,13 @@
+{
+  "id": "595",
+  "userId": "936",
+  "hasDonated": false,
+  "cause": "content-based application Planner",
+  "channel": "SMS",
+  "campaignId": "882",
+  "isNotificationSent": true,
+  "createdAt": "1970-01-01T00:09:51.000000239Z",
+  "isBirthdayRequest": false,
+  "hasClicked": true,
+  "uuid": "{{ faker.random.uuid }}"
+}

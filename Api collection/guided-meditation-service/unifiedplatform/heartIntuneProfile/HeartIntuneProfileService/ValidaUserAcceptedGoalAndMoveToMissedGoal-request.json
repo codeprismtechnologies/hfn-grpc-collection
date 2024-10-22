@@ -1,9 +1,0 @@
-{
-  "ID": "800",
-  "userID": "842",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "fcmToken": "Ergonomic Fresh Chair",
-  "deviceId": "{{ faker.random.uuid }}",
-  "jwtToken": "Branch Clothing, Tools & Beauty navigating",
-  "email": "{{ faker.internet.example_email }}"
-}

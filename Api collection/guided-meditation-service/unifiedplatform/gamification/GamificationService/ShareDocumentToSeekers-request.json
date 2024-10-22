@@ -1,9 +1,0 @@
-{
-  "seekerIds": [
-    "Tactics RSS Rand",
-    "Metal"
-  ],
-  "preceptorId": "{{ faker.random.uuid }}",
-  "contentId": "36",
-  "contentCategory": "VIDEO"
-}

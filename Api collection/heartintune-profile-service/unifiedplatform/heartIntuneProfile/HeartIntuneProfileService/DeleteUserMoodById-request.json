@@ -1,9 +1,0 @@
-{
-  "ID": "841",
-  "userID": "588",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "fcmToken": "Ergonomic Steel Gloves",
-  "deviceId": "{{ faker.random.uuid }}",
-  "jwtToken": "reintermediate",
-  "email": "{{ faker.internet.example_email }}"
-}

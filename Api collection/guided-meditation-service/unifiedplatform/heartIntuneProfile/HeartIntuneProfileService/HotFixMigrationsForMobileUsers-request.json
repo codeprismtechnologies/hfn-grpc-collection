@@ -1,4 +1,0 @@
-{
-  "oldFireBaseId": "{{ faker.random.uuid }}",
-  "newFireBaseId": "{{ faker.random.uuid }}"
-}

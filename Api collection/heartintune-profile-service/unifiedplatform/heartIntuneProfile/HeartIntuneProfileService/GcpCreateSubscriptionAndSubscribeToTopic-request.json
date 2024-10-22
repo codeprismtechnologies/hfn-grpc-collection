@@ -1,5 +1,0 @@
-{
-  "topicId": "{{ faker.random.uuid }}",
-  "subscriptionId": "{{ faker.random.uuid }}",
-  "message": "Fantastic Concrete Ball Incredible interface"
-}
