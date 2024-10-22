@@ -1,19 +1,10 @@
 {
   "settings": [
     {
-      "authId": "46d83971-08d7-42b5-acc9-413e2ca27446",
-      "options": {
-        "grpc": {
-          "endpoint": "http://localhost:50060",
-          "disableServerCertificateValidation": true
-        }
-      }
-    },
-    {
       "environmentId": "3c549bfc-3592-4fdb-a130-19880e8bfcda",
       "options": {
         "grpc": {
-          "endpoint": "https://hfn-events-service-grpc.heartfulnessinstitute.in"
+          "endpoint": "https://heartintune-profile-service-grpc.heartfulnessinstitute.in"
         }
       }
     },
@@ -21,7 +12,7 @@
       "environmentId": "9617d2c8-ecdf-4c4f-b6af-1269bf96ae64",
       "options": {
         "grpc": {
-          "endpoint": "https://hfn-events-service-grpc.qa.heartfulnessinstitute.in"
+          "endpoint": "https://heartintune-profile-service-grpc.qa.heartfulnessinstitute.in"
         }
       }
     },
@@ -29,7 +20,7 @@
       "environmentId": "c1a36b45-fa5c-406e-a67f-8d068d3f80a2",
       "options": {
         "grpc": {
-          "endpoint": "http://localhost:50060",
+          "endpoint": "http://localhost:50052",
           "disableServerCertificateValidation": true
         }
       }
@@ -38,7 +29,7 @@
       "environmentId": "fa6533a5-1946-4334-b721-13304226cb75",
       "options": {
         "grpc": {
-          "endpoint": "https://hfn-events-service-grpc.dev.heartfulnessinstitute.in"
+          "endpoint": "https://innermastery-profile-service-grpc.dev.heartfulnessinstitute.in"
         }
       }
     }
