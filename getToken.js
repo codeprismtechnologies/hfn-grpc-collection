@@ -23,7 +23,8 @@ function updateJsonToken(token) {
     ? (jsonData.authConfigs[1].options.value = token)
     : (jsonData.authConfigs[0].options.value = token);
 
-  // Write the updated JSON back to the file
+
+  // Write the updated JSON back to file
   fs.writeFileSync(JSON_FILE_PATH, JSON.stringify(jsonData, null, 2));
   console.log("Token successfully updated in JSON file.");
 }
