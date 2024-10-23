@@ -1,8 +1,9 @@
 {
   "pageable": {
-    "pageSize": 5,
+    "pageSize": 100,
     "pageNumber": 0
   },
   "selectedLanguage":"EN",
-  "sort": false
+  "sort": false,
+  "isAdmin":true
 }

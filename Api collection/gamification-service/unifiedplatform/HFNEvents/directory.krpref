@@ -19,6 +19,7 @@
     },
     {
       "environmentId": "9617d2c8-ecdf-4c4f-b6af-1269bf96ae64",
+      "authId": "3e5a4920-291e-41e7-81f6-0293601765f0",
       "options": {
         "grpc": {
           "endpoint": "https://hfn-events-service-grpc.qa.heartfulnessinstitute.in"
