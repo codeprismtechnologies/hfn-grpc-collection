@@ -12,7 +12,8 @@ const AUTH_USERNAME = process.env.AUTH_USERNAME;
 const AUTH_PASSWORD = process.env.AUTH_PASSWORD;
 const TOKEN_FILE = ".env"; // The .env file path
 
-const JSON_FILE_PATH = "./Api collection/gamification-service/gamification-service-api.krproj";
+const JSON_FILE_PATH =
+  "./Api collection/gamification-service/gamification-service-api.krproj";
 
 // Function to update the token in the JSON file
 function updateJsonToken(token) {
@@ -22,7 +23,6 @@ function updateJsonToken(token) {
   ENV === "qa"
     ? (jsonData.authConfigs[1].options.value = token)
     : (jsonData.authConfigs[0].options.value = token);
-
 
   // Write the updated JSON back to file
   fs.writeFileSync(JSON_FILE_PATH, JSON.stringify(jsonData, null, 2));
@@ -85,7 +85,7 @@ async function getToken() {
 
   if (token && elapsed < 20 * 60000) {
     console.log("Using cached token:", token);
-    return token;
+    // return token;
   }
 
   console.log("Cached token expired or not found. Fetching new token...");

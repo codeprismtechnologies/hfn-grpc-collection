@@ -28,7 +28,7 @@
       "environmentId": "c1a36b45-fa5c-406e-a67f-8d068d3f80a2",
       "options": {
         "grpc": {
-          "endpoint": "http://localhost:50058",
+          "endpoint": "http://localhost:50056",
           "disableServerCertificateValidation": true
         }
       }
@@ -37,7 +37,8 @@
       "environmentId": "fa6533a5-1946-4334-b721-13304226cb75",
       "options": {
         "grpc": {
-          "endpoint": "https://live-meditation-service-grpc.dev.heartfulnessinstitute.in"
+          "endpoint": "https://live-meditation-service-grpc.dev.heartfulnessinstitute.in",
+          "disableServerCertificateValidation": false
         }
       }
     }

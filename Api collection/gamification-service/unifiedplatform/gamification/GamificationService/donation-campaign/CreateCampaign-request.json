@@ -1,0 +1,18 @@
+{
+  "id": "258",
+  "title": {
+    "defaultContent": "Campign1",
+    "en": "Campaign1",
+    
+  },
+  "description": {
+    "defaultContent": "Campigndesc",
+    "en": "CampaignDEsc",
+  
+  },
+  "isActive": true,
+  "listOfDays": [
+    -7,0,7,14
+  ],
+  "donationPeriod": 1
+}

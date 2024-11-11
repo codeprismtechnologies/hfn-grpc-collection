@@ -1,0 +1,16 @@
+{
+  "id": "657",
+  "campaignId": "1",
+  "channel": "EMAIL_ADDRESS",
+  "template": {
+    "defaultContent": "EMAIL_ADDRESS",
+    "en": "EMAIL_ADDRESS",
+  },
+  "day": 14,
+  "deepLink": "digital end-to-end",
+  "notificationTitle": {
+    "defaultContent": "EMAIL_ADDRESS",
+    "en": "EMAIL_ADDRESS",
+  },
+  "screenName": "orange"
+}
