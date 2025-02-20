@@ -1,0 +1,26 @@
+{
+  "circleId": "523",
+  "circleName": "Stream Sleek metrics",
+  "userId": "1681",
+  "activityName": "Guinea Franc",
+  "description": "Money Market Account harness back-end",
+  "preRecordedId": "117",
+  "recurring": false,
+  "scheduleAt": "2025-03-08T00:04:46.000000229Z",
+  "dayFrequency": "DAILY",
+  "weekDays": [
+    231,
+    788
+  ],
+  "recurringEndTime": "2025-03-10T00:04:46.000000229Z",
+  "userIdInvite": [
+    1676
+  ],
+  "circleActivityId": "456",
+  "zonalDifference": "268",
+  "activity": "GROUPS_ACTIVIVTY",
+  "trainerId":1676,
+  "waitingUsers": [    "1300"
+
+  ],
+}

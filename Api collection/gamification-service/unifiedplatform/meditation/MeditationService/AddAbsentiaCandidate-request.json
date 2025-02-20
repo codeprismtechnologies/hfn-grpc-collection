@@ -1,0 +1,5 @@
+{
+  "preceptorId": "{{ faker.random.uuid }}",
+  "seekerId": "{{ faker.random.uuid }}",
+  "dayOfWeek": 566
+}

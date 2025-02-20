@@ -1,0 +1,7 @@
+{
+  "sessionId": "{{ faker.random.uuid }}",
+  "feedback": {
+    "starRating": "NOTHING",
+    "comment": "Gorgeous Metal Salad"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "donationId": "996",
+  "userId": "{{ faker.random.uuid }}"
+}

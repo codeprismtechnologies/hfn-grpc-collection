@@ -1,0 +1,4 @@
+{
+  "userId": "{{ faker.random.uuid }}",
+  "meditationSessionId": "{{ faker.random.uuid }}"
+}

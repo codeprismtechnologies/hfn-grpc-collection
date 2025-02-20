@@ -1,0 +1,6 @@
+{
+  "ownerUserId": "19",
+  "shareId": "{{ faker.random.uuid }}",
+  "userId": "270",
+  "inviteStatus": "PENDING"
+}

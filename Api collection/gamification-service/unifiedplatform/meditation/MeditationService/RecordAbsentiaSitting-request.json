@@ -1,0 +1,5 @@
+{
+  "preceptorId": "{{ faker.random.uuid }}",
+  "dayOfWeek": 594,
+  "pageToken": 984
+}

@@ -1,0 +1,48 @@
+{
+  "id": "{{ faker.random.uuid }}",
+  "sessionType": "REMOTE_NOW",
+  "requestorType": "ABHYASI",
+  "requestorId": "{{ faker.random.uuid }}",
+  "otherRequestorId": [
+    "{{ faker.random.uuid }}",
+    "{{ faker.random.uuid }}"
+  ],
+  "requestorLocation": {
+    "latitude": 581.5538229716439,
+    "longitude": 323.0449151495714
+  },
+  "requestTime": "1970-01-01T00:05:16.000000196Z",
+  "requestEndTime": "1970-01-01T00:15:09.000000614Z",
+  "meditationSession": {
+    "sessionId": "{{ faker.random.uuid }}",
+    "preceptorId": "{{ faker.random.uuid }}",
+    "preceptorName": "Frozen",
+    "preceptorPhotoUrl": "actuating Faroe Islands Refined Granite Salad",
+    "preceptorDetails": "Steel Tasty Minnesota",
+    "seekerId": "{{ faker.random.uuid }}",
+    "seekerName": "Refined Granite Soap",
+    "seekerPhotoUrl": "Monaco scale payment",
+    "seekerDetails": "Customer",
+    "type": "IN_PERSON",
+    "state": "MEDITATION_COMPLETED",
+    "errorState": "IN_PROGRESS",
+    "seekerFeedback": {
+      "starRating": "THREE_STAR",
+      "comment": "Multi-layered"
+    },
+    "preceptorFeedback": {
+      "starRating": "NOTHING",
+      "comment": "protocol haptic"
+    },
+    "totalSeekers": 153,
+    "batchSitting": false,
+    "seekerIds": [
+      "Engineer SQL",
+      "Auto Loan Account pink"
+    ],
+    "seekerNames": "encoding",
+    "comments": "override",
+    "meansThroughWhichSittingGiven": "HEARTSAPP"
+  },
+  "distanceInKms": 801.5462700061753
+}

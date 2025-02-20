@@ -1,0 +1,28 @@
+{
+  "donationItemId": "{{ faker.random.uuid }}",
+  "toBeFiltered": "Indiana Oregon Lakes",
+  "filterType": "complexity Cambridgeshire",
+  "globalSearch": "deliverables",
+  "searchCriteria": {
+    "trackingId": "{{ faker.random.uuid }}",
+    "mandateId": "{{ faker.random.uuid }}",
+    "name": "{{ faker.name.last_name }}",
+    "emailAddress": "Directives Director",
+    "mobileNumber": "{{ faker.random.ushort }}",
+    "status": "Intelligent Fantastic Plastic Pants heuristic",
+    "donationType": "Toys, Games & Home",
+    "country": "{{ faker.address.country }}",
+    "fromDate": "Rue Refined Metal Chicken",
+    "toDate": "Port Berkshire deposit"
+  },
+  "sortingFieldName": "COM input generating",
+  "sortingOrder": "New Hampshire application connect",
+  "pageNo": "actuating violet",
+  "pageSize": "Fresh Montana Intelligent Fresh Computer",
+  "adminProfile": {
+    "userId": "{{ faker.random.uuid }}",
+    "idToken": "orchid Borders PNG",
+    "emailAddress": "extranet"
+  },
+  "emailAddress": "Corporate hack multi-byte"
+}

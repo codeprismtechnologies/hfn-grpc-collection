@@ -1,0 +1,70 @@
+{
+  "userId": "{{ faker.random.uuid }}",
+  "idToken": "Isle of Man",
+  "donationLineItems": [
+    {
+      "id": "{{ faker.random.uuid }}",
+      "donationId": "{{ faker.random.uuid }}",
+      "donationItem": {
+        "id": "{{ faker.random.uuid }}",
+        "name": "{{ faker.name.last_name }}",
+        "description": "Small Concrete Computer front-end Tennessee",
+        "region": "Handcrafted Frozen Bacon",
+        "currency": "{{ faker.finance.currency }}",
+        "billingAccountName": "hacking Kids, Movies & Outdoors",
+        "isActive": true
+      },
+      "currency": "{{ faker.finance.currency }}",
+      "amount": 244.8163894268483,
+      "isRecurring": false,
+      "recurringStartDate": "24/365 Bypass Generic",
+      "recurringFrequency": "Open-architected",
+      "extras": {
+        "Bedfordshire": "back up salmon"
+      }
+    },
+    {
+      "id": "{{ faker.random.uuid }}",
+      "donationId": "{{ faker.random.uuid }}",
+      "donationItem": {
+        "id": "{{ faker.random.uuid }}",
+        "name": "{{ faker.name.last_name }}",
+        "description": "transmitting withdrawal",
+        "region": "solid state Practical Steel Keyboard",
+        "currency": "{{ faker.finance.currency }}",
+        "billingAccountName": "Tools & Tools Compatible",
+        "isActive": true
+      },
+      "currency": "{{ faker.finance.currency }}",
+      "amount": 403.22860078187904,
+      "isRecurring": false,
+      "recurringStartDate": "Future Balanced Beauty, Garden & Automotive",
+      "recurringFrequency": "disintermediate backing up",
+      "extras": {
+        "Avon Secured": "payment Senior solid state"
+      }
+    }
+  ],
+  "userProfile": {
+    "userId": "{{ faker.random.uuid }}",
+    "profileId": "{{ faker.random.uuid }}",
+    "firstName": "{{ faker.name.first_name }}",
+    "lastName": "{{ faker.name.last_name }}",
+    "emailAddress": "Assistant vortals action-items",
+    "phoneNumber": "{{ faker.phone.phone_number }}",
+    "addressLine1": "Borders",
+    "addressLine2": "sky blue",
+    "city": "{{ faker.address.city }}",
+    "state": "{{ faker.address.state }}",
+    "postalCode": "{{ faker.address.zip_code }}",
+    "country": "{{ faker.address.country }}",
+    "memberId": "{{ faker.random.uuid }}",
+    "taxId": "{{ faker.random.uuid }}",
+    "citizenshipCountry": "Convertible Marks models synthesize",
+    "reason": "quantifying withdrawal Money Market Account"
+  },
+  "clientSuccessRedirectUrl": "Response Sleek Cotton Keyboard",
+  "clientFailureRedirectUrl": "Kroon withdrawal orange",
+  "clientId": "{{ faker.random.uuid }}",
+  "extrasJsonString": "Applications Ergonomic Plastic Computer"
+}

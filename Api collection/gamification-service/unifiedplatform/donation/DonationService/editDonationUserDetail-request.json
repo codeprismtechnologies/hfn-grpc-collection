@@ -1,0 +1,22 @@
+{
+  "donationId": "212",
+  "userProfile": {
+    "userId": "{{ faker.random.uuid }}",
+    "profileId": "{{ faker.random.uuid }}",
+    "firstName": "{{ faker.name.first_name }}",
+    "lastName": "{{ faker.name.last_name }}",
+    "emailAddress": "Consultant",
+    "phoneNumber": "{{ faker.phone.phone_number }}",
+    "addressLine1": "copy architecture",
+    "addressLine2": "Italy United States Minor Outlying Islands Practical Soft Car",
+    "city": "{{ faker.address.city }}",
+    "state": "{{ faker.address.state }}",
+    "postalCode": "{{ faker.address.zip_code }}",
+    "country": "{{ faker.address.country }}",
+    "memberId": "{{ faker.random.uuid }}",
+    "taxId": "{{ faker.random.uuid }}",
+    "citizenshipCountry": "monitor overriding Centralized",
+    "reason": "Legacy concept"
+  },
+  "userId": "{{ faker.random.uuid }}"
+}

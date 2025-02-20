@@ -1,0 +1,9 @@
+{
+  "preceptorId": "{{ faker.random.uuid }}",
+  "deviceId": "{{ faker.random.uuid }}",
+  "command": "SEEKER_CANCEL",
+  "meditationSessionId": "{{ faker.random.uuid }}",
+  "sequenceNumber": "859",
+  "timeZoneId": "{{ faker.random.uuid }}",
+  "version": "{{ faker.system.version }}"
+}

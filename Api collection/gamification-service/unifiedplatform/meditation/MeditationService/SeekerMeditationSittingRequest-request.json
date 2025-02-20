@@ -1,0 +1,11 @@
+{
+  "seekerId": "{{ faker.random.uuid }}",
+  "deviceId": "{{ faker.random.uuid }}",
+  "command": "SCHEDULE",
+  "meditationSessionId": "{{ faker.random.uuid }}",
+  "sequenceNumber": "490",
+  "version": "{{ faker.system.version }}",
+  "noOfAdditionalSeekers": 31,
+  "retryOffsetTimeSecs": 851,
+  "exitReason": "Consultant generating"
+}

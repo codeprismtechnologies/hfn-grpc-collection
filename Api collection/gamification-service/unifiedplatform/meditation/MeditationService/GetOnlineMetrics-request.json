@@ -1,0 +1,10 @@
+{
+  "noOfPreceptorsOnline": 53,
+  "noOfPreceptorsFree": 186,
+  "noOfSittingsInProgress": 847,
+  "noOfPendingSeekerRequests": 241,
+  "noOfSeekersTakingSitting": 116,
+  "noOfSeekersWaitingForSitting": 351,
+  "noOfSittingsCompleted": 141,
+  "noOfSittingsCompletedLastUpdatedTimestamp": "1970-01-01T00:06:14.000000111Z"
+}

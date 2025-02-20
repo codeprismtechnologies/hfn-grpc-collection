@@ -1,0 +1,28 @@
+{
+  "donationItemId": "{{ faker.random.uuid }}",
+  "toBeFiltered": "white Checking Account",
+  "filterType": "Locks",
+  "globalSearch": "Ford",
+  "searchCriteria": {
+    "trackingId": "{{ faker.random.uuid }}",
+    "mandateId": "{{ faker.random.uuid }}",
+    "name": "{{ faker.name.last_name }}",
+    "emailAddress": "Roads El Salvador Colon Response",
+    "mobileNumber": "{{ faker.random.ushort }}",
+    "status": "Ouguiya Plastic",
+    "donationType": "Sleek Vision-oriented",
+    "country": "{{ faker.address.country }}",
+    "fromDate": "Valleys empower innovate",
+    "toDate": "Rustic Frozen Ball Soft envisioneer"
+  },
+  "sortingFieldName": "Village Tactics blue",
+  "sortingOrder": "El Salvador Colon Plaza Group",
+  "pageNo": "Bedfordshire demand-driven",
+  "pageSize": "Security Rustic",
+  "adminProfile": {
+    "userId": "{{ faker.random.uuid }}",
+    "idToken": "Brooks IB Outdoors",
+    "emailAddress": "XSS"
+  },
+  "emailAddress": "Ethiopian Birr Cloned generating"
+}

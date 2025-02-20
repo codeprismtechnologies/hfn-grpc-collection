@@ -1,0 +1,27 @@
+{
+  "circleId": "426",
+  "circleName": "Ports Rial Omani ROI",
+  "userId": "149",
+  "activityName": "customized",
+  "description": "knowledge base EXE Islands",
+  "preRecordedId": "241",
+  "recurring": true,
+  "scheduleAt": "1970-01-01T00:06:16.000000431Z",
+  "dayFrequency": "DAILY",
+  "weekDays": [
+    868,
+    962
+  ],
+  "recurringEndTime": "1970-01-01T00:10:21.000000961Z",
+  "userIdInvite": [
+    "379",
+    "771"
+  ],
+  "circleActivityId": "659",
+  "zonalDifference": "185",
+  "activity": "LIVE_MEDITATION_ACTIVITY",
+  "waitingUsers": [
+    "536",
+    "398"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "trainerId": "{{ faker.random.uuid }}",
+  "trainerSessionState": "PENDING",
+  "circleMetadataId": "485"
+}

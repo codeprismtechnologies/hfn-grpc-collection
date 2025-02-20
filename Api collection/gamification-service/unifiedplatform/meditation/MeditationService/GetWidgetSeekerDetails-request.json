@@ -1,0 +1,4 @@
+{
+  "seekerId": "{{ faker.random.uuid }}",
+  "tenantId": "{{ faker.random.uuid }}"
+}

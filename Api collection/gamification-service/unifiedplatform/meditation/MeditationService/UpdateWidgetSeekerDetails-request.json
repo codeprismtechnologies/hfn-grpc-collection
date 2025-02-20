@@ -1,0 +1,8 @@
+{
+  "id": "786",
+  "seekerId": "{{ faker.random.uuid }}",
+  "tenantId": "{{ faker.random.uuid }}",
+  "completedVideoSeconds": "22",
+  "totalVideoSeconds": "303",
+  "sessionId": 81
+}

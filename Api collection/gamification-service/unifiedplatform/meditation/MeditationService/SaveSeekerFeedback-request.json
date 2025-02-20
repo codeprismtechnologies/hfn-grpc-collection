@@ -1,0 +1,7 @@
+{
+  "sessionId": "{{ faker.random.uuid }}",
+  "feedback": {
+    "starRating": "THREE_STAR",
+    "comment": "quantifying"
+  }
+}

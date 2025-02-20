@@ -1,0 +1,5 @@
+{
+  "preceptorId": "{{ faker.random.uuid }}",
+  "deviceId": "{{ faker.random.uuid }}",
+  "dndDurationInSeconds": 974
+}

@@ -1,0 +1,16 @@
+{
+  "scheduleId": "{{ faker.random.uuid }}",
+  "startTimeOfTheDay": 130,
+  "endTimeOfTheDay": 627,
+  "zoneId": "{{ faker.random.uuid }}",
+  "isRemoteAvailable": true,
+  "isInPersonAvailable": false,
+  "isOnSunday": false,
+  "isOnMonday": false,
+  "isOnTuesday": true,
+  "isOnWednesday": false,
+  "isOnThursday": false,
+  "isOnFriday": false,
+  "isOnSaturday": true,
+  "preceptorId": "{{ faker.random.uuid }}"
+}

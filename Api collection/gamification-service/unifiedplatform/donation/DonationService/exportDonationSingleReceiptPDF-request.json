@@ -1,0 +1,14 @@
+{
+  "toBeFiltered": "JBOD Nevada Avon",
+  "donationId": "{{ faker.random.uuid }}",
+  "trackingId": "{{ faker.random.uuid }}",
+  "fromDate": "Pakistan Rupee",
+  "toDate": "Avon connect",
+  "citizenshipCountry": "Front-line Gorgeous Granite Sausages",
+  "adminProfile": {
+    "userId": "{{ faker.random.uuid }}",
+    "idToken": "cyan optimize Metal",
+    "emailAddress": "firewall"
+  },
+  "emailAddress": "generate Hollow"
+}

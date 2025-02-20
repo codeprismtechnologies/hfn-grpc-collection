@@ -1,0 +1,9 @@
+{
+  "preceptorId": "{{ faker.random.uuid }}",
+  "deviceId": "{{ faker.random.uuid }}",
+  "command": "PRECEPTOR_START_MEDITATION",
+  "meditationSessionId": "{{ faker.random.uuid }}",
+  "sequenceNumber": "436",
+  "timeZoneId": "{{ faker.random.uuid }}",
+  "version": "{{ faker.system.version }}"
+}

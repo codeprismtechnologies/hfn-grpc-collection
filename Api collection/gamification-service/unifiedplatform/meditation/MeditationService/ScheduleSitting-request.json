@@ -1,0 +1,48 @@
+{
+  "id": "{{ faker.random.uuid }}",
+  "sessionType": "REMOTE",
+  "requestorType": "PRECEPTOR",
+  "requestorId": "{{ faker.random.uuid }}",
+  "otherRequestorId": [
+    "{{ faker.random.uuid }}",
+    "{{ faker.random.uuid }}"
+  ],
+  "requestorLocation": {
+    "latitude": 61.740616476469185,
+    "longitude": 735.4290889790241
+  },
+  "requestTime": "2024-12-13T12:10:10.000000717Z",
+  "requestEndTime": "1970-01-01T00:11:10.000000717Z",
+  "meditationSession": {
+    "sessionId": "{{ faker.random.uuid }}",
+    "preceptorId": "{{ faker.random.uuid }}",
+    "preceptorName": "Tunisia plug-and-play maroon",
+    "preceptorPhotoUrl": "concept",
+    "preceptorDetails": "Cotton",
+    "seekerId": "{{ faker.random.uuid }}",
+    "seekerName": "alarm neural",
+    "seekerPhotoUrl": "mindshare deposit",
+    "seekerDetails": "Wooden Park",
+    "type": "REMOTE_NOW",
+    "state": "STARTED",
+    "errorState": "WAITING_FOR_PRECEPTOR_TO_START_BATCH",
+    "seekerFeedback": {
+      "starRating": "THREE_STAR",
+      "comment": "Metrics"
+    },
+    "preceptorFeedback": {
+      "starRating": "ENERGIZED",
+      "comment": "navigating Awesome"
+    },
+    "totalSeekers": 932,
+    "batchSitting": false,
+    "seekerIds": [
+      "background",
+      "Awesome Wooden Sausages Integration array"
+    ],
+    "seekerNames": "Lane",
+    "comments": "Savings Account Configurable",
+    "meansThroughWhichSittingGiven": "WITHOUT_USING_APP"
+  },
+  "distanceInKms": 26.241851462844735
+}

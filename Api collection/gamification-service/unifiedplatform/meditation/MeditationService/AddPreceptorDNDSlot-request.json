@@ -1,0 +1,6 @@
+{
+  "dndId": "{{ faker.random.uuid }}",
+  "preceptorId": "{{ faker.random.uuid }}",
+  "startTimeOfTheDay": 288,
+  "endTimeOfTheDay": 200
+}

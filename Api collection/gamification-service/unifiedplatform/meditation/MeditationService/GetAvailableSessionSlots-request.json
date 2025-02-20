@@ -1,0 +1,48 @@
+{
+  "id": "{{ faker.random.uuid }}",
+  "sessionType": "IN_PERSON",
+  "requestorType": "PRECEPTOR",
+  "requestorId": "{{ faker.random.uuid }}",
+  "otherRequestorId": [
+    "{{ faker.random.uuid }}",
+    "{{ faker.random.uuid }}"
+  ],
+  "requestorLocation": {
+    "latitude": 435.8187167984388,
+    "longitude": 8.351676647256113
+  },
+  "requestTime": "1970-01-01T00:10:13.000000134Z",
+  "requestEndTime": "1970-01-01T00:01:06.000000105Z",
+  "meditationSession": {
+    "sessionId": "{{ faker.random.uuid }}",
+    "preceptorId": "{{ faker.random.uuid }}",
+    "preceptorName": "Belize Dollar sky blue",
+    "preceptorPhotoUrl": "Research",
+    "preceptorDetails": "program Small Cotton Bacon web-readiness",
+    "seekerId": "{{ faker.random.uuid }}",
+    "seekerName": "Synergistic Grove task-force",
+    "seekerPhotoUrl": "Mall 1080p",
+    "seekerDetails": "Games Port",
+    "type": "IN_PERSON",
+    "state": "WAITING_FOR_SCHEDULING",
+    "errorState": "PRECEPTOR_COMPLETED",
+    "seekerFeedback": {
+      "starRating": "ONE_STAR",
+      "comment": "Won Rubber Checking Account"
+    },
+    "preceptorFeedback": {
+      "starRating": "TWO_STAR",
+      "comment": "withdrawal"
+    },
+    "totalSeekers": 657,
+    "batchSitting": false,
+    "seekerIds": [
+      "North Carolina invoice International",
+      "Square calculating"
+    ],
+    "seekerNames": "calculating Throughway Advanced",
+    "comments": "Assimilated",
+    "meansThroughWhichSittingGiven": "WITHOUT_USING_APP"
+  },
+  "distanceInKms": 29.66031136087965
+}

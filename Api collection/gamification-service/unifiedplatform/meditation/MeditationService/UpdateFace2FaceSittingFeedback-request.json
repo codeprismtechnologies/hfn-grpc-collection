@@ -1,0 +1,4 @@
+{
+  "sessionId": "{{ faker.random.uuid }}",
+  "sittingState": "NO_SITTING"
+}

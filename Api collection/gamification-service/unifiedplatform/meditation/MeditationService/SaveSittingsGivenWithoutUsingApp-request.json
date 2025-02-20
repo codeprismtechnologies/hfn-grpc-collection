@@ -1,0 +1,18 @@
+{
+  "startTime": "1970-01-01T00:05:18.000000405Z",
+  "endTime": "1970-01-01T00:09:36.000000588Z",
+  "noOfPeople": 858,
+  "seekerInfo": [
+    {
+      "seekerId": "{{ faker.random.uuid }}",
+      "seekerName": "zero tolerance matrices Roads",
+      "email": "{{ faker.internet.example_email }}"
+    },
+    {
+      "seekerId": "{{ faker.random.uuid }}",
+      "seekerName": "optical Comoro Franc",
+      "email": "{{ faker.internet.example_email }}"
+    }
+  ],
+  "comments": "Group"
+}

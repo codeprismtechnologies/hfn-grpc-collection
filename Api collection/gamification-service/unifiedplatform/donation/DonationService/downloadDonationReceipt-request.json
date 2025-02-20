@@ -1,0 +1,5 @@
+{
+  "donationId": "91",
+  "receiptId": "602",
+  "firebaseId": "{{ faker.random.uuid }}"
+}

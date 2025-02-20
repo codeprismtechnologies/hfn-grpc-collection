@@ -1,0 +1,14 @@
+{
+  "toBeFiltered": "intuitive Refined Frozen Bike",
+  "donationId": "{{ faker.random.uuid }}",
+  "trackingId": "{{ faker.random.uuid }}",
+  "fromDate": "purple",
+  "toDate": "24/365 scale back-end",
+  "citizenshipCountry": "Tools, Jewelery & Garden",
+  "adminProfile": {
+    "userId": "{{ faker.random.uuid }}",
+    "idToken": "Nebraska syndicate backing up",
+    "emailAddress": "Gourde functionalities array"
+  },
+  "emailAddress": "Borders"
+}

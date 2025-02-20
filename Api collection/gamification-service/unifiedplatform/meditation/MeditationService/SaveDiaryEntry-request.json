@@ -1,0 +1,8 @@
+{
+  "id": "{{ faker.random.uuid }}",
+  "userId": "{{ faker.random.uuid }}",
+  "entryTime": "1970-01-01T00:01:49.000000879Z",
+  "moodRating": "THREE_STAR",
+  "text": "{{ faker.lorem.text }}",
+  "meditationSessionId": "{{ faker.random.uuid }}"
+}

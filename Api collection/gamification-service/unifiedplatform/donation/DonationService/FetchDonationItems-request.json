@@ -1,0 +1,7 @@
+{
+  "userId": "{{ faker.random.uuid }}",
+  "citizenshipCountry": "e-enable Plastic Down-sized",
+  "idToken": "Granite reboot",
+  "sortBy": "Credit Card Account",
+  "organizationId": "184"
+}

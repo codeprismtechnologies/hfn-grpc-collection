@@ -51,5 +51,7 @@ if [ "$1" == "dev" ]; then
     cd ..
 fi
 cp -r hfn-events-service/hfn-events-api/src/main/proto/ ../protos
+git clone https://github.com/HeartfulnessInstitute/meditation-service.git
+cp -r  meditation-service/meditation-service-api/src/main/proto/ ../protos
 cd ..
 rm -rf temp

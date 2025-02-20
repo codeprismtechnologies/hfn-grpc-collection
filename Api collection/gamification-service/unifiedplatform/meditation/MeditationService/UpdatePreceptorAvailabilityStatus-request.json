@@ -1,0 +1,5 @@
+{
+  "preceptorId": "{{ faker.random.uuid }}",
+  "status": true,
+  "timeZoneId": "{{ faker.random.uuid }}"
+}

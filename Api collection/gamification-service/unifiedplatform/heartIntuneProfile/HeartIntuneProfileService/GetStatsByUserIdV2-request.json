@@ -1,0 +1,64 @@
+{
+  "userId": "860",
+  "startTime": "1970-01-01T00:04:53.000000225Z",
+  "endTime": "1970-01-01T00:06:22.000000844Z",
+  "year": 1000,
+  "pageable": {
+    "pageSize": 42,
+    "pageNumber": 156
+  },
+  "responseUserStatsV2": {
+    "totalSeconds": "762",
+    "dailyMeditationData": [
+      {
+        "meditationSeconds": "506",
+        "journalCount": "228"
+      },
+      {
+        "meditationSeconds": "984",
+        "journalCount": "470"
+      }
+    ],
+    "yearlyMeditationData": [
+      {
+        "year": 792,
+        "totalSeconds": "875",
+        "totalSessions": "559",
+        "journals": "935"
+      },
+      {
+        "year": 845,
+        "totalSeconds": "286",
+        "totalSessions": "456",
+        "journals": "910"
+      }
+    ],
+    "dailyAverage": "575",
+    "totalSessions": "28",
+    "longestSessions": "530",
+    "dairyEntries": "885",
+    "meditationBreakup": [
+      {
+        "meditationCategory": "payment e-business",
+        "totalSeconds": "643",
+        "totalSessions": "868"
+      },
+      {
+        "meditationCategory": "Rustic Cotton Cheese",
+        "totalSeconds": "452",
+        "totalSessions": "491"
+      }
+    ],
+    "meditationPattern": [
+      {
+        "hour": 434,
+        "totalSeconds": "18"
+      },
+      {
+        "hour": 136,
+        "totalSeconds": "920"
+      }
+    ]
+  },
+  "isHomePageDashboard": false
+}

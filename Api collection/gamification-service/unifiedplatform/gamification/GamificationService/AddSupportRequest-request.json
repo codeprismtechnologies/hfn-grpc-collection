@@ -1,0 +1,24 @@
+{
+  "userId": "{{ faker.random.uuid }}",
+  "userName": "{{ faker.internet.user_name }}",
+  "userEmail": "supply-chains",
+  "userPhone": "Sleek Steel Pizza Orchard Virtual",
+  "attachmentUrl": "Home, Computers & Movies Facilitator River",
+  "comment": "wireless",
+  "extras": {
+    "initiatives": "Developer Burgs"
+  },
+  "uploadFileRequest": {
+    "badgeId": "{{ faker.random.uuid }}",
+    "info": {
+      "name": "{{ faker.name.last_name }}",
+      "format": "FTP Convertible Marks",
+      "size": "378",
+      "token": "Gold monitoring",
+      "chunkRange": "Steel Checking Account",
+      "objectPath": "24 hour Wooden teal",
+      "type": "{{ faker.database.type }}"
+    },
+    "file": "bW9ycGggYXR0aXR1ZGUtb3JpZW50ZWQgVW5icmFuZGVk"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "userId": "{{ faker.random.uuid }}",
+  "pageToken": 548,
+  "from": "1970-01-01T00:05:00.000000138Z",
+  "to": "1970-01-01T00:05:25.000000604Z",
+  "pageSize": 148,
+  "sittingType": "SITTINGS_TAKEN",
+  "meansThroughWhichSittingGiven": [
+    "HEARTSAPP",
+    "WITHOUT_USING_APP"
+  ]
+}

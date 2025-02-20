@@ -1,0 +1,19 @@
+{
+  "userId": "{{ faker.random.uuid }}",
+  "donationReportRequest": {
+    "userId": "{{ faker.random.uuid }}",
+    "idToken": "Circles Lane Unbranded",
+    "fromDate": "Silver Personal Loan Account",
+    "toDate": "Legacy Wooden Terrace",
+    "paymentStatus": "Product Associate Administrator",
+    "emailAddress": "visualize Holy See (Vatican City State)",
+    "firstName": "{{ faker.name.first_name }}",
+    "lastName": "{{ faker.name.last_name }}",
+    "sortBy": "withdrawal Auto Loan Account Fantastic Cotton Shirt",
+    "pageSize": 703,
+    "pageNum": 553,
+    "totalRows": 250,
+    "citizenshipCountry": "SDD"
+  },
+  "email": "{{ faker.internet.example_email }}"
+}

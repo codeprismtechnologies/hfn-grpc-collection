@@ -1,0 +1,11 @@
+{
+  "preceptorId": "{{ faker.random.uuid }}",
+  "from": "1970-01-01T00:02:58.000000100Z",
+  "to": "1970-01-01T00:05:15.000000057Z",
+  "email": "{{ faker.internet.example_email }}",
+  "timeZoneId": "{{ faker.random.uuid }}",
+  "meansThroughWhichSittingGiven": [
+    "HEARTSAPP",
+    "WITHOUT_USING_APP"
+  ]
+}
