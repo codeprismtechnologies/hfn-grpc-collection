@@ -1,5 +1,5 @@
 {
-  "preceptorId": "{{ faker.random.uuid }}",
+  "preceptorId": "GY6eBC4AHaRh62VPCzOkZMuSbce2",
   "deviceId": "{{ faker.random.uuid }}",
   "command": "SEEKER_CANCEL",
   "meditationSessionId": "{{ faker.random.uuid }}",

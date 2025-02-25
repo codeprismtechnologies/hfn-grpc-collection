@@ -1,26 +1,17 @@
 {
-  "circleId": "523",
-  "circleName": "Stream Sleek metrics",
-  "userId": "1681",
-  "activityName": "Guinea Franc",
-  "description": "Money Market Account harness back-end",
-  "preRecordedId": "117",
+  "circleId": 0,
+  "circleName": "",
+  "userId": 1686,
+  "activityName": "Meditate Together",
+  "description": "1200",
+  "preRecordedId": 140,
   "recurring": false,
   "scheduleAt": "2025-03-08T00:04:46.000000229Z",
-  "dayFrequency": "DAILY",
-  "weekDays": [
-    231,
-    788
-  ],
-  "recurringEndTime": "2025-03-10T00:04:46.000000229Z",
-  "userIdInvite": [
-    1676
-  ],
-  "circleActivityId": "456",
-  "zonalDifference": "268",
+  "dayFrequency": "CUSTOM_DAY",
+  "recurringEndTime": "2025-03-08T00:04:46.000000229Z",
+  "userIdInvite": [1682,1676],
+  "circleActivityId": 0,
   "activity": "GROUPS_ACTIVIVTY",
-  "trainerId":1676,
-  "waitingUsers": [    "1300"
-
-  ],
+  "waitingUsers": [1300],
+  "trainerId": 1676
 }

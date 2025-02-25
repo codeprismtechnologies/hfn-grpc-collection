@@ -1,5 +1,5 @@
 {
-  "preceptorId": "{{ faker.random.uuid }}",
+  "preceptorId": "GY6eBC4AHaRh62VPCzOkZMuSbce2",
   "status": true,
-  "timeZoneId": "{{ faker.random.uuid }}"
+  "timeZoneId": "UTC"
 }

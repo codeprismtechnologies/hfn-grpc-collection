@@ -1,9 +1,3 @@
 {
-  "ID": "1218",
-  "userID": "1676",
-  "firebaseId": "{{ faker.random.uuid }}",
-  "fcmToken": "back-end Gorgeous Concrete Bacon",
-  "deviceId": "{{ faker.random.uuid }}",
-  "jwtToken": "vertical",
-  "email": "{{ faker.internet.example_email }}"
+  "ID": "1287"//circleActivityId
 }

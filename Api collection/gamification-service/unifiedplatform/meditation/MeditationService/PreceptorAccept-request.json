@@ -1,9 +1,9 @@
 {
-  "preceptorId": "{{ faker.random.uuid }}",
+  "preceptorId": "GY6eBC4AHaRh62VPCzOkZMuSbce2",
   "deviceId": "{{ faker.random.uuid }}",
   "command": "SCHEDULE",
-  "meditationSessionId": "{{ faker.random.uuid }}",
-  "sequenceNumber": "662",
+  "meditationSessionId": "434b280a-39de-4318-a7c5-86c3c2e876fd",
+  "sequenceNumber": "0",
   "timeZoneId": "{{ faker.random.uuid }}",
   "version": "{{ faker.system.version }}"
 }

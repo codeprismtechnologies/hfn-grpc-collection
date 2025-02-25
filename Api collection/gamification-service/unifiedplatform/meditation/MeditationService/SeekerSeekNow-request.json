@@ -1,5 +1,5 @@
 {
-  "seekerId": "{{ faker.random.uuid }}",
+  "seekerId": "4bjVTuWDQLfXabnSZfaQKYHb5F33",
   "deviceId": "{{ faker.random.uuid }}",
   "command": "SCHEDULE",
   "meditationSessionId": "{{ faker.random.uuid }}",
